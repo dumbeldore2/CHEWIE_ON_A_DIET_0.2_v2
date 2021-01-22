@@ -5,20 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity2"
-    android:background="@drawable/background27">
+    android:background="@drawable/background_1">
 
     <TextView
         android:id="@+id/titel_page_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="75dp"
+        android:fontFamily="@font/roboto_slab"
         android:text="DASHBOARD"
         android:textColor="@color/wit"
         android:textSize="50dp"
-        android:transitionName="1_1"/>
+        android:transitionName="1_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/rectangle_1_page_2"
@@ -35,6 +36,7 @@
         android:id="@+id/rectangle_1_page_2_letter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_slab"
         android:text="H"
         android:textColor="@color/wit"
         android:textSize="90dp"
@@ -73,14 +75,15 @@
         android:id="@+id/rectangle_2_page_2_letter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/rectangle_2_page_2"
-        app:layout_constraintBottom_toBottomOf="@id/rectangle_2_page_2"
-        app:layout_constraintStart_toStartOf="@id/rectangle_2_page_2"
-        app:layout_constraintEnd_toEndOf="@id/rectangle_2_page_2"
+        android:fontFamily="@font/roboto_slab"
         android:text="+"
+        android:textColor="@color/wit"
         android:textSize="90dp"
         android:transitionName="1_4.1"
-        android:textColor="@color/wit"/>
+        app:layout_constraintBottom_toBottomOf="@id/rectangle_2_page_2"
+        app:layout_constraintEnd_toEndOf="@id/rectangle_2_page_2"
+        app:layout_constraintStart_toStartOf="@id/rectangle_2_page_2"
+        app:layout_constraintTop_toTopOf="@id/rectangle_2_page_2" />
     <TextView
         android:id="@+id/rectangle_2_page_2_text"
         android:layout_width="wrap_content"
@@ -105,18 +108,20 @@
         android:layout_marginTop="125dp"
         android:src="@drawable/rectangle"
         android:transitionName="1_6"/>
+
     <TextView
         android:id="@+id/rectangle_3_page_2_letter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/rectangle_3_page_2"
-        app:layout_constraintBottom_toBottomOf="@id/rectangle_3_page_2"
-        app:layout_constraintStart_toStartOf="@id/rectangle_3_page_2"
-        app:layout_constraintEnd_toEndOf="@id/rectangle_3_page_2"
+        android:fontFamily="@font/roboto_slab"
         android:text="T"
+        android:textColor="@color/wit"
         android:textSize="90dp"
         android:transitionName="1_6.1"
-        android:textColor="@color/wit"/>
+        app:layout_constraintBottom_toBottomOf="@id/rectangle_3_page_2"
+        app:layout_constraintEnd_toEndOf="@id/rectangle_3_page_2"
+        app:layout_constraintStart_toStartOf="@id/rectangle_3_page_2"
+        app:layout_constraintTop_toTopOf="@id/rectangle_3_page_2" />
 
     <TextView
         android:id="@+id/rectangle_3_page_2_text"
