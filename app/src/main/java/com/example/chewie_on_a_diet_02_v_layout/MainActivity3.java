@@ -38,10 +38,10 @@ public class MainActivity3 extends AppCompatActivity {
         textView4 = findViewById(R.id.dashboard_word);
 
         click_fun_1();
-        setColorToGradiant(textView1);
-        setColorToGradiant(textView2);
-        setColorToGradiant(textView3);
-        setColorToGradiant(textView4);
+        // setColorToGradiant(textView1);
+        // setColorToGradiant(textView2);
+        // setColorToGradiant(textView3);
+        // setColorToGradiant(textView4);
     }
 
     public void click_fun_1(){
