@@ -39,9 +39,9 @@ public class MainActivity5 extends AppCompatActivity {
 
         click_fun_1();
 
-        setColorToGradiant(textView1);
-        setColorToGradiant(textView2);
-        setColorToGradiant(textView3);
+        // setColorToGradiant(textView1);
+        // setColorToGradiant(textView2);
+        // setColorToGradiant(textView3);
     }
 
 
