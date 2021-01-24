@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background27"
+    android:background="@drawable/background_1"
     tools:context=".MainActivity7">
     <TextView
         android:id="@+id/text_1"
@@ -14,6 +14,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="75dp"
         android:layout_marginLeft="15dp"
+        android:fontFamily="@font/roboto_slab"
         android:text="F"
         android:textSize="90dp"
         android:transitionName="5_1"
@@ -23,7 +24,8 @@
         android:id="@+id/text_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/roboto_slab"
         android:text="ood"
         android:textColor="@color/wit"
         android:textSize="45dp"
@@ -37,9 +39,9 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="75dp"
-        android:layout_marginRight="15dp"
-        android:src="@drawable/circle"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="25dp"
+        android:src="@drawable/circle_1"
         android:transitionName="5_3"/>
 
     <TextView
@@ -50,8 +52,9 @@
         app:layout_constraintEnd_toEndOf="@id/dashboard"
         app:layout_constraintTop_toTopOf="@id/dashboard"
         app:layout_constraintBottom_toBottomOf="@id/dashboard"
+        android:fontFamily="@font/roboto_slab"
         android:text="dashboard"
         android:textColor="@color/wit"
-        android:textSize="20dp"
+        android:textSize="14dp"
         android:transitionName="5_4"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
