@@ -7,16 +7,30 @@
     tools:context=".MainActivity11"
     android:background="@drawable/background27">
 
-    <ImageView
-        android:id="@+id/header"
+    <TextView
+        android:id="@+id/text_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/titel18"
-        android:transitionName="9_1"/>
+        android:layout_marginTop="75dp"
+        android:layout_marginLeft="15dp"
+        android:text="D"
+        android:textSize="90dp"
+        android:transitionName="9_1"
+        android:textColor="@color/wit"/>
+
+    <TextView
+        android:id="@+id/text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="rink"
+        android:textColor="@color/wit"
+        android:textSize="45dp"
+        android:transitionName="9_2"
+        app:layout_constraintBottom_toBottomOf="@id/text_1"
+        app:layout_constraintStart_toEndOf="@id/text_1" />
 
     <ImageView
         android:id="@+id/dashboard"
@@ -26,7 +40,19 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="75dp"
         android:layout_marginRight="15dp"
-        android:src="@drawable/dashboard_icon_1"
-        android:transitionName="9_2"/>
+        android:src="@drawable/circle"
+        android:transitionName="9_3"/>
 
+    <TextView
+        android:id="@+id/dashboard_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/dashboard"
+        app:layout_constraintEnd_toEndOf="@id/dashboard"
+        app:layout_constraintTop_toTopOf="@id/dashboard"
+        app:layout_constraintBottom_toBottomOf="@id/dashboard"
+        android:text="dashboard"
+        android:textColor="@color/wit"
+        android:textSize="20dp"
+        android:transitionName="9_4"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
