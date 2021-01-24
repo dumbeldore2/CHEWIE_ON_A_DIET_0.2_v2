@@ -71,25 +71,25 @@ public class MainActivity2 extends AppCompatActivity {
         click_8();
         click_9();
 
-        setColorToGradiant(textView1);
-        setColorToGradiant(textView2);
-        setColorToGradiant(textView3);
-        setColorToGradiant(textView4);
-        setColorToGradiant(textView5);
-        setColorToGradiant(textView6);
-        setColorToGradiant(textView7);
-        setColorToGradiant(textView8);
-        setColorToGradiant(textView9);
+        //setColorToGradiant(textView1);
+        //setColorToGradiant(textView2);
+        //setColorToGradiant(textView3);
+        //setColorToGradiant(textView4);
+        //setColorToGradiant(textView5);
+        //setColorToGradiant(textView6);
+        //setColorToGradiant(textView7);
+        // setColorToGradiant(textView8);
+        // setColorToGradiant(textView9);
 
-        setColorToGradiant2(textView10);
-        setColorToGradiant2(textView11);
-        setColorToGradiant2(textView12);
-        setColorToGradiant2(textView13);
-        setColorToGradiant2(textView14);
-        setColorToGradiant2(textView15);
-        setColorToGradiant2(textView16);
-        setColorToGradiant2(textView17);
-        setColorToGradiant2(textView18);
+        //setColorToGradiant2(textView10);
+        // setColorToGradiant2(textView11);
+        // setColorToGradiant2(textView12);
+        // setColorToGradiant2(textView13);
+        // setColorToGradiant2(textView14);
+        // setColorToGradiant2(textView15);
+        // setColorToGradiant2(textView16);
+        // setColorToGradiant2(textView17);
+        // setColorToGradiant2(textView18);
     }
 
     public void click_1(){
@@ -251,8 +251,8 @@ public class MainActivity2 extends AppCompatActivity {
 
         Shader shader = new LinearGradient(width/2,0,width/2,textView.getTextSize(),
                 new int[]{
-                        Color.parseColor("#286086"),
-                        Color.parseColor("#ffffff")
+                        Color.parseColor("#00688B"),
+                        Color.parseColor("#00FA9A")
                 },null,Shader.TileMode.CLAMP);
         textView.getPaint().setShader(shader);
     }
