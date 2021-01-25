@@ -2,12 +2,15 @@ package com.example.chewie_on_a_diet_02_v_layout;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
+import android.graphics.Paint;
 import android.graphics.Shader;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextPaint;
@@ -17,11 +20,25 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.Description;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.github.mikephil.charting.utils.ColorTemplate;
+
+import java.util.ArrayList;
+
 public class MainActivity4 extends AppCompatActivity {
 
     ImageView imageView1;
 
     TextView textView1,textView2,textView3;
+
+    LineChart lineChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +55,52 @@ public class MainActivity4 extends AppCompatActivity {
         textView2 = findViewById(R.id.text_2);
         textView3 = findViewById(R.id.dashboard_word);
 
+        lineChart = findViewById(R.id.line_chart);
+
+        ArrayList<Entry> yvalues = new ArrayList<>();
+
+        yvalues.add(new Entry(0,10));
+        yvalues.add(new Entry(1,50));
+        yvalues.add(new Entry(2,10));
+        yvalues.add(new Entry(3,10));
+        yvalues.add(new Entry(4,90));
+        yvalues.add(new Entry(5,10));
+        yvalues.add(new Entry(6,10));
+        yvalues.add(new Entry(7,-100));
+        yvalues.add(new Entry(8,-300));
+        yvalues.add(new Entry(9,0));
+
+        LineDataSet lineDataSet = new LineDataSet(yvalues, "Data set 1");
+
+        Drawable drawable = ContextCompat.getDrawable(this, R.drawable.background_2);
+
+        lineChart.setHighlightPerDragEnabled(false);
+        lineChart.setHighlightPerTapEnabled(false);
+        lineDataSet.setDrawCircleHole(false);
+        lineDataSet.setDrawCircles(false);
+        lineDataSet.setColor(Color.rgb(0,250,154));
+        lineDataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);
+
+        lineDataSet.setDrawFilled(true);
+        lineDataSet.setFillDrawable(drawable);
+        XAxis xas = lineChart.getXAxis();
+        xas.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xas.setDrawGridLines(false);
+        xas.setEnabled(true);
+
+        YAxis yas = lineChart.getAxisRight();
+        yas.setDrawGridLines(false);
+        yas.setEnabled(false);
+
+        YAxis yas2 = lineChart.getAxisLeft();
+        yas2.setDrawGridLines(false);
+
+        ArrayList<ILineDataSet> dataSets = new ArrayList<>();
+        dataSets.add(lineDataSet);
+
+        LineData data = new LineData(dataSets);
+
+        lineChart.setData(data);
         click_fun_1();
 
         // setColorToGradiant(textView1);
