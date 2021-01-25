@@ -8,7 +8,6 @@ import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
-import android.graphics.Paint;
 import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -34,9 +33,9 @@ import java.util.ArrayList;
 
 public class MainActivity4 extends AppCompatActivity {
 
-    ImageView imageView1;
+    ImageView imageView1,imageView2;
 
-    TextView textView1,textView2,textView3;
+    TextView textView1,textView2,textView3,textView4;
 
     LineChart lineChart;
 
@@ -50,10 +49,12 @@ public class MainActivity4 extends AppCompatActivity {
         );
 
         imageView1 = findViewById(R.id.dashboard);
+        imageView2 = findViewById(R.id.image_1);
 
         textView1 = findViewById(R.id.text_1);
         textView2 = findViewById(R.id.text_2);
         textView3 = findViewById(R.id.dashboard_word);
+        textView4 = findViewById(R.id.text_3);
 
         lineChart = findViewById(R.id.line_chart);
 
@@ -101,7 +102,9 @@ public class MainActivity4 extends AppCompatActivity {
         LineData data = new LineData(dataSets);
 
         lineChart.setData(data);
+
         click_fun_1();
+        click_fun_2();
 
         // setColorToGradiant(textView1);
         // setColorToGradiant(textView2);
@@ -145,6 +148,25 @@ public class MainActivity4 extends AppCompatActivity {
                 pairs[25] = new Pair<View,String>(imageView1,"1_14.1");
                 pairs[26] = new Pair<View,String>(imageView1,"1_16.1");
                 pairs[27] = new Pair<View,String>(imageView1,"1_18.1");
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity4.this, pairs);
+
+                startActivity(intent,options.toBundle());
+            }
+        });
+    }
+
+    public void click_fun_2(){
+        imageView2.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity5.class);
+
+                Pair[] pairs = new Pair[4];
+                pairs[0] = new Pair<View,String>(imageView2,"3_1");
+                pairs[1] = new Pair<View,String>(imageView2,"3_2");
+                pairs[2] = new Pair<View,String>(imageView2,"3_3");
+                pairs[3] = new Pair<View,String>(imageView2,"3_4");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity4.this, pairs);
 
                 startActivity(intent,options.toBundle());

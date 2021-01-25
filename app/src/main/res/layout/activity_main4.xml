@@ -80,7 +80,7 @@
         android:transitionName="2_6"/>
 
     <TextView
-        android:id="@+id/text_4"
+        android:id="@+id/text_3"
         android:text="Add Data"
         android:textSize="36dp"
         android:textColor="@color/wit"
