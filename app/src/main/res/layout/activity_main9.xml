@@ -15,7 +15,7 @@
         android:layout_marginTop="75dp"
         android:layout_marginLeft="15dp"
         android:fontFamily="@font/roboto_slab"
-        android:text="D"
+        android:text="A"
         android:textSize="90dp"
         android:transitionName="7_1"
         android:textColor="@color/wit"/>
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="14dp"
         android:fontFamily="@font/roboto_slab"
-        android:text="rink"
+        android:text="ctivity"
         android:textColor="@color/wit"
         android:textSize="45dp"
         android:transitionName="7_2"
