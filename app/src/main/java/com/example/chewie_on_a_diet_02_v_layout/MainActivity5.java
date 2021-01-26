@@ -133,7 +133,7 @@ public class MainActivity5 extends AppCompatActivity {
         imageView4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(),MainActivity14.class);
                 startActivity(intent);
             }
         });

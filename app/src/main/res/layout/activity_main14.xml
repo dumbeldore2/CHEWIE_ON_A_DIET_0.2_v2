@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity13"
+    tools:context=".MainActivity14"
     android:background="@drawable/background_1">
 
     <TextView
@@ -27,9 +27,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="14dp"
         android:fontFamily="@font/roboto_slab"
-        android:text="drink object"
+        android:text="activity object"
         android:textColor="@color/wit"
-        android:textSize="64dp"
+        android:textSize="54dp"
         android:transitionName="2"
         app:layout_constraintTop_toBottomOf="@id/text_1"
         app:layout_constraintStart_toStartOf="@id/text_1" />
@@ -141,7 +141,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_slab"
-                    android:text="Maker"
+                    android:text="Calories"
                     android:textColor="@color/groen"
                     android:textSize="48dp"
                     android:transitionName="8"
@@ -156,104 +156,12 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/but_10"
                     android:gravity="center"
-                    android:hint="maker here"
+                    android:hint="Calories here"
                     android:textColor="@color/blauw"
                     android:textColorHint="@color/wit"
                     android:transitionName="11"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/image_3"
-                    app:layout_constraintEnd_toEndOf="parent"/>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraint_3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp">
-
-                <ImageView
-                    android:id="@+id/image_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/but_8"
-                    android:transitionName="3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/text_6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_slab"
-                    android:text="calories/100ml"
-                    android:textColor="@color/groen"
-                    android:textSize="46dp"
-                    android:transitionName="4"
-                    app:layout_constraintBottom_toBottomOf="@id/image_4"
-                    app:layout_constraintEnd_toEndOf="@id/image_4"
-                    app:layout_constraintStart_toStartOf="@id/image_4"
-                    app:layout_constraintTop_toTopOf="@id/image_4" />
-
-                <EditText
-                    android:id="@+id/edit_text_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/but_10"
-                    android:gravity="center"
-                    android:hint="calories/100ml here"
-                    android:textColor="@color/blauw"
-                    android:textColorHint="@color/wit"
-                    android:transitionName="7"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/image_4"
-                    app:layout_constraintEnd_toEndOf="parent"/>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraint_4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp">
-
-                <ImageView
-                    android:id="@+id/image_5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/but_8"
-                    android:transitionName="3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
-
-                <TextView
-                    android:id="@+id/text_7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_slab"
-                    android:text="size in ml's"
-                    android:textColor="@color/groen"
-                    android:textSize="48dp"
-                    android:transitionName="4"
-                    app:layout_constraintBottom_toBottomOf="@id/image_5"
-                    app:layout_constraintEnd_toEndOf="@id/image_5"
-                    app:layout_constraintStart_toStartOf="@id/image_5"
-                    app:layout_constraintTop_toTopOf="@id/image_5" />
-
-                <EditText
-                    android:id="@+id/edit_text_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/but_10"
-                    android:gravity="center"
-                    android:hint="size in ml's here"
-                    android:textColor="@color/blauw"
-                    android:textColorHint="@color/wit"
-                    android:transitionName="7"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/image_5"
                     app:layout_constraintEnd_toEndOf="parent"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -276,7 +184,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_slab"
-        android:text="Add Drink To Drinklist"
+        android:text="Add Activity To Activity"
         android:textSize="20dp"
         android:textColor="@color/wit"
         app:layout_constraintStart_toStartOf="@id/image_7"
@@ -299,11 +207,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_slab"
-        android:text="Add Drink To Today and Drinklist"
+        android:text="Add Activity To Today and Activitylist"
         android:textSize="20dp"
         android:textColor="@color/wit"
         app:layout_constraintStart_toStartOf="@id/image_8"
         app:layout_constraintEnd_toEndOf="@id/image_8"
         app:layout_constraintTop_toTopOf="@id/image_8"
         app:layout_constraintBottom_toBottomOf="@id/image_8"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
