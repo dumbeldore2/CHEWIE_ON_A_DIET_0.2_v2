@@ -31,11 +31,11 @@ public class MainActivity7 extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
 
-        imageView1 = findViewById(R.id.dashboard);
+        imageView1 = findViewById(R.id.image_1);
 
         textView1 = findViewById(R.id.text_1);
         textView2 = findViewById(R.id.text_2);
-        textView3 = findViewById(R.id.dashboard_word);
+        textView3 = findViewById(R.id.text_3);
 
         click_fun_1();
 
@@ -54,34 +54,34 @@ public class MainActivity7 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
 
                 Pair[] pairs = new Pair[28];
-                pairs[0] = new Pair<View,String>(imageView1,"1_1");
-                pairs[1] = new Pair<View,String>(imageView1,"1_2");
-                pairs[2] = new Pair<View,String>(imageView1,"1_3");
-                pairs[3] = new Pair<View,String>(imageView1,"1_4");
-                pairs[4] = new Pair<View,String>(imageView1,"1_5");
-                pairs[5] = new Pair<View,String>(imageView1,"1_6");
-                pairs[6] = new Pair<View,String>(imageView1,"1_7");
-                pairs[7] = new Pair<View,String>(imageView1,"1_8");
-                pairs[8] = new Pair<View,String>(imageView1,"1_9");
-                pairs[9] = new Pair<View,String>(imageView1,"1_10");
-                pairs[10] = new Pair<View,String>(imageView1,"1_11");
-                pairs[11] = new Pair<View,String>(imageView1,"1_12");
-                pairs[12] = new Pair<View,String>(imageView1,"1_13");
-                pairs[13] = new Pair<View,String>(imageView1,"1_14");
-                pairs[14] = new Pair<View,String>(imageView1,"1_15");
-                pairs[15] = new Pair<View,String>(imageView1,"1_16");
-                pairs[16] = new Pair<View,String>(imageView1,"1_17");
-                pairs[17] = new Pair<View,String>(imageView1,"1_18");
-                pairs[18] = new Pair<View,String>(imageView1,"1_19");
-                pairs[19] = new Pair<View,String>(imageView1,"1_2.1");
-                pairs[20] = new Pair<View,String>(imageView1,"1_4.1");
-                pairs[21] = new Pair<View,String>(imageView1,"1_6.1");
-                pairs[22] = new Pair<View,String>(imageView1,"1_8.1");
-                pairs[23] = new Pair<View,String>(imageView1,"1_10.1");
-                pairs[24] = new Pair<View,String>(imageView1,"1_12.1");
-                pairs[25] = new Pair<View,String>(imageView1,"1_14.1");
-                pairs[26] = new Pair<View,String>(imageView1,"1_16.1");
-                pairs[27] = new Pair<View,String>(imageView1,"1_18.1");
+                pairs[0] = new Pair<View,String>(textView3,"1_1");
+                pairs[1] = new Pair<View,String>(textView3,"1_2");
+                pairs[2] = new Pair<View,String>(textView3,"1_3");
+                pairs[3] = new Pair<View,String>(textView3,"1_4");
+                pairs[4] = new Pair<View,String>(textView3,"1_5");
+                pairs[5] = new Pair<View,String>(textView3,"1_6");
+                pairs[6] = new Pair<View,String>(textView3,"1_7");
+                pairs[7] = new Pair<View,String>(textView3,"1_8");
+                pairs[8] = new Pair<View,String>(textView3,"1_9");
+                pairs[9] = new Pair<View,String>(textView3,"1_10");
+                pairs[10] = new Pair<View,String>(textView3,"1_11");
+                pairs[11] = new Pair<View,String>(textView3,"1_12");
+                pairs[12] = new Pair<View,String>(textView3,"1_13");
+                pairs[13] = new Pair<View,String>(textView3,"1_14");
+                pairs[14] = new Pair<View,String>(textView3,"1_15");
+                pairs[15] = new Pair<View,String>(textView3,"1_16");
+                pairs[16] = new Pair<View,String>(textView3,"1_17");
+                pairs[17] = new Pair<View,String>(textView3,"1_18");
+                pairs[18] = new Pair<View,String>(textView3,"1_19");
+                pairs[19] = new Pair<View,String>(textView3,"1_2.1");
+                pairs[20] = new Pair<View,String>(textView3,"1_4.1");
+                pairs[21] = new Pair<View,String>(textView3,"1_6.1");
+                pairs[22] = new Pair<View,String>(textView3,"1_8.1");
+                pairs[23] = new Pair<View,String>(textView3,"1_10.1");
+                pairs[24] = new Pair<View,String>(textView3,"1_12.1");
+                pairs[25] = new Pair<View,String>(textView3,"1_14.1");
+                pairs[26] = new Pair<View,String>(textView3,"1_16.1");
+                pairs[27] = new Pair<View,String>(textView3,"1_18.1");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity7.this, pairs);
 
                 startActivity(intent,options.toBundle());

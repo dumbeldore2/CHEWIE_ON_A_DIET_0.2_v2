@@ -34,7 +34,7 @@
         app:layout_constraintStart_toEndOf="@id/text_1" />
 
     <ImageView
-        android:id="@+id/dashboard"
+        android:id="@+id/image_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,13 +45,13 @@
         android:transitionName="5_3"/>
 
     <TextView
-        android:id="@+id/dashboard_word"
+        android:id="@+id/text_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/dashboard"
-        app:layout_constraintEnd_toEndOf="@id/dashboard"
-        app:layout_constraintTop_toTopOf="@id/dashboard"
-        app:layout_constraintBottom_toBottomOf="@id/dashboard"
+        app:layout_constraintStart_toStartOf="@id/image_1"
+        app:layout_constraintEnd_toEndOf="@id/image_1"
+        app:layout_constraintTop_toTopOf="@id/image_1"
+        app:layout_constraintBottom_toBottomOf="@id/image_1"
         android:fontFamily="@font/roboto_slab"
         android:text="dashboard"
         android:textColor="@color/wit"
