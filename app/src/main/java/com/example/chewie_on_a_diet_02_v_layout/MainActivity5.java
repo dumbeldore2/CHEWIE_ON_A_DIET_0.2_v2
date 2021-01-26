@@ -3,6 +3,8 @@ package com.example.chewie_on_a_diet_02_v_layout;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Color;
@@ -16,6 +18,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -63,17 +66,19 @@ public class MainActivity5 extends AppCompatActivity {
     public void anime_fun_1(){
         animation = AnimationUtils.loadAnimation(this,R.anim.anim_1);
         imageView4.startAnimation(animation);
-
+        textView4.startAnimation(animation);
     }
 
     public void anime_fun_2(){
         animation = AnimationUtils.loadAnimation(this,R.anim.anim_1);
         imageView5.startAnimation(animation);
+        textView5.startAnimation(animation);
     }
 
     public void anime_fun_3(){
         animation = AnimationUtils.loadAnimation(this,R.anim.anim_1);
         imageView6.startAnimation(animation);
+        textView6.startAnimation(animation);
     }
     public void anime_fun_4(){
         animation = AnimationUtils.loadAnimation(this,R.anim.anim_1);
@@ -155,6 +160,29 @@ public class MainActivity5 extends AppCompatActivity {
         imageView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                System.out.println(imageView4.getX());
+                System.out.println(imageView5.getX());
+                System.out.println(imageView6.getX());
+
+                System.out.println(imageView6.getX() - imageView4.getX());
+
+                ObjectAnimator animatorX = ObjectAnimator.ofFloat(imageView4,"x",imageView6.getX());
+                ObjectAnimator animatorY = ObjectAnimator.ofFloat(imageView4,"y",imageView6.getY());
+                ObjectAnimator animatorX1 = ObjectAnimator.ofFloat(imageView6,"x",imageView5.getX());
+                ObjectAnimator animatorY1 = ObjectAnimator.ofFloat(imageView6,"y",imageView5.getY());
+                ObjectAnimator animatorX2 = ObjectAnimator.ofFloat(imageView5,"x",imageView4.getX());
+                ObjectAnimator animatorY2 = ObjectAnimator.ofFloat(imageView5,"y",imageView4.getY());
+                ObjectAnimator animatorX3 = ObjectAnimator.ofFloat(textView4,"x",textView6.getX());
+                ObjectAnimator animatorY3 = ObjectAnimator.ofFloat(textView4,"y",textView6.getY());
+                ObjectAnimator animatorX4 = ObjectAnimator.ofFloat(textView6,"x",textView5.getX());
+                ObjectAnimator animatorY4 = ObjectAnimator.ofFloat(textView6,"y",textView5.getY());
+                ObjectAnimator animatorX5 = ObjectAnimator.ofFloat(textView5,"x",textView4.getX());
+                ObjectAnimator animatorY5 = ObjectAnimator.ofFloat(textView5,"y",textView4.getY());
+
+                AnimatorSet animatorSet = new AnimatorSet();
+                animatorSet.playTogether(animatorX,animatorY,animatorX1,animatorY1,animatorX2,animatorY2,animatorX3,animatorY3,animatorX4,animatorY4,animatorX5,animatorY5);
+                animatorSet.start();
+
                 anime_fun_1();
                 anime_fun_2();
                 anime_fun_3();
