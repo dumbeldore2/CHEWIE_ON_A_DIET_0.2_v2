@@ -61,22 +61,22 @@ public class MainActivity5 extends AppCompatActivity {
     }
 
     public void anime_fun_1(){
-        animation = AnimationUtils.loadAnimation(this,R.anim.rotate_activity_5_clock);
+        animation = AnimationUtils.loadAnimation(this,R.anim.anim_1);
         imageView4.startAnimation(animation);
 
     }
 
     public void anime_fun_2(){
-        animation = AnimationUtils.loadAnimation(this,R.anim.rotate_activity_5_clock);
+        animation = AnimationUtils.loadAnimation(this,R.anim.anim_1);
         imageView5.startAnimation(animation);
     }
 
     public void anime_fun_3(){
-        animation = AnimationUtils.loadAnimation(this,R.anim.rotate_activity_5_clock);
+        animation = AnimationUtils.loadAnimation(this,R.anim.anim_1);
         imageView6.startAnimation(animation);
     }
     public void anime_fun_4(){
-        animation = AnimationUtils.loadAnimation(this,R.anim.rotate_activity_5_clock);
+        animation = AnimationUtils.loadAnimation(this,R.anim.anim_1);
         imageView2.startAnimation(animation);
     }
 
