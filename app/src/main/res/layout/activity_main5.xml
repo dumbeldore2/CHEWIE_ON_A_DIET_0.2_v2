@@ -35,7 +35,7 @@
         app:layout_constraintStart_toEndOf="@id/text_1" />
 
     <ImageView
-        android:id="@+id/dashboard"
+        android:id="@+id/image_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,16 +46,117 @@
         android:transitionName="3_3"/>
 
     <TextView
-        android:id="@+id/dashboard_word"
+        android:id="@+id/text_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/dashboard"
-        app:layout_constraintEnd_toEndOf="@id/dashboard"
-        app:layout_constraintTop_toTopOf="@id/dashboard"
-        app:layout_constraintBottom_toBottomOf="@id/dashboard"
+        app:layout_constraintStart_toStartOf="@id/image_1"
+        app:layout_constraintEnd_toEndOf="@id/image_1"
+        app:layout_constraintTop_toTopOf="@id/image_1"
+        app:layout_constraintBottom_toBottomOf="@id/image_1"
         android:fontFamily="@font/roboto_slab"
         android:text="dashboard"
         android:textColor="@color/wit"
         android:textSize="14dp"
         android:transitionName="3_4"/>
+
+    <ImageView
+        android:id="@+id/image_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/circle_2_1"
+        android:transitionName="3_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_1" />
+
+    <ImageView
+        android:id="@+id/image_3"
+        android:layout_width="wrap_content"
+        android:layout_height="206dp"
+        android:src="@drawable/pyramide_2"
+        android:transitionName="3_6"
+        android:layout_marginTop="65dp"
+        app:layout_constraintEnd_toEndOf="@id/image_2"
+        app:layout_constraintStart_toStartOf="@id/image_2"
+        app:layout_constraintTop_toTopOf="@id/image_2"/>
+
+    <ImageView
+        android:id="@+id/image_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circle_3"
+        android:transitionName="3_7"
+        app:layout_constraintBottom_toTopOf="@+id/image_3"
+        app:layout_constraintEnd_toEndOf="@id/image_3"
+        app:layout_constraintStart_toStartOf="@id/image_3"
+        app:layout_constraintTop_toTopOf="@+id/image_3" />
+
+    <ImageView
+        android:id="@+id/image_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circle_3"
+        android:transitionName="3_8"
+        app:layout_constraintBottom_toBottomOf="@+id/image_3"
+        app:layout_constraintEnd_toStartOf="@+id/image_3"
+        app:layout_constraintStart_toStartOf="@+id/image_3"
+        app:layout_constraintTop_toBottomOf="@+id/image_3" />
+
+    <ImageView
+        android:id="@+id/image_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circle_3"
+        android:transitionName="3_9"
+        app:layout_constraintBottom_toBottomOf="@+id/image_3"
+        app:layout_constraintEnd_toEndOf="@+id/image_3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/image_3"
+        app:layout_constraintTop_toBottomOf="@+id/image_3"
+        app:layout_constraintVertical_bias="0.792" />
+
+    <TextView
+        android:id="@+id/text_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_slab"
+        android:text="Add Food"
+        android:textColor="@color/wit"
+        android:textSize="20dp"
+        android:transitionName="3_10"
+        app:layout_constraintBottom_toBottomOf="@+id/image_6"
+        app:layout_constraintEnd_toEndOf="@+id/image_6"
+        app:layout_constraintStart_toStartOf="@+id/image_6"
+        app:layout_constraintTop_toTopOf="@+id/image_6" />
+
+    <TextView
+        android:id="@+id/text_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/wit"
+        android:fontFamily="@font/roboto_slab"
+        android:text="Add Drink"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@id/image_5"
+        app:layout_constraintEnd_toEndOf="@id/image_5"
+        app:layout_constraintTop_toTopOf="@id/image_5"
+        app:layout_constraintBottom_toBottomOf="@id/image_5"
+        android:transitionName="3_11"/>
+
+    <TextView
+        android:id="@+id/text_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_slab"
+        android:text="Add Activity"
+        android:textColor="@color/wit"
+        android:textSize="20dp"
+        android:transitionName="3_12"
+        app:layout_constraintBottom_toBottomOf="@+id/image_4"
+        app:layout_constraintEnd_toEndOf="@+id/image_4"
+        app:layout_constraintStart_toStartOf="@+id/image_4"
+        app:layout_constraintTop_toTopOf="@+id/image_4" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

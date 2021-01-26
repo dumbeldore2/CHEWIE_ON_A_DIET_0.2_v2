@@ -14,14 +14,18 @@ import android.text.TextPaint;
 import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity5 extends AppCompatActivity {
 
-    ImageView imageView1;
+    ImageView imageView1,imageView2,imageView3,imageView4,imageView5,imageView6;
 
-    TextView textView1,textView2,textView3;
+    TextView textView1,textView2,textView3,textView4,textView5,textView6;
+
+    Animation animation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,19 +35,50 @@ public class MainActivity5 extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
 
-        imageView1 = findViewById(R.id.dashboard);
+        imageView1 = findViewById(R.id.image_1);
+        imageView2 = findViewById(R.id.image_2);
+        imageView3 = findViewById(R.id.image_3);
+        imageView4 = findViewById(R.id.image_4);
+        imageView5 = findViewById(R.id.image_5);
+        imageView6 = findViewById(R.id.image_6);
 
         textView1 = findViewById(R.id.text_1);
         textView2 = findViewById(R.id.text_2);
-        textView3 = findViewById(R.id.dashboard_word);
+        textView3 = findViewById(R.id.text_3);
+        textView4 = findViewById(R.id.text_4);
+        textView5 = findViewById(R.id.text_5);
+        textView6 = findViewById(R.id.text_6);
 
         click_fun_1();
+        click_fun_2();
+        click_fun_3();
+        click_fun_4();
+        click_fun_5();
 
         // setColorToGradiant(textView1);
         // setColorToGradiant(textView2);
         // setColorToGradiant(textView3);
     }
 
+    public void anime_fun_1(){
+        animation = AnimationUtils.loadAnimation(this,R.anim.rotate_activity_5_clock);
+        imageView4.startAnimation(animation);
+
+    }
+
+    public void anime_fun_2(){
+        animation = AnimationUtils.loadAnimation(this,R.anim.rotate_activity_5_clock);
+        imageView5.startAnimation(animation);
+    }
+
+    public void anime_fun_3(){
+        animation = AnimationUtils.loadAnimation(this,R.anim.rotate_activity_5_clock);
+        imageView6.startAnimation(animation);
+    }
+    public void anime_fun_4(){
+        animation = AnimationUtils.loadAnimation(this,R.anim.rotate_activity_5_clock);
+        imageView2.startAnimation(animation);
+    }
 
 
     public void click_fun_1(){
@@ -85,6 +120,45 @@ public class MainActivity5 extends AppCompatActivity {
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity5.this, pairs);
 
                 startActivity(intent,options.toBundle());
+            }
+        });
+    }
+
+    public void click_fun_2(){
+        imageView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    public void click_fun_3(){
+        imageView5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    public void click_fun_4(){
+        imageView6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+    public void click_fun_5(){
+        imageView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                anime_fun_1();
+                anime_fun_2();
+                anime_fun_3();
+                anime_fun_4();
             }
         });
     }
