@@ -64,9 +64,10 @@
         <androidx.core.widget.NestedScrollView
             android:id="@+id/nestle"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="300dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_2"
+            app:layout_constraintBottom_toTopOf="@id/image_7"
             android:layout_margin="40dp">
 
             <LinearLayout
@@ -268,8 +269,8 @@
         android:src="@drawable/but_5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nestle"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintBottom_toTopOf="@id/image_8"
+        android:layout_marginBottom="10dp"/>
 
     <TextView
         android:id="@+id/text_8"
@@ -291,8 +292,8 @@
         android:src="@drawable/but_5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image_7"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <TextView
         android:id="@+id/text_9"
