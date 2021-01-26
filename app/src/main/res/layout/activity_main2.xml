@@ -16,7 +16,7 @@
         android:text="DASHBOARD"
         android:textColor="@color/wit"
         android:textSize="50dp"
-        android:transitionName="1_1"
+        android:transitionName="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,7 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titel_page_2"
         android:layout_marginLeft="30dp"
-        android:transitionName="1_2"/>
+        android:transitionName="2"/>
 
     <TextView
         android:id="@+id/rectangle_1_page_2_letter"
@@ -40,7 +40,7 @@
         android:text="H"
         android:textColor="@color/wit"
         android:textSize="90dp"
-        android:transitionName="1_2.1"
+        android:transitionName="2.1"
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="@id/rectangle_1_page_2"
         app:layout_constraintEnd_toEndOf="@id/rectangle_1_page_2"
@@ -59,7 +59,7 @@
         android:text="HOME"
         android:textColor="@color/wit"
         android:textSize="25dp"
-        android:transitionName="1_3"/>
+        android:transitionName="3"/>
 
     <ImageView
         android:id="@+id/rectangle_2_page_2"
@@ -70,7 +70,7 @@
         android:layout_marginTop="125dp"
         android:layout_marginRight="30dp"
         android:src="@drawable/rectangle"
-        android:transitionName="1_4"/>
+        android:transitionName="4"/>
 
     <TextView
         android:id="@+id/rectangle_2_page_2_letter"
@@ -80,7 +80,7 @@
         android:text="+"
         android:textColor="@color/wit"
         android:textSize="90dp"
-        android:transitionName="1_4.1"
+        android:transitionName="4.1"
         app:layout_constraintBottom_toBottomOf="@id/rectangle_2_page_2"
         app:layout_constraintEnd_toEndOf="@id/rectangle_2_page_2"
         app:layout_constraintStart_toStartOf="@id/rectangle_2_page_2"
@@ -97,7 +97,7 @@
         android:text="ADD"
         android:textColor="@color/wit"
         android:textSize="25dp"
-        android:transitionName="1_5"/>
+        android:transitionName="5"/>
 
 
     <ImageView
@@ -109,7 +109,7 @@
         app:layout_constraintTop_toBottomOf="@id/titel_page_2"
         android:layout_marginTop="125dp"
         android:src="@drawable/rectangle"
-        android:transitionName="1_6"/>
+        android:transitionName="6"/>
 
     <TextView
         android:id="@+id/rectangle_3_page_2_letter"
@@ -119,7 +119,7 @@
         android:text="T"
         android:textColor="@color/wit"
         android:textSize="90dp"
-        android:transitionName="1_6.1"
+        android:transitionName="6.1"
         app:layout_constraintBottom_toBottomOf="@id/rectangle_3_page_2"
         app:layout_constraintEnd_toEndOf="@id/rectangle_3_page_2"
         app:layout_constraintStart_toStartOf="@id/rectangle_3_page_2"
@@ -137,7 +137,7 @@
         android:text="TODAY"
         android:textColor="@color/wit"
         android:textSize="25dp"
-        android:transitionName="1_7"/>
+        android:transitionName="7"/>
 
 
     <ImageView
@@ -149,7 +149,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rectangle_1_page_2"
         android:layout_marginLeft="30dp"
-        android:transitionName="1_8"/>
+        android:transitionName="8"/>
 
     <TextView
         android:id="@+id/rectangle_4_page_2_letter"
@@ -162,7 +162,7 @@
         android:fontFamily="@font/roboto_slab"
         android:text="W"
         android:textSize="90dp"
-        android:transitionName="1_8.1"
+        android:transitionName="8.1"
         android:textColor="@color/wit"/>
 
     <TextView
@@ -177,7 +177,7 @@
         android:text="WEIGHT"
         android:textColor="@color/wit"
         android:textSize="25dp"
-        android:transitionName="1_9"/>
+        android:transitionName="9"/>
 
 
     <ImageView
@@ -189,7 +189,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginRight="30dp"
         android:src="@drawable/rectangle"
-        android:transitionName="1_10"/>
+        android:transitionName="10"/>
 
     <TextView
         android:id="@+id/rectangle_5_page_2_letter"
@@ -202,7 +202,7 @@
         android:fontFamily="@font/roboto_slab"
         android:text="D"
         android:textSize="90dp"
-        android:transitionName="1_10.1"
+        android:transitionName="10.1"
         android:textColor="@color/wit"/>
 
     <TextView
@@ -217,7 +217,7 @@
         android:text="DRINK"
         android:textColor="@color/wit"
         android:textSize="25dp"
-        android:transitionName="1_11"/>
+        android:transitionName="11"/>
 
     <ImageView
         android:id="@+id/rectangle_6_page_2"
@@ -228,7 +228,7 @@
         app:layout_constraintTop_toBottomOf="@id/rectangle_3_page_2"
         android:layout_marginTop="50dp"
         android:src="@drawable/rectangle"
-        android:transitionName="1_12"/>
+        android:transitionName="12"/>
 
     <TextView
         android:id="@+id/rectangle_6_page_2_letter"
@@ -241,7 +241,7 @@
         android:fontFamily="@font/roboto_slab"
         android:text="F"
         android:textSize="90dp"
-        android:transitionName="1_12.1"
+        android:transitionName="12.1"
         android:textColor="@color/wit"/>
 
     <TextView
@@ -256,7 +256,7 @@
         android:text="FOOD"
         android:textColor="@color/wit"
         android:textSize="25dp"
-        android:transitionName="1_13"/>
+        android:transitionName="13"/>
 
     <ImageView
         android:id="@+id/rectangle_7_page_2"
@@ -267,7 +267,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rectangle_4_page_2"
         android:layout_marginLeft="30dp"
-        android:transitionName="1_14"/>
+        android:transitionName="14"/>
 
     <TextView
         android:id="@+id/rectangle_7_page_2_letter"
@@ -280,7 +280,7 @@
         android:fontFamily="@font/roboto_slab"
         android:text="A"
         android:textSize="90dp"
-        android:transitionName="1_14.1"
+        android:transitionName="14.1"
         android:textColor="@color/wit"/>
 
     <TextView
@@ -295,7 +295,7 @@
         android:text="ACTIVITY"
         android:textColor="@color/wit"
         android:textSize="20dp"
-        android:transitionName="1_15"/>
+        android:transitionName="15"/>
 
     <ImageView
         android:id="@+id/rectangle_8_page_2"
@@ -306,7 +306,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginRight="30dp"
         android:src="@drawable/rectangle"
-        android:transitionName="1_16"/>
+        android:transitionName="16"/>
 
     <TextView
         android:id="@+id/rectangle_8_page_2_letter"
@@ -319,7 +319,7 @@
         android:fontFamily="@font/roboto_slab"
         android:text="S"
         android:textSize="90dp"
-        android:transitionName="1_16.1"
+        android:transitionName="16.1"
         android:textColor="@color/wit"/>
     <TextView
         android:id="@+id/rectangle_8_page_2_text"
@@ -333,7 +333,7 @@
         android:text="SETTINGS"
         android:textColor="@color/wit"
         android:textSize="20dp"
-        android:transitionName="1_17"/>
+        android:transitionName="17"/>
     <ImageView
         android:id="@+id/rectangle_9_page_2"
         android:layout_width="wrap_content"
@@ -343,7 +343,7 @@
         app:layout_constraintTop_toBottomOf="@id/rectangle_6_page_2"
         android:layout_marginTop="50dp"
         android:src="@drawable/rectangle"
-        android:transitionName="1_18"/>
+        android:transitionName="18"/>
     <TextView
         android:id="@+id/rectangle_9_page_2_letter"
         android:layout_width="wrap_content"
@@ -355,7 +355,7 @@
         android:fontFamily="@font/roboto_slab"
         android:text="#"
         android:textSize="90dp"
-        android:transitionName="1_18.1"
+        android:transitionName="18.1"
         android:textColor="@color/wit"/>
     <TextView
         android:id="@+id/rectangle_9_page_2_text"
@@ -369,6 +369,6 @@
         android:text="ACCOUNT"
         android:textColor="@color/wit"
         android:textSize="20dp"
-        android:transitionName="1_19"/>
+        android:transitionName="19"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

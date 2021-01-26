@@ -18,7 +18,7 @@
         android:fontFamily="@font/roboto_slab"
         android:text="T"
         android:textSize="90dp"
-        android:transitionName="2_1"
+        android:transitionName="1"
         android:textColor="@color/wit"/>
 
     <TextView
@@ -30,7 +30,7 @@
         android:text="oday"
         android:textColor="@color/wit"
         android:textSize="45dp"
-        android:transitionName="2_2"
+        android:transitionName="2"
         app:layout_constraintBottom_toBottomOf="@id/text_1"
         app:layout_constraintStart_toEndOf="@id/text_1" />
 
@@ -43,7 +43,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginRight="25dp"
         android:src="@drawable/circle_1"
-        android:transitionName="2_3"/>
+        android:transitionName="3"/>
 
     <TextView
         android:id="@+id/text_3"
@@ -57,7 +57,7 @@
         android:text="dashboard"
         android:textColor="@color/wit"
         android:textSize="14dp"
-        android:transitionName="2_4"/>
+        android:transitionName="4"/>
     
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/line_chart"
@@ -66,7 +66,7 @@
         android:layout_height="400dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_1"
-        android:transitionName="2_5"/>
+        android:transitionName="5"/>
 
     <ImageView
         android:id="@+id/image_2"
@@ -77,7 +77,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/line_chart"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:transitionName="2_6"/>
+        android:transitionName="6"/>
 
     <TextView
         android:id="@+id/text_4"
@@ -91,5 +91,5 @@
         app:layout_constraintEnd_toEndOf="@id/image_2"
         app:layout_constraintTop_toTopOf="@id/image_2"
         app:layout_constraintBottom_toBottomOf="@id/image_2"
-        android:transitionName="2_7"/>
+        android:transitionName="7"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,7 +17,7 @@
         android:fontFamily="@font/roboto_slab"
         android:text="F"
         android:textSize="90dp"
-        android:transitionName="5_1"
+        android:transitionName="1"
         android:textColor="@color/wit"/>
 
     <TextView
@@ -29,7 +29,7 @@
         android:text="ood"
         android:textColor="@color/wit"
         android:textSize="45dp"
-        android:transitionName="5_2"
+        android:transitionName="2"
         app:layout_constraintBottom_toBottomOf="@id/text_1"
         app:layout_constraintStart_toEndOf="@id/text_1" />
 
@@ -42,7 +42,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginRight="25dp"
         android:src="@drawable/circle_1"
-        android:transitionName="5_3"/>
+        android:transitionName="3"/>
 
     <TextView
         android:id="@+id/text_3"
@@ -56,5 +56,5 @@
         android:text="dashboard"
         android:textColor="@color/wit"
         android:textSize="14dp"
-        android:transitionName="5_4"/>
+        android:transitionName="4"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

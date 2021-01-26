@@ -18,7 +18,7 @@
         android:fontFamily="@font/roboto_slab"
         android:text="A"
         android:textSize="90dp"
-        android:transitionName="3_1"
+        android:transitionName="1"
         android:textColor="@color/wit"/>
 
     <TextView
@@ -30,7 +30,7 @@
         android:text="dd"
         android:textColor="@color/wit"
         android:textSize="45dp"
-        android:transitionName="3_2"
+        android:transitionName="2"
         app:layout_constraintBottom_toBottomOf="@id/text_1"
         app:layout_constraintStart_toEndOf="@id/text_1" />
 
@@ -43,7 +43,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginRight="25dp"
         android:src="@drawable/circle_1"
-        android:transitionName="3_3"/>
+        android:transitionName="3"/>
 
     <TextView
         android:id="@+id/text_3"
@@ -57,7 +57,7 @@
         android:text="dashboard"
         android:textColor="@color/wit"
         android:textSize="14dp"
-        android:transitionName="3_4"/>
+        android:transitionName="4"/>
 
     <ImageView
         android:id="@+id/image_2"
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:src="@drawable/circle_2_1"
-        android:transitionName="3_5"
+        android:transitionName="5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="206dp"
         android:src="@drawable/pyramide_2"
-        android:transitionName="3_6"
+        android:transitionName="6"
         android:layout_marginTop="65dp"
         app:layout_constraintEnd_toEndOf="@id/image_2"
         app:layout_constraintStart_toStartOf="@id/image_2"
@@ -87,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/circle_3"
-        android:transitionName="3_7"
+        android:transitionName="7"
         app:layout_constraintBottom_toTopOf="@+id/image_3"
         app:layout_constraintEnd_toEndOf="@id/image_3"
         app:layout_constraintStart_toStartOf="@id/image_3"
@@ -98,7 +98,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/circle_3"
-        android:transitionName="3_8"
+        android:transitionName="8"
         app:layout_constraintBottom_toBottomOf="@+id/image_3"
         app:layout_constraintEnd_toStartOf="@+id/image_3"
         app:layout_constraintStart_toStartOf="@+id/image_3"
@@ -109,7 +109,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/circle_3"
-        android:transitionName="3_9"
+        android:transitionName="9"
         app:layout_constraintBottom_toBottomOf="@+id/image_3"
         app:layout_constraintEnd_toEndOf="@+id/image_3"
         app:layout_constraintHorizontal_bias="1.0"
@@ -118,14 +118,14 @@
         app:layout_constraintVertical_bias="0.792" />
 
     <TextView
-        android:id="@+id/text_4"
+        android:id="@+id/text_6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_slab"
         android:text="Add Food"
         android:textColor="@color/wit"
         android:textSize="18dp"
-        android:transitionName="3_10"
+        android:transitionName="10"
         app:layout_constraintBottom_toBottomOf="@+id/image_6"
         app:layout_constraintEnd_toEndOf="@+id/image_6"
         app:layout_constraintStart_toStartOf="@+id/image_6"
@@ -143,17 +143,17 @@
         app:layout_constraintEnd_toEndOf="@id/image_5"
         app:layout_constraintTop_toTopOf="@id/image_5"
         app:layout_constraintBottom_toBottomOf="@id/image_5"
-        android:transitionName="3_11"/>
+        android:transitionName="11"/>
 
     <TextView
-        android:id="@+id/text_6"
+        android:id="@+id/text_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_slab"
         android:text="Add Activity"
         android:textColor="@color/wit"
         android:textSize="18dp"
-        android:transitionName="3_12"
+        android:transitionName="12"
         app:layout_constraintBottom_toBottomOf="@+id/image_4"
         app:layout_constraintEnd_toEndOf="@+id/image_4"
         app:layout_constraintStart_toStartOf="@+id/image_4"

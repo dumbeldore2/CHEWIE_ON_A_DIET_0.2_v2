@@ -101,11 +101,11 @@ public class MainActivity2 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),MainActivity3.class);
 
                 Pair[] pairs = new Pair[5];
-                pairs[0] = new Pair<View,String>(textView2,"1_1");
-                pairs[1] = new Pair<View,String>(textView2,"1_2");
-                pairs[2] = new Pair<View,String>(textView2,"1_3");
-                pairs[3] = new Pair<View,String>(textView2,"1_4");
-                pairs[4] = new Pair<View,String>(textView2,"1_5");
+                pairs[0] = new Pair<View,String>(textView2,"1");
+                pairs[1] = new Pair<View,String>(textView2,"2");
+                pairs[2] = new Pair<View,String>(textView2,"3");
+                pairs[3] = new Pair<View,String>(textView2,"4");
+                pairs[4] = new Pair<View,String>(textView2,"5");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
 
                 startActivity(intent,options.toBundle());
@@ -121,13 +121,13 @@ public class MainActivity2 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),MainActivity4.class);
 
                 Pair[] pairs = new Pair[7];
-                pairs[0] = new Pair<View,String>(textView4,"2_1");
-                pairs[1] = new Pair<View,String>(textView4,"2_2");
-                pairs[2] = new Pair<View,String>(textView4,"2_3");
-                pairs[3] = new Pair<View,String>(textView4,"2_4");
-                pairs[4] = new Pair<View,String>(textView4,"2_5");
-                pairs[5] = new Pair<View,String>(textView4,"2_6");
-                pairs[6] = new Pair<View,String>(textView4,"2_7");
+                pairs[0] = new Pair<View,String>(textView4,"1");
+                pairs[1] = new Pair<View,String>(textView4,"2");
+                pairs[2] = new Pair<View,String>(textView4,"3");
+                pairs[3] = new Pair<View,String>(textView4,"4");
+                pairs[4] = new Pair<View,String>(textView4,"5");
+                pairs[5] = new Pair<View,String>(textView4,"6");
+                pairs[6] = new Pair<View,String>(textView4,"7");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
 
                 startActivity(intent,options.toBundle());
@@ -142,18 +142,18 @@ public class MainActivity2 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),MainActivity5.class);
 
                 Pair[] pairs = new Pair[12];
-                pairs[0] = new Pair<View,String>(textView3,"3_1");
-                pairs[1] = new Pair<View,String>(textView3,"3_2");
-                pairs[2] = new Pair<View,String>(textView3,"3_3");
-                pairs[3] = new Pair<View,String>(textView3,"3_4");
-                pairs[4] = new Pair<View,String>(textView3,"3_5");
-                pairs[5] = new Pair<View,String>(textView3,"3_6");
-                pairs[6] = new Pair<View,String>(textView3,"3_7");
-                pairs[7] = new Pair<View,String>(textView3,"3_8");
-                pairs[8] = new Pair<View,String>(textView3,"3_9");
-                pairs[9] = new Pair<View,String>(textView3,"3_10");
-                pairs[10] = new Pair<View,String>(textView3,"3_11");
-                pairs[11] = new Pair<View,String>(textView3,"3_12");
+                pairs[0] = new Pair<View,String>(textView3,"1");
+                pairs[1] = new Pair<View,String>(textView3,"2");
+                pairs[2] = new Pair<View,String>(textView3,"3");
+                pairs[3] = new Pair<View,String>(textView3,"4");
+                pairs[4] = new Pair<View,String>(textView3,"5");
+                pairs[5] = new Pair<View,String>(textView3,"6");
+                pairs[6] = new Pair<View,String>(textView3,"7");
+                pairs[7] = new Pair<View,String>(textView3,"8");
+                pairs[8] = new Pair<View,String>(textView3,"9");
+                pairs[9] = new Pair<View,String>(textView3,"10");
+                pairs[10] = new Pair<View,String>(textView3,"11");
+                pairs[11] = new Pair<View,String>(textView3,"12");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
 
                 startActivity(intent,options.toBundle());
@@ -168,10 +168,10 @@ public class MainActivity2 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),MainActivity6.class);
 
                 Pair[] pairs = new Pair[4];
-                pairs[0] = new Pair<View,String>(textView5,"4_1");
-                pairs[1] = new Pair<View,String>(textView5,"4_2");
-                pairs[2] = new Pair<View,String>(textView5,"4_3");
-                pairs[3] = new Pair<View,String>(textView5,"4_4");
+                pairs[0] = new Pair<View,String>(textView5,"1");
+                pairs[1] = new Pair<View,String>(textView5,"2");
+                pairs[2] = new Pair<View,String>(textView5,"3");
+                pairs[3] = new Pair<View,String>(textView5,"4");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
 
                 startActivity(intent,options.toBundle());
@@ -186,10 +186,10 @@ public class MainActivity2 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),MainActivity7.class);
 
                 Pair[] pairs = new Pair[4];
-                pairs[0] = new Pair<View,String>(textView7,"5_1");
-                pairs[1] = new Pair<View,String>(textView7,"5_2");
-                pairs[2] = new Pair<View,String>(textView7,"5_3");
-                pairs[3] = new Pair<View,String>(textView7,"5_4");
+                pairs[0] = new Pair<View,String>(textView7,"1");
+                pairs[1] = new Pair<View,String>(textView7,"2");
+                pairs[2] = new Pair<View,String>(textView7,"3");
+                pairs[3] = new Pair<View,String>(textView7,"4");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
 
                 startActivity(intent,options.toBundle());
@@ -204,10 +204,10 @@ public class MainActivity2 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),MainActivity8.class);
 
                 Pair[] pairs = new Pair[4];
-                pairs[0] = new Pair<View,String>(textView6,"6_1");
-                pairs[1] = new Pair<View,String>(textView6,"6_2");
-                pairs[2] = new Pair<View,String>(textView6,"6_3");
-                pairs[3] = new Pair<View,String>(textView6,"6_4");
+                pairs[0] = new Pair<View,String>(textView6,"1");
+                pairs[1] = new Pair<View,String>(textView6,"2");
+                pairs[2] = new Pair<View,String>(textView6,"3");
+                pairs[3] = new Pair<View,String>(textView6,"4");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
 
                 startActivity(intent,options.toBundle());
@@ -222,10 +222,10 @@ public class MainActivity2 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),MainActivity9.class);
 
                 Pair[] pairs = new Pair[4];
-                pairs[0] = new Pair<View,String>(textView8,"7_1");
-                pairs[1] = new Pair<View,String>(textView8,"7_2");
-                pairs[2] = new Pair<View,String>(textView8,"7_3");
-                pairs[3] = new Pair<View,String>(textView8,"7_4");
+                pairs[0] = new Pair<View,String>(textView8,"1");
+                pairs[1] = new Pair<View,String>(textView8,"2");
+                pairs[2] = new Pair<View,String>(textView8,"3");
+                pairs[3] = new Pair<View,String>(textView8,"4");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
 
                 startActivity(intent,options.toBundle());
@@ -240,10 +240,10 @@ public class MainActivity2 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),MainActivity10.class);
 
                 Pair[] pairs = new Pair[4];
-                pairs[0] = new Pair<View,String>(textView10,"8_1");
-                pairs[1] = new Pair<View,String>(textView10,"8_2");
-                pairs[2] = new Pair<View,String>(textView10,"8_3");
-                pairs[3] = new Pair<View,String>(textView10,"8_4");
+                pairs[0] = new Pair<View,String>(textView10,"1");
+                pairs[1] = new Pair<View,String>(textView10,"2");
+                pairs[2] = new Pair<View,String>(textView10,"3");
+                pairs[3] = new Pair<View,String>(textView10,"4");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
 
                 startActivity(intent,options.toBundle());
@@ -258,10 +258,10 @@ public class MainActivity2 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),MainActivity11.class);
 
                 Pair[] pairs = new Pair[4];
-                pairs[0] = new Pair<View,String>(textView9,"9_1");
-                pairs[1] = new Pair<View,String>(textView9,"9_2");
-                pairs[2] = new Pair<View,String>(textView9,"9_3");
-                pairs[3] = new Pair<View,String>(textView9,"9_4");
+                pairs[0] = new Pair<View,String>(textView9,"1");
+                pairs[1] = new Pair<View,String>(textView9,"2");
+                pairs[2] = new Pair<View,String>(textView9,"3");
+                pairs[3] = new Pair<View,String>(textView9,"4");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
 
                 startActivity(intent,options.toBundle());
