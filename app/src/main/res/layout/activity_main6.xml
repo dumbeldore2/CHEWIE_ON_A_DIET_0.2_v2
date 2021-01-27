@@ -58,4 +58,77 @@
         android:textColor="@color/wit"
         android:textSize="14dp"
         android:transitionName="4"/>
+    <TextView
+        android:id="@+id/text_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/text_1"
+        app:layout_constraintTop_toBottomOf="@id/text_2"
+        android:fontFamily="@font/roboto_slab"
+        android:text="Latest data : 100kg"
+        android:textColor="@color/blauw"
+        android:textSize="36dp"
+        android:transitionName="5"/>
+    <TextView
+        android:id="@+id/text_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/text_1"
+        app:layout_constraintTop_toBottomOf="@id/text_4"
+        android:fontFamily="@font/roboto_slab"
+        android:text="doel : 100kg"
+        android:textColor="@color/blauw"
+        android:textSize="36dp"
+        android:transitionName="6"/>
+    <ImageView
+        android:id="@+id/image_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_5"
+        android:src="@drawable/bar_1"
+        android:transitionName="7"/>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_2"
+        android:orientation="vertical"
+        android:layout_margin="30dp"
+        android:transitionName="8">
+        <ListView
+            android:id="@+id/listview_1"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/but_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        android:transitionName="9"/>
+
+    <TextView
+        android:id="@+id/text_6"
+        android:text="Add Data"
+        android:textSize="36dp"
+        android:textColor="@color/wit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_slab"
+        app:layout_constraintStart_toStartOf="@id/image_3"
+        app:layout_constraintEnd_toEndOf="@id/image_3"
+        app:layout_constraintTop_toTopOf="@id/image_3"
+        app:layout_constraintBottom_toBottomOf="@id/image_3"
+        android:transitionName="10"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/image_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/but_13" />
+
+    <TextView
+        android:id="@+id/text_listvieuw_bar_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datum"
+        android:textColor="@color/wit"
+        android:textSize="14dp"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@id/image_listview"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/text_listvieuw_bar_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kilo"
+        android:textColor="@color/wit"
+        android:textSize="25dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/text_listvieuw_bar_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+kilo"
+        android:textColor="@color/wit"
+        android:textSize="25dp"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@id/image_listview"
+        android:layout_marginRight="10dp"/>
+</RelativeLayout>

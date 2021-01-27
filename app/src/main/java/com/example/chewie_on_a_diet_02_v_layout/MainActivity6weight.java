@@ -15,6 +15,7 @@ import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity6weight extends AppCompatActivity {
@@ -22,6 +23,13 @@ public class MainActivity6weight extends AppCompatActivity {
     ImageView imageView1;
 
     TextView textView1,textView2,textView3;
+
+    ListView listView;
+
+    MainActivity6weightBar mainActivity6weightBar;
+    String data[] = {"15 Oktober 2020","15 Oktober 2010","15 Oktober 2010","15 Oktober 2010"};
+    String data2[] = {"59kg","59kg","59kg","59kg"};
+    String data3[] = {"-5kg","-15kg","-19kg","-15kg"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +46,10 @@ public class MainActivity6weight extends AppCompatActivity {
         textView2 = findViewById(R.id.text_2);
         textView3 = findViewById(R.id.text_3);
 
+        listView = findViewById(R.id.listview_1);
+
+        mainActivity6weightBar = new MainActivity6weightBar(this,data,data2,data3);
+        listView.setAdapter(mainActivity6weightBar);
         click_fun_1();
 
         // setColorToGradiant(textView1);
