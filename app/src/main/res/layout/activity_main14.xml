@@ -170,32 +170,32 @@
 
     </androidx.core.widget.NestedScrollView>
     <ImageView
-        android:id="@+id/image_7"
+        android:id="@+id/image_4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/but_5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/image_8"
+        app:layout_constraintBottom_toTopOf="@id/image_5"
         android:layout_marginBottom="10dp"
         android:transitionName="11"/>
 
     <TextView
-        android:id="@+id/text_8"
+        android:id="@+id/text_6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_slab"
         android:text="Add Activity To Activitylist"
         android:textSize="20dp"
         android:textColor="@color/wit"
-        app:layout_constraintStart_toStartOf="@id/image_7"
-        app:layout_constraintEnd_toEndOf="@id/image_7"
-        app:layout_constraintTop_toTopOf="@id/image_7"
-        app:layout_constraintBottom_toBottomOf="@id/image_7"
+        app:layout_constraintStart_toStartOf="@id/image_4"
+        app:layout_constraintEnd_toEndOf="@id/image_4"
+        app:layout_constraintTop_toTopOf="@id/image_4"
+        app:layout_constraintBottom_toBottomOf="@id/image_4"
         android:transitionName="12"/>
 
     <ImageView
-        android:id="@+id/image_8"
+        android:id="@+id/image_5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/but_5"
@@ -206,17 +206,17 @@
         android:transitionName="13"/>
 
     <TextView
-        android:id="@+id/text_9"
+        android:id="@+id/text_7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_slab"
         android:text="Add Activity To Today and Activitylist"
         android:textSize="20dp"
         android:textColor="@color/wit"
-        app:layout_constraintStart_toStartOf="@id/image_8"
-        app:layout_constraintEnd_toEndOf="@id/image_8"
-        app:layout_constraintTop_toTopOf="@id/image_8"
-        app:layout_constraintBottom_toBottomOf="@id/image_8"
+        app:layout_constraintStart_toStartOf="@id/image_5"
+        app:layout_constraintEnd_toEndOf="@id/image_5"
+        app:layout_constraintTop_toTopOf="@id/image_5"
+        app:layout_constraintBottom_toBottomOf="@id/image_5"
         android:transitionName="14"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
