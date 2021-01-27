@@ -17,41 +17,31 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity12 extends AppCompatActivity {
+public class MainActivity10account extends AppCompatActivity {
 
-    TextView textView1,textView2,textView3,textView4,textView5,textView6,textView7;
+    ImageView imageView1;
 
-    ImageView imageView1,imageView2,imageView3;
+    TextView textView1,textView2,textView3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main12);
+        setContentView(R.layout.activity_main10);
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
+        imageView1 = findViewById(R.id.image_1);
 
         textView1 = findViewById(R.id.text_1);
         textView2 = findViewById(R.id.text_2);
         textView3 = findViewById(R.id.text_3);
-        textView4 = findViewById(R.id.text_4);
-        textView5 = findViewById(R.id.text_5);
-        textView6 = findViewById(R.id.text_6);
-        textView7 = findViewById(R.id.text_7);
-
-        imageView1 = findViewById(R.id.image_1);
-        imageView2 = findViewById(R.id.image_7);
-        imageView3 = findViewById(R.id.image_8);
-
-        setColorToGradiant(textView4);
-        setColorToGradiant(textView5);
-        setColorToGradiant(textView6);
-        setColorToGradiant(textView7);
 
         click_fun_1();
-        click_fun_2();
-        click_fun_3();
+
+        // setColorToGradiant(textView1);
+        // setColorToGradiant(textView2);
+        // setColorToGradiant(textView3);
     }
 
 
@@ -60,7 +50,7 @@ public class MainActivity12 extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity2dashboard.class);
 
                 Pair[] pairs = new Pair[28];
                 pairs[0] = new Pair<View,String>(textView3,"1");
@@ -91,33 +81,20 @@ public class MainActivity12 extends AppCompatActivity {
                 pairs[25] = new Pair<View,String>(textView3,"14.1");
                 pairs[26] = new Pair<View,String>(textView3,"16.1");
                 pairs[27] = new Pair<View,String>(textView3,"18.1");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity12.this, pairs);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity10account.this, pairs);
 
                 startActivity(intent,options.toBundle());
             }
         });
     }
-    public void click_fun_2(){
-        imageView2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ;
-            }
-        });
-    }
-
-    public void click_fun_3(){
-
-    }
-
     private void setColorToGradiant(TextView textView){
         TextPaint textPaint = textView.getPaint();
         float width = textPaint.measureText(textView.getText().toString());
 
         Shader shader = new LinearGradient(width/2,0,width/2,textView.getTextSize(),
                 new int[]{
-                        Color.parseColor("#00688B"),
-                        Color.parseColor("#00FA9A")
+                        Color.parseColor("#286086"),
+                        Color.parseColor("#ffffff")
                 },null,Shader.TileMode.CLAMP);
         textView.getPaint().setShader(shader);
     }

@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
 
-        Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
+        Intent intent = new Intent(getApplicationContext(), MainActivity2dashboard.class);
         startActivity(intent);
     }
 }

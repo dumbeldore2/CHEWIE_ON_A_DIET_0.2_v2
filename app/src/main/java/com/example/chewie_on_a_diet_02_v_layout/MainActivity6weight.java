@@ -2,14 +2,12 @@ package com.example.chewie_on_a_diet_02_v_layout;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Shader;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextPaint;
@@ -19,92 +17,28 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.components.Description;
-import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.components.YAxis;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.LineData;
-import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
-import com.github.mikephil.charting.utils.ColorTemplate;
+public class MainActivity6weight extends AppCompatActivity {
 
-import java.util.ArrayList;
+    ImageView imageView1;
 
-public class MainActivity4 extends AppCompatActivity {
-
-    ImageView imageView1,imageView2;
-
-    TextView textView1,textView2,textView3,textView4;
-
-    LineChart lineChart;
+    TextView textView1,textView2,textView3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main4);
+        setContentView(R.layout.activity_main6);
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
 
         imageView1 = findViewById(R.id.image_1);
-        imageView2 = findViewById(R.id.image_2);
 
         textView1 = findViewById(R.id.text_1);
         textView2 = findViewById(R.id.text_2);
         textView3 = findViewById(R.id.text_3);
-        textView4 = findViewById(R.id.text_4);
-
-        lineChart = findViewById(R.id.line_chart);
-
-        ArrayList<Entry> yvalues = new ArrayList<>();
-
-        yvalues.add(new Entry(0,10));
-        yvalues.add(new Entry(1,50));
-        yvalues.add(new Entry(2,10));
-        yvalues.add(new Entry(3,10));
-        yvalues.add(new Entry(4,90));
-        yvalues.add(new Entry(5,10));
-        yvalues.add(new Entry(6,10));
-        yvalues.add(new Entry(7,-100));
-        yvalues.add(new Entry(8,-300));
-        yvalues.add(new Entry(9,0));
-
-        LineDataSet lineDataSet = new LineDataSet(yvalues, "Data set 1");
-
-        Drawable drawable = ContextCompat.getDrawable(this, R.drawable.background_2);
-
-        lineChart.setHighlightPerDragEnabled(false);
-        lineChart.setHighlightPerTapEnabled(false);
-        lineDataSet.setDrawCircleHole(false);
-        lineDataSet.setDrawCircles(false);
-        lineDataSet.setColor(Color.rgb(0,250,154));
-        lineDataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);
-
-        lineDataSet.setDrawFilled(true);
-        lineDataSet.setFillDrawable(drawable);
-        XAxis xas = lineChart.getXAxis();
-        xas.setPosition(XAxis.XAxisPosition.BOTTOM);
-        xas.setDrawGridLines(false);
-        xas.setEnabled(true);
-
-        YAxis yas = lineChart.getAxisRight();
-        yas.setDrawGridLines(false);
-        yas.setEnabled(false);
-
-        YAxis yas2 = lineChart.getAxisLeft();
-        yas2.setDrawGridLines(false);
-
-        ArrayList<ILineDataSet> dataSets = new ArrayList<>();
-        dataSets.add(lineDataSet);
-
-        LineData data = new LineData(dataSets);
-
-        lineChart.setData(data);
 
         click_fun_1();
-        click_fun_2();
 
         // setColorToGradiant(textView1);
         // setColorToGradiant(textView2);
@@ -112,12 +46,13 @@ public class MainActivity4 extends AppCompatActivity {
     }
 
 
+
     public void click_fun_1(){
         imageView1.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity2dashboard.class);
 
                 Pair[] pairs = new Pair[28];
                 pairs[0] = new Pair<View,String>(textView3,"1");
@@ -148,35 +83,7 @@ public class MainActivity4 extends AppCompatActivity {
                 pairs[25] = new Pair<View,String>(textView3,"14.1");
                 pairs[26] = new Pair<View,String>(textView3,"16.1");
                 pairs[27] = new Pair<View,String>(textView3,"18.1");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity4.this, pairs);
-
-                startActivity(intent,options.toBundle());
-            }
-        });
-    }
-
-    public void click_fun_2(){
-        imageView2.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity5.class);
-
-
-                Pair[] pairs = new Pair[12];
-                pairs[0] = new Pair<View,String>(textView4,"1");
-                pairs[1] = new Pair<View,String>(textView4,"2");
-                pairs[2] = new Pair<View,String>(textView4,"3");
-                pairs[3] = new Pair<View,String>(textView4,"4");
-                pairs[4] = new Pair<View,String>(textView4,"5");
-                pairs[5] = new Pair<View,String>(textView4,"6");
-                pairs[6] = new Pair<View,String>(textView4,"7");
-                pairs[7] = new Pair<View,String>(textView4,"8");
-                pairs[8] = new Pair<View,String>(textView4,"9");
-                pairs[9] = new Pair<View,String>(textView4,"10");
-                pairs[10] = new Pair<View,String>(textView4,"11");
-                pairs[11] = new Pair<View,String>(textView4,"12");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity4.this, pairs);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity6weight.this, pairs);
 
                 startActivity(intent,options.toBundle());
             }

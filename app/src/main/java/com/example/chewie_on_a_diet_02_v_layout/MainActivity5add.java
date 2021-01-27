@@ -18,11 +18,10 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity5 extends AppCompatActivity {
+public class MainActivity5add extends AppCompatActivity {
 
     ImageView imageView1,imageView2,imageView3,imageView4,imageView5,imageView6;
 
@@ -91,7 +90,7 @@ public class MainActivity5 extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity2dashboard.class);
 
                 Pair[] pairs = new Pair[28];
                 pairs[0] = new Pair<View,String>(textView3,"1");
@@ -122,7 +121,7 @@ public class MainActivity5 extends AppCompatActivity {
                 pairs[25] = new Pair<View,String>(textView3,"14.1");
                 pairs[26] = new Pair<View,String>(textView3,"16.1");
                 pairs[27] = new Pair<View,String>(textView3,"18.1");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity5.this, pairs);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity5add.this, pairs);
 
                 startActivity(intent,options.toBundle());
             }
@@ -134,7 +133,7 @@ public class MainActivity5 extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity14.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity14makeactivityobject.class);
 
                 Pair[] pairs = new Pair[14];
                 pairs[0] = new Pair<View,String>(textView4,"1");
@@ -151,7 +150,7 @@ public class MainActivity5 extends AppCompatActivity {
                 pairs[11] = new Pair<View,String>(textView4,"12");
                 pairs[12] = new Pair<View,String>(textView4,"13");
                 pairs[13] = new Pair<View,String>(textView4,"14");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity5.this, pairs);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity5add.this, pairs);
 
                 startActivity(intent,options.toBundle());
             }
@@ -162,7 +161,7 @@ public class MainActivity5 extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity13.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity13makedrinkobject.class);
 
                 Pair[] pairs = new Pair[20];
                 pairs[0] = new Pair<View,String>(textView4,"1");
@@ -185,7 +184,7 @@ public class MainActivity5 extends AppCompatActivity {
                 pairs[17] = new Pair<View,String>(textView4,"18");
                 pairs[18] = new Pair<View,String>(textView4,"19");
                 pairs[19] = new Pair<View,String>(textView4,"20");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity5.this, pairs);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity5add.this, pairs);
 
                 startActivity(intent,options.toBundle());
             }
@@ -196,7 +195,7 @@ public class MainActivity5 extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity12.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity12makefoodobject.class);
 
                 Pair[] pairs = new Pair[20];
                 pairs[0] = new Pair<View,String>(textView4,"1");
@@ -219,7 +218,7 @@ public class MainActivity5 extends AppCompatActivity {
                 pairs[17] = new Pair<View,String>(textView4,"18");
                 pairs[18] = new Pair<View,String>(textView4,"19");
                 pairs[19] = new Pair<View,String>(textView4,"20");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity5.this, pairs);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity5add.this, pairs);
 
                 startActivity(intent,options.toBundle());
             }

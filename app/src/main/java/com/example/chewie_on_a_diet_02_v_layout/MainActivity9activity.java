@@ -17,14 +17,16 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity3 extends AppCompatActivity {
+public class MainActivity9activity extends AppCompatActivity {
 
     ImageView imageView1;
-    TextView textView1,textView2,textView3,textView4;
+
+    TextView textView1,textView2,textView3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_main9);
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
@@ -35,21 +37,22 @@ public class MainActivity3 extends AppCompatActivity {
         textView1 = findViewById(R.id.text_1);
         textView2 = findViewById(R.id.text_2);
         textView3 = findViewById(R.id.text_3);
-        textView4 = findViewById(R.id.text_4);
 
         click_fun_1();
+
         // setColorToGradiant(textView1);
         // setColorToGradiant(textView2);
         // setColorToGradiant(textView3);
-        // setColorToGradiant(textView4);
     }
+
+
 
     public void click_fun_1(){
         imageView1.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity2dashboard.class);
 
                 Pair[] pairs = new Pair[28];
                 pairs[0] = new Pair<View,String>(textView3,"1");
@@ -80,14 +83,12 @@ public class MainActivity3 extends AppCompatActivity {
                 pairs[25] = new Pair<View,String>(textView3,"14.1");
                 pairs[26] = new Pair<View,String>(textView3,"16.1");
                 pairs[27] = new Pair<View,String>(textView3,"18.1");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity3.this, pairs);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity9activity.this, pairs);
 
                 startActivity(intent,options.toBundle());
             }
         });
     }
-
-
     private void setColorToGradiant(TextView textView){
         TextPaint textPaint = textView.getPaint();
         float width = textPaint.measureText(textView.getText().toString());

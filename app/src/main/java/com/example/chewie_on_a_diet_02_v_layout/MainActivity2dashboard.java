@@ -3,7 +3,6 @@ package com.example.chewie_on_a_diet_02_v_layout;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Color;
@@ -18,7 +17,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity2dashboard extends AppCompatActivity {
 
     ImageView imageView1,imageView2,imageView3,imageView4,imageView5,imageView6,imageView7,imageView8,imageView9;
     TextView textView1,textView2,textView3,textView4,textView5,textView6,textView7,textView8,textView9,textView10,
@@ -98,7 +97,7 @@ public class MainActivity2 extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity3.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity3home.class);
 
                 Pair[] pairs = new Pair[5];
                 pairs[0] = new Pair<View,String>(textView2,"1");
@@ -106,7 +105,7 @@ public class MainActivity2 extends AppCompatActivity {
                 pairs[2] = new Pair<View,String>(textView2,"3");
                 pairs[3] = new Pair<View,String>(textView2,"4");
                 pairs[4] = new Pair<View,String>(textView2,"5");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2dashboard.this, pairs);
 
                 startActivity(intent,options.toBundle());
             }
@@ -118,7 +117,7 @@ public class MainActivity2 extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity4.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity4today.class);
 
                 Pair[] pairs = new Pair[7];
                 pairs[0] = new Pair<View,String>(textView4,"1");
@@ -128,7 +127,7 @@ public class MainActivity2 extends AppCompatActivity {
                 pairs[4] = new Pair<View,String>(textView4,"5");
                 pairs[5] = new Pair<View,String>(textView4,"6");
                 pairs[6] = new Pair<View,String>(textView4,"7");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2dashboard.this, pairs);
 
                 startActivity(intent,options.toBundle());
             }
@@ -139,7 +138,7 @@ public class MainActivity2 extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity5.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity5add.class);
 
                 Pair[] pairs = new Pair[12];
                 pairs[0] = new Pair<View,String>(textView3,"1");
@@ -154,7 +153,7 @@ public class MainActivity2 extends AppCompatActivity {
                 pairs[9] = new Pair<View,String>(textView3,"10");
                 pairs[10] = new Pair<View,String>(textView3,"11");
                 pairs[11] = new Pair<View,String>(textView3,"12");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2dashboard.this, pairs);
 
                 startActivity(intent,options.toBundle());
             }
@@ -165,14 +164,14 @@ public class MainActivity2 extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity6.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity6weight.class);
 
                 Pair[] pairs = new Pair[4];
                 pairs[0] = new Pair<View,String>(textView5,"1");
                 pairs[1] = new Pair<View,String>(textView5,"2");
                 pairs[2] = new Pair<View,String>(textView5,"3");
                 pairs[3] = new Pair<View,String>(textView5,"4");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2dashboard.this, pairs);
 
                 startActivity(intent,options.toBundle());
             }
@@ -183,14 +182,14 @@ public class MainActivity2 extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity7.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity7food.class);
 
                 Pair[] pairs = new Pair[4];
                 pairs[0] = new Pair<View,String>(textView7,"1");
                 pairs[1] = new Pair<View,String>(textView7,"2");
                 pairs[2] = new Pair<View,String>(textView7,"3");
                 pairs[3] = new Pair<View,String>(textView7,"4");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2dashboard.this, pairs);
 
                 startActivity(intent,options.toBundle());
             }
@@ -201,14 +200,14 @@ public class MainActivity2 extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity8.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity8drink.class);
 
                 Pair[] pairs = new Pair[4];
                 pairs[0] = new Pair<View,String>(textView6,"1");
                 pairs[1] = new Pair<View,String>(textView6,"2");
                 pairs[2] = new Pair<View,String>(textView6,"3");
                 pairs[3] = new Pair<View,String>(textView6,"4");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2dashboard.this, pairs);
 
                 startActivity(intent,options.toBundle());
             }
@@ -219,14 +218,14 @@ public class MainActivity2 extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity9.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity9activity.class);
 
                 Pair[] pairs = new Pair[4];
                 pairs[0] = new Pair<View,String>(textView8,"1");
                 pairs[1] = new Pair<View,String>(textView8,"2");
                 pairs[2] = new Pair<View,String>(textView8,"3");
                 pairs[3] = new Pair<View,String>(textView8,"4");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2dashboard.this, pairs);
 
                 startActivity(intent,options.toBundle());
             }
@@ -237,14 +236,14 @@ public class MainActivity2 extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity10.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity10account.class);
 
                 Pair[] pairs = new Pair[4];
                 pairs[0] = new Pair<View,String>(textView10,"1");
                 pairs[1] = new Pair<View,String>(textView10,"2");
                 pairs[2] = new Pair<View,String>(textView10,"3");
                 pairs[3] = new Pair<View,String>(textView10,"4");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2dashboard.this, pairs);
 
                 startActivity(intent,options.toBundle());
             }
@@ -255,14 +254,14 @@ public class MainActivity2 extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity11.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity11settings.class);
 
                 Pair[] pairs = new Pair[4];
                 pairs[0] = new Pair<View,String>(textView9,"1");
                 pairs[1] = new Pair<View,String>(textView9,"2");
                 pairs[2] = new Pair<View,String>(textView9,"3");
                 pairs[3] = new Pair<View,String>(textView9,"4");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2.this, pairs);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2dashboard.this, pairs);
 
                 startActivity(intent,options.toBundle());
             }

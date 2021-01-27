@@ -17,7 +17,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity13 extends AppCompatActivity {
+public class MainActivity14makeactivityobject extends AppCompatActivity {
 
     TextView textView1,textView2,textView3,textView4,textView5,textView6,textView7;
 
@@ -26,7 +26,7 @@ public class MainActivity13 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main13);
+        setContentView(R.layout.activity_main14);
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
@@ -37,8 +37,6 @@ public class MainActivity13 extends AppCompatActivity {
         textView3 = findViewById(R.id.text_3);
         textView4 = findViewById(R.id.text_4);
         textView5 = findViewById(R.id.text_5);
-        textView6 = findViewById(R.id.text_6);
-        textView7 = findViewById(R.id.text_7);
 
         imageView1 = findViewById(R.id.image_1);
         imageView2 = findViewById(R.id.image_2);
@@ -46,8 +44,6 @@ public class MainActivity13 extends AppCompatActivity {
 
         setColorToGradiant(textView4);
         setColorToGradiant(textView5);
-        setColorToGradiant(textView6);
-        setColorToGradiant(textView7);
 
         click_fun_1();
     }
@@ -58,7 +54,7 @@ public class MainActivity13 extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity2dashboard.class);
 
                 Pair[] pairs = new Pair[28];
                 pairs[0] = new Pair<View, String>(textView3, "1");
@@ -89,7 +85,7 @@ public class MainActivity13 extends AppCompatActivity {
                 pairs[25] = new Pair<View, String>(textView3, "14.1");
                 pairs[26] = new Pair<View, String>(textView3, "16.1");
                 pairs[27] = new Pair<View, String>(textView3, "18.1");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity13.this, pairs);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity14makeactivityobject.this, pairs);
 
                 startActivity(intent, options.toBundle());
             }

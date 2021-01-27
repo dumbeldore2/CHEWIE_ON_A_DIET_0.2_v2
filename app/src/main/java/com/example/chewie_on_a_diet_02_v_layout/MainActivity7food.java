@@ -17,16 +17,15 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity6 extends AppCompatActivity {
+public class MainActivity7food extends AppCompatActivity {
 
     ImageView imageView1;
 
     TextView textView1,textView2,textView3;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main6);
+        setContentView(R.layout.activity_main7);
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
@@ -52,7 +51,7 @@ public class MainActivity6 extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity2dashboard.class);
 
                 Pair[] pairs = new Pair[28];
                 pairs[0] = new Pair<View,String>(textView3,"1");
@@ -83,7 +82,7 @@ public class MainActivity6 extends AppCompatActivity {
                 pairs[25] = new Pair<View,String>(textView3,"14.1");
                 pairs[26] = new Pair<View,String>(textView3,"16.1");
                 pairs[27] = new Pair<View,String>(textView3,"18.1");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity6.this, pairs);
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity7food.this, pairs);
 
                 startActivity(intent,options.toBundle());
             }
@@ -112,4 +111,5 @@ public class MainActivity6 extends AppCompatActivity {
                 },null,Shader.TileMode.CLAMP);
         textView.getPaint().setShader(shader);
     }
+
 }
