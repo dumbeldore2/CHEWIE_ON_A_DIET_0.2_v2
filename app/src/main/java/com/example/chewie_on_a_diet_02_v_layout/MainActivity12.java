@@ -41,8 +41,8 @@ public class MainActivity12 extends AppCompatActivity {
         textView7 = findViewById(R.id.text_7);
 
         imageView1 = findViewById(R.id.image_1);
-        imageView2 = findViewById(R.id.image_2);
-        imageView3 = findViewById(R.id.image_3);
+        imageView2 = findViewById(R.id.image_7);
+        imageView3 = findViewById(R.id.image_8);
 
         setColorToGradiant(textView4);
         setColorToGradiant(textView5);
@@ -50,6 +50,8 @@ public class MainActivity12 extends AppCompatActivity {
         setColorToGradiant(textView7);
 
         click_fun_1();
+        click_fun_2();
+        click_fun_3();
     }
 
 
@@ -95,6 +97,19 @@ public class MainActivity12 extends AppCompatActivity {
             }
         });
     }
+    public void click_fun_2(){
+        imageView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ;
+            }
+        });
+    }
+
+    public void click_fun_3(){
+
+    }
+
     private void setColorToGradiant(TextView textView){
         TextPaint textPaint = textView.getPaint();
         float width = textPaint.measureText(textView.getText().toString());

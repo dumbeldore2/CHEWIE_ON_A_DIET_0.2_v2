@@ -85,8 +85,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:src="@drawable/but_8"
-                        android:transitionName="3"
+                        android:src="@drawable/but_11"
+                        android:transitionName="5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"/>
@@ -99,7 +99,7 @@
                         android:text="Name"
                         android:textColor="@color/groen"
                         android:textSize="48dp"
-                        android:transitionName="4"
+                        android:transitionName="6"
                         app:layout_constraintBottom_toBottomOf="@id/image_2"
                         app:layout_constraintEnd_toEndOf="@id/image_2"
                         app:layout_constraintStart_toStartOf="@id/image_2"
@@ -109,9 +109,9 @@
                         android:id="@+id/edit_text_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/but_10"
+                        android:background="@drawable/but_12"
                         android:gravity="center"
-                        android:hint="name here"
+                        android:hint="write name here"
                         android:textColor="@color/blauw"
                         android:textColorHint="@color/wit"
                         android:transitionName="7"
@@ -131,8 +131,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:src="@drawable/but_8"
-                        android:transitionName="7"
+                        android:src="@drawable/but_11"
+                        android:transitionName="8"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"/>
@@ -145,7 +145,7 @@
                         android:text="Maker"
                         android:textColor="@color/groen"
                         android:textSize="48dp"
-                        android:transitionName="8"
+                        android:transitionName="9"
                         app:layout_constraintBottom_toBottomOf="@id/image_3"
                         app:layout_constraintEnd_toEndOf="@id/image_3"
                         app:layout_constraintStart_toStartOf="@id/image_3"
@@ -155,12 +155,12 @@
                         android:id="@+id/edit_text_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/but_10"
+                        android:background="@drawable/but_12"
                         android:gravity="center"
-                        android:hint="maker here"
+                        android:hint="write maker here"
                         android:textColor="@color/blauw"
                         android:textColorHint="@color/wit"
-                        android:transitionName="11"
+                        android:transitionName="10"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/image_3"
                         app:layout_constraintEnd_toEndOf="parent"/>
@@ -177,8 +177,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:src="@drawable/but_8"
-                        android:transitionName="3"
+                        android:src="@drawable/but_11"
+                        android:transitionName="11"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -191,7 +191,7 @@
                         android:text="calories/100g"
                         android:textColor="@color/groen"
                         android:textSize="48dp"
-                        android:transitionName="4"
+                        android:transitionName="12"
                         app:layout_constraintBottom_toBottomOf="@id/image_4"
                         app:layout_constraintEnd_toEndOf="@id/image_4"
                         app:layout_constraintStart_toStartOf="@id/image_4"
@@ -201,12 +201,12 @@
                         android:id="@+id/edit_text_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/but_10"
+                        android:background="@drawable/but_12"
                         android:gravity="center"
-                        android:hint="calories/100g here"
+                        android:hint="write calories/100g here"
                         android:textColor="@color/blauw"
                         android:textColorHint="@color/wit"
-                        android:transitionName="7"
+                        android:transitionName="13"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/image_4"
                         app:layout_constraintEnd_toEndOf="parent"/>
@@ -223,8 +223,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:src="@drawable/but_8"
-                        android:transitionName="3"
+                        android:src="@drawable/but_11"
+                        android:transitionName="14"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintEnd_toEndOf="parent" />
@@ -237,7 +237,7 @@
                         android:text="size in grams"
                         android:textColor="@color/groen"
                         android:textSize="48dp"
-                        android:transitionName="4"
+                        android:transitionName="15"
                         app:layout_constraintBottom_toBottomOf="@id/image_5"
                         app:layout_constraintEnd_toEndOf="@id/image_5"
                         app:layout_constraintStart_toStartOf="@id/image_5"
@@ -247,12 +247,12 @@
                         android:id="@+id/edit_text_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/but_10"
+                        android:background="@drawable/but_12"
                         android:gravity="center"
-                        android:hint="size in grams here"
+                        android:hint="write size in grams here"
                         android:textColor="@color/blauw"
                         android:textColorHint="@color/wit"
-                        android:transitionName="7"
+                        android:transitionName="16"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/image_5"
                         app:layout_constraintEnd_toEndOf="parent"/>
@@ -270,7 +270,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/image_8"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:transitionName="17"/>
 
     <TextView
         android:id="@+id/text_8"
@@ -283,7 +284,8 @@
         app:layout_constraintStart_toStartOf="@id/image_7"
         app:layout_constraintEnd_toEndOf="@id/image_7"
         app:layout_constraintTop_toTopOf="@id/image_7"
-        app:layout_constraintBottom_toBottomOf="@id/image_7"/>
+        app:layout_constraintBottom_toBottomOf="@id/image_7"
+        android:transitionName="18"/>
 
     <ImageView
         android:id="@+id/image_8"
@@ -293,7 +295,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:transitionName="19"/>
 
     <TextView
         android:id="@+id/text_9"
@@ -306,5 +309,6 @@
         app:layout_constraintStart_toStartOf="@id/image_8"
         app:layout_constraintEnd_toEndOf="@id/image_8"
         app:layout_constraintTop_toTopOf="@id/image_8"
-        app:layout_constraintBottom_toBottomOf="@id/image_8"/>
+        app:layout_constraintBottom_toBottomOf="@id/image_8"
+        android:transitionName="20"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
