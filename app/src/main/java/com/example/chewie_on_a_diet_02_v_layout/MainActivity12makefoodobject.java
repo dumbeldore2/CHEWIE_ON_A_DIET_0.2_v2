@@ -19,9 +19,9 @@ import android.widget.TextView;
 
 public class MainActivity12makefoodobject extends AppCompatActivity {
 
-    TextView textView1,textView2,textView3,textView4,textView5,textView6,textView7;
+    TextView textView1,textView2,textView3,textView4,textView5,textView6,textView7,textView8,textView9;
 
-    ImageView imageView1,imageView2,imageView3;
+    ImageView imageView1,imageView7,imageView8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +39,12 @@ public class MainActivity12makefoodobject extends AppCompatActivity {
         textView5 = findViewById(R.id.text_5);
         textView6 = findViewById(R.id.text_6);
         textView7 = findViewById(R.id.text_7);
+        textView8 = findViewById(R.id.text_8);
+        textView9 = findViewById(R.id.text_9);
 
         imageView1 = findViewById(R.id.image_1);
-        imageView2 = findViewById(R.id.image_7);
-        imageView3 = findViewById(R.id.image_8);
+        imageView7 = findViewById(R.id.image_7);
+        imageView8 = findViewById(R.id.image_8);
 
         setColorToGradiant(textView4);
         setColorToGradiant(textView5);
@@ -98,16 +100,43 @@ public class MainActivity12makefoodobject extends AppCompatActivity {
         });
     }
     public void click_fun_2(){
-        imageView2.setOnClickListener(new View.OnClickListener() {
+        imageView7.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity7food.class);
+                Pair[] pairs = new Pair[4];
+                pairs[0] = new Pair<View,String>(textView8,"1");
+                pairs[1] = new Pair<View,String>(textView8,"2");
+                pairs[2] = new Pair<View,String>(textView8,"3");
+                pairs[3] = new Pair<View,String>(textView8,"4");
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity12makefoodobject.this, pairs);
+
+                startActivity(intent,options.toBundle());
             }
         });
     }
 
     public void click_fun_3(){
+        imageView8.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity4today.class);
 
+                Pair[] pairs = new Pair[7];
+                pairs[0] = new Pair<View,String>(textView9,"1");
+                pairs[1] = new Pair<View,String>(textView9,"2");
+                pairs[2] = new Pair<View,String>(textView9,"3");
+                pairs[3] = new Pair<View,String>(textView9,"4");
+                pairs[4] = new Pair<View,String>(textView9,"5");
+                pairs[5] = new Pair<View,String>(textView9,"6");
+                pairs[6] = new Pair<View,String>(textView9,"7");
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity12makefoodobject.this, pairs);
+
+                startActivity(intent,options.toBundle());
+            }
+        });
     }
 
     private void setColorToGradiant(TextView textView){
