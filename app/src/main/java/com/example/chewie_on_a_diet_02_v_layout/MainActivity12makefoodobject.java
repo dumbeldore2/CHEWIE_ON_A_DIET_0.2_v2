@@ -105,11 +105,14 @@ public class MainActivity12makefoodobject extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity7food.class);
-                Pair[] pairs = new Pair[4];
+                Pair[] pairs = new Pair[7];
                 pairs[0] = new Pair<View,String>(textView8,"1");
                 pairs[1] = new Pair<View,String>(textView8,"2");
                 pairs[2] = new Pair<View,String>(textView8,"3");
                 pairs[3] = new Pair<View,String>(textView8,"4");
+                pairs[4] = new Pair<View,String>(textView8,"5");
+                pairs[5] = new Pair<View,String>(textView8,"6");
+                pairs[6] = new Pair<View,String>(textView8,"7");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity12makefoodobject.this, pairs);
 
                 startActivity(intent,options.toBundle());

@@ -74,4 +74,30 @@
             android:layout_height="0dip"
             android:layout_weight="1"/>
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/but_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        android:transitionName="6"/>
+
+    <TextView
+        android:id="@+id/text_4"
+        android:text="Add Data"
+        android:textSize="36dp"
+        android:textColor="@color/wit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_slab"
+        app:layout_constraintStart_toStartOf="@id/image_2"
+        app:layout_constraintEnd_toEndOf="@id/image_2"
+        app:layout_constraintTop_toTopOf="@id/image_2"
+        app:layout_constraintBottom_toBottomOf="@id/image_2"
+        android:transitionName="7"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
