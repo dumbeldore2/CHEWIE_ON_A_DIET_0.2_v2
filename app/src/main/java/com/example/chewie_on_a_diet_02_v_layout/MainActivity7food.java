@@ -15,6 +15,7 @@ import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity7food extends AppCompatActivity {
@@ -22,6 +23,15 @@ public class MainActivity7food extends AppCompatActivity {
     ImageView imageView1;
 
     TextView textView1,textView2,textView3;
+
+    ListView listView;
+
+    MainActivity7foodBar mainActivity7foodBar;
+    String data[] = {"naam = appel","naam = peer","naam = olifant","naam = muis"};
+    String data2[] = {"maker = appelman","maker = peerman","maker = olifantman","maker = muisman"};
+    String data3[] = {"aantal calories/100g = 1500","aantal calories/100g = 1500","aantal calories/100g = 1500","aantal calories/100g = 1500"};
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +46,12 @@ public class MainActivity7food extends AppCompatActivity {
         textView1 = findViewById(R.id.text_1);
         textView2 = findViewById(R.id.text_2);
         textView3 = findViewById(R.id.text_3);
+
+
+        listView = findViewById(R.id.listview_1);
+
+        mainActivity7foodBar = new MainActivity7foodBar(this,data,data2,data3);
+        listView.setAdapter(mainActivity7foodBar);
 
         click_fun_1();
 
