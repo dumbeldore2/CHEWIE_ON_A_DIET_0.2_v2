@@ -15,6 +15,7 @@ import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity9activity extends AppCompatActivity {
@@ -22,6 +23,13 @@ public class MainActivity9activity extends AppCompatActivity {
     ImageView imageView1;
 
     TextView textView1,textView2,textView3;
+
+    ListView listView;
+
+    MainActivity9activityBar mainActivity9activityBar;
+
+    String data[] = {"naam = appel","naam = peer","naam = olifant","naam = muis"};
+    String data3[] = {"aantal calories/100ml = 1500","aantal calories/100ml = 1500","aantal calories/100ml = 1500","aantal calories/100ml = 1500"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +45,11 @@ public class MainActivity9activity extends AppCompatActivity {
         textView1 = findViewById(R.id.text_1);
         textView2 = findViewById(R.id.text_2);
         textView3 = findViewById(R.id.text_3);
+
+        listView = findViewById(R.id.listview_1);
+
+        mainActivity9activityBar = new MainActivity9activityBar(this,data,data3);
+        listView.setAdapter(mainActivity9activityBar);
 
         click_fun_1();
 

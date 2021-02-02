@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/list_item_text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="1"
+        android:layout_centerVertical="true"
+        android:textColor="@color/wit"/>
+
+    <ImageView
+        android:id="@+id/image_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/but_14" />
+
+    <TextView
+        android:id="@+id/list_item_text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/image_listview"
+        android:layout_alignTop="@id/image_listview"
+        android:layout_alignRight="@id/image_listview"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/roboto_slab"
+        android:gravity="center"
+        android:text="naam = appel"
+        android:textColor="@color/groen"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/list_item_text_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list_item_text_2"
+        android:layout_alignLeft="@id/image_listview"
+        android:layout_alignRight="@id/image_listview"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/roboto_slab"
+        android:gravity="center"
+        android:text="aantal calories burned = 1500"
+        android:textColor="@color/groen"
+        android:textSize="24dp" />
+</RelativeLayout>
