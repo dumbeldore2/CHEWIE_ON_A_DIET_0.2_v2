@@ -55,7 +55,7 @@
         android:fontFamily="@font/roboto_slab"
         android:text="dashboard"
         android:textColor="@color/wit"
-        android:textSize="14sp"
+        android:textSize="14dp"
         android:transitionName="4"/>
 
     <LinearLayout
