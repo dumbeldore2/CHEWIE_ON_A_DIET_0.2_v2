@@ -263,11 +263,17 @@ public class MainActivity2dashboard extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity10account.class);
 
-                Pair[] pairs = new Pair[4];
+                Pair[] pairs = new Pair[10];
                 pairs[0] = new Pair<View,String>(textView10,"1");
                 pairs[1] = new Pair<View,String>(textView10,"2");
                 pairs[2] = new Pair<View,String>(textView10,"3");
                 pairs[3] = new Pair<View,String>(textView10,"4");
+                pairs[4] = new Pair<View,String>(textView10,"5");
+                pairs[5] = new Pair<View,String>(textView10,"6");
+                pairs[6] = new Pair<View,String>(textView10,"7");
+                pairs[7] = new Pair<View,String>(textView10,"8");
+                pairs[8] = new Pair<View,String>(textView10,"9");
+                pairs[9] = new Pair<View,String>(textView10,"10");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity2dashboard.this, pairs);
 
                 startActivity(intent,options.toBundle());

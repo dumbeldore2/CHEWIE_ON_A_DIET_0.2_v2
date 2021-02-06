@@ -60,7 +60,6 @@ public class DataBaseRunner extends SQLiteOpenHelper {
     public static final String Table_6_col_5 = "activity_id";
     public static final String Table_6_col_6 = "today_activity_calories";
 
-
     public DataBaseRunner(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 1);
     }

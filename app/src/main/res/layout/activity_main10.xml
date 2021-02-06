@@ -57,4 +57,78 @@
         android:textColor="@color/wit"
         android:textSize="14dp"
         android:transitionName="4"/>
+
+    <ImageView
+        android:id="@+id/image_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rec_2"
+        app:layout_constraintTop_toBottomOf="@id/text_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:transitionName="5"/>
+
+    <TextView
+        android:id="@+id/text_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/image_2"
+        app:layout_constraintTop_toTopOf="@id/image_2"
+        app:layout_constraintEnd_toEndOf="@id/image_2"
+        app:layout_constraintBottom_toBottomOf="@id/image_2"
+        android:text="Y"
+        android:textColor="@color/wit"
+        android:textSize="96dp"
+        android:fontFamily="@font/roboto_slab"
+        android:transitionName="6"/>
+
+    <ImageView
+        android:id="@+id/image_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rec_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/image_4"
+        android:layout_marginBottom="25dp"
+        android:transitionName="7"/>
+
+    <TextView
+        android:id="@+id/text_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/image_3"
+        app:layout_constraintTop_toTopOf="@id/image_3"
+        app:layout_constraintEnd_toEndOf="@id/image_3"
+        app:layout_constraintBottom_toBottomOf="@id/image_3"
+        android:text="other account"
+        android:textSize="48dp"
+        android:textColor="@color/blauw"
+        android:fontFamily="@font/roboto_slab"
+        android:transitionName="8"/>
+
+    <ImageView
+        android:id="@+id/image_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rec_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="25dp"
+        android:transitionName="9"/>
+
+    <TextView
+        android:id="@+id/text_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/image_4"
+        app:layout_constraintTop_toTopOf="@id/image_4"
+        app:layout_constraintEnd_toEndOf="@id/image_4"
+        app:layout_constraintBottom_toBottomOf="@id/image_4"
+        android:text="Add account"
+        android:textSize="48dp"
+        android:textColor="@color/blauw"
+        android:fontFamily="@font/roboto_slab"
+        android:transitionName="10"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
