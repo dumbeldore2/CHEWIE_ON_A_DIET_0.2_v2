@@ -72,7 +72,7 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         db.execSQL("create table " + DATABASE_table_3 + "("+Table_3_col_1+" INTEGER primary key,"+Table_3_col_2+" TEXT ,"+Table_3_col_3+" TEXT ,"+Table_3_col_4+" INTEGER ,"+Table_3_col_5+" INTEGER , foreign key ("+Table_3_col_5+") references "+DATABASE_table_1+"("+Table_1_col_1+"))");
         db.execSQL("create table " + DATABASE_table_4 + "("+Table_4_col_1+" INTEGER primary key,"+Table_4_col_2+" TEXT ,"+Table_4_col_3+" TEXT ,"+Table_4_col_4+" INTEGER ,"+Table_4_col_5+" INTEGER , foreign key ("+Table_4_col_4+") references "+DATABASE_table_1+"("+Table_1_col_1+"))");
         db.execSQL("create table " + DATABASE_table_5 + "("+Table_5_col_1+" INTEGER primary key,"+Table_5_col_2+" TEXT ,"+Table_5_col_3+" TEXT ,"+Table_5_col_4+" INTEGER ,"+Table_5_col_5+" INTEGER ,"+Table_5_col_6+" INTEGER ,"+Table_5_col_7+" INTEGER , foreign key ("+Table_5_col_4+") references "+DATABASE_table_1+"("+Table_1_col_1+") , foreign key ("+Table_5_col_5+") references "+DATABASE_table_2+"("+Table_2_col_1+"))");
-        //db.execSQL("create table " + DATABASE_table_6 + "()");
+        db.execSQL("create table " + DATABASE_table_6 + "("+Table_6_col_1+" INTEGER primary key,"+Table_6_col_2+" TEXT ,"+Table_6_col_3+" TEXT ,"+Table_6_col_4+" INTEGER ,"+Table_6_col_5+" INTEGER ,"+Table_6_col_6+" INTEGER , foreign key ("+Table_6_col_4+") references "+DATABASE_table_1+"("+Table_1_col_1+"), foreign key ("+Table_6_col_5+") references "+DATABASE_table_3+"("+Table_3_col_1+"))");
     }
 
     @Override
