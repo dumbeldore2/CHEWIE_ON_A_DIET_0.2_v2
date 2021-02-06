@@ -22,6 +22,7 @@ public class MainActivity2dashboard extends AppCompatActivity {
     ImageView imageView1,imageView2,imageView3,imageView4,imageView5,imageView6,imageView7,imageView8,imageView9;
     TextView textView1,textView2,textView3,textView4,textView5,textView6,textView7,textView8,textView9,textView10,
             textView11,textView12,textView13,textView14,textView15,textView16,textView17,textView18,textView19;
+    DataBaseRunner dataBaseRunner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +62,12 @@ public class MainActivity2dashboard extends AppCompatActivity {
         textView18 = findViewById(R.id.rectangle_8_page_2_text);
         textView19 = findViewById(R.id.rectangle_9_page_2_text);
 
+        dataBaseRunner = new DataBaseRunner(this);
+        dataBaseRunner.addToTabel1("lol");
+        dataBaseRunner.addToTabel1("elo");
+        dataBaseRunner.addToTabel2("elo","delhaize",50,1,"food");
+        dataBaseRunner.addToTabel2("elo","delhaize",50,1,"food");
+
         click_1();
         click_2();
         click_3();
@@ -90,6 +97,9 @@ public class MainActivity2dashboard extends AppCompatActivity {
         // setColorToGradiant2(textView16);
         // setColorToGradiant2(textView17);
         // setColorToGradiant2(textView18);
+
+        System.out.println(dataBaseRunner.IDMAKERTABLE1());
+        System.out.println(dataBaseRunner.IDMAKERTABLE2());
     }
 
     public void click_1(){
