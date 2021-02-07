@@ -66,7 +66,7 @@
         android:layout_height="300dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_2"
-        app:layout_constraintBottom_toTopOf="@id/image_3"
+        app:layout_constraintBottom_toTopOf="@id/image_4"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="40dp">
 
@@ -131,7 +131,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:src="@drawable/but_11"
-                    android:transitionName="5"
+                    android:transitionName="8"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"/>
@@ -144,7 +144,7 @@
                     android:text="Email adress"
                     android:textColor="@color/groen"
                     android:textSize="48dp"
-                    android:transitionName="6"
+                    android:transitionName="9"
                     app:layout_constraintBottom_toBottomOf="@id/image_3"
                     app:layout_constraintEnd_toEndOf="@id/image_3"
                     app:layout_constraintStart_toStartOf="@id/image_3"
@@ -159,7 +159,7 @@
                     android:hint="email adress here"
                     android:textColor="@color/blauw"
                     android:textColorHint="@color/wit"
-                    android:transitionName="7"
+                    android:transitionName="10"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/image_3"
                     app:layout_constraintEnd_toEndOf="parent"/>
@@ -177,21 +177,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="10dp"
-        android:transitionName="8"/>
+        android:layout_marginBottom="25dp"
+        android:transitionName="11"/>
 
     <TextView
         android:id="@+id/text_6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_slab"
-        android:text="Add Activity To Activitylist"
+        android:text="Add account"
         android:textSize="20dp"
         android:textColor="@color/wit"
         app:layout_constraintStart_toStartOf="@id/image_4"
         app:layout_constraintEnd_toEndOf="@id/image_4"
         app:layout_constraintTop_toTopOf="@id/image_4"
         app:layout_constraintBottom_toBottomOf="@id/image_4"
-        android:transitionName="9"/>
+        android:transitionName="12"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

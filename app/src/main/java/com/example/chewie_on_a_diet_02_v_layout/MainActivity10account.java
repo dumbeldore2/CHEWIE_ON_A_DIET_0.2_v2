@@ -19,9 +19,9 @@ import android.widget.TextView;
 
 public class MainActivity10account extends AppCompatActivity {
 
-    ImageView imageView1;
+    ImageView imageView1,imageView4;
 
-    TextView textView1,textView2,textView3;
+    TextView textView1,textView2,textView3,textView6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +32,15 @@ public class MainActivity10account extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
         imageView1 = findViewById(R.id.image_1);
+        imageView4 = findViewById(R.id.image_4);
 
         textView1 = findViewById(R.id.text_1);
         textView2 = findViewById(R.id.text_2);
         textView3 = findViewById(R.id.text_3);
+        textView6 = findViewById(R.id.text_6);
 
         click_fun_1();
+        click_fun_2();
 
         // setColorToGradiant(textView1);
         // setColorToGradiant(textView2);
@@ -87,6 +90,34 @@ public class MainActivity10account extends AppCompatActivity {
             }
         });
     }
+
+    public void click_fun_2(){
+        imageView4.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity16makeaccount.class);
+
+                Pair[] pairs = new Pair[12];
+                pairs[0] = new Pair<View,String>(textView6,"1");
+                pairs[1] = new Pair<View,String>(textView6,"2");
+                pairs[2] = new Pair<View,String>(textView6,"3");
+                pairs[3] = new Pair<View,String>(textView6,"4");
+                pairs[4] = new Pair<View,String>(textView6,"5");
+                pairs[5] = new Pair<View,String>(textView6,"6");
+                pairs[6] = new Pair<View,String>(textView6,"7");
+                pairs[7] = new Pair<View,String>(textView6,"8");
+                pairs[8] = new Pair<View,String>(textView6,"9");
+                pairs[9] = new Pair<View,String>(textView6,"10");
+                pairs[10] = new Pair<View,String>(textView6,"11");
+                pairs[11] = new Pair<View,String>(textView6,"12");
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity10account.this, pairs);
+
+                startActivity(intent,options.toBundle());
+            }
+        });
+    }
+
     private void setColorToGradiant(TextView textView){
         TextPaint textPaint = textView.getPaint();
         float width = textPaint.measureText(textView.getText().toString());
