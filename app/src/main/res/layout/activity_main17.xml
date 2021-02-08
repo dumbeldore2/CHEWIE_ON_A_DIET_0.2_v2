@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity17accounts"
+    android:background="@drawable/background_1">
+    <TextView
+        android:id="@+id/text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="75dp"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="A"
+        android:textSize="90dp"
+        android:transitionName="1"
+        android:textColor="@color/wit"/>
+
+    <TextView
+        android:id="@+id/text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="ctivitys"
+        android:textColor="@color/wit"
+        android:textSize="45dp"
+        android:transitionName="2"
+        app:layout_constraintBottom_toBottomOf="@id/text_1"
+        app:layout_constraintStart_toEndOf="@id/text_1" />
+
+    <ImageView
+        android:id="@+id/image_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="25dp"
+        android:src="@drawable/circle_1"
+        android:transitionName="3"/>
+
+    <TextView
+        android:id="@+id/text_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/image_1"
+        app:layout_constraintEnd_toEndOf="@id/image_1"
+        app:layout_constraintTop_toTopOf="@id/image_1"
+        app:layout_constraintBottom_toBottomOf="@id/image_1"
+        android:fontFamily="@font/roboto_slab"
+        android:text="dashboard"
+        android:textColor="@color/wit"
+        android:textSize="14dp"
+        android:transitionName="4"/>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="wrap_content"
+        android:layout_height="450dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_2"
+        android:orientation="vertical"
+        android:layout_margin="30dp"
+        android:transitionName="5">
+        <ListView
+            android:id="@+id/listview_1"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/but_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        android:transitionName="6"/>
+
+    <TextView
+        android:id="@+id/text_4"
+        android:text="Add Data"
+        android:textSize="36dp"
+        android:textColor="@color/wit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_slab"
+        app:layout_constraintStart_toStartOf="@id/image_2"
+        app:layout_constraintEnd_toEndOf="@id/image_2"
+        app:layout_constraintTop_toTopOf="@id/image_2"
+        app:layout_constraintBottom_toBottomOf="@id/image_2"
+        android:transitionName="7"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

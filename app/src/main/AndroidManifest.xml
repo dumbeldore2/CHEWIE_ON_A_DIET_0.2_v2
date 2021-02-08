@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity16makeaccount"></activity>
+        <activity android:name=".MainActivity17accounts"></activity>
+        <activity android:name=".MainActivity16makeaccount" />
         <activity android:name=".MainActivity15makeweightobject" />
         <activity android:name=".MainActivity14makeactivityobject" />
         <activity android:name=".MainActivity13makedrinkobject" />
