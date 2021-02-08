@@ -62,7 +62,7 @@
         android:id="@+id/image_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/rec_2"
+        android:src="@drawable/but_18"
         app:layout_constraintTop_toBottomOf="@id/text_1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,7 +77,7 @@
         app:layout_constraintEnd_toEndOf="@id/image_2"
         app:layout_constraintBottom_toBottomOf="@id/image_2"
         android:text="Y"
-        android:textColor="@color/wit"
+        android:textColor="@color/blauw"
         android:textSize="96dp"
         android:fontFamily="@font/roboto_slab"
         android:transitionName="6"/>
