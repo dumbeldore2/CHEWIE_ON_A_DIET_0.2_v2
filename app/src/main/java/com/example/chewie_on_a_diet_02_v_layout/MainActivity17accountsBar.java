@@ -22,6 +22,7 @@ public class MainActivity17accountsBar extends ArrayAdapter<String> {
         super(c,R.layout.activity_main17_bar, R.id.listview_1,s);
         this.stringName = s;
         this.stringActivated = s1;
+        this.anInt = i;
     }
 
 

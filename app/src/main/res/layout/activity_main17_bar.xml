@@ -13,7 +13,7 @@
         android:src="@drawable/but_15" />
 
     <TextView
-        android:id="@+id/list_item_text_2"
+        android:id="@+id/list_item_text_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_slab"

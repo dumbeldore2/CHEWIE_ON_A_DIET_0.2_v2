@@ -19,9 +19,9 @@ import android.widget.TextView;
 
 public class MainActivity10account extends AppCompatActivity {
 
-    ImageView imageView1,imageView4;
+    ImageView imageView1,imageView3,imageView4;
 
-    TextView textView1,textView2,textView3,textView6;
+    TextView textView1,textView2,textView3,textView5,textView6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,14 +33,17 @@ public class MainActivity10account extends AppCompatActivity {
         );
         imageView1 = findViewById(R.id.image_1);
         imageView4 = findViewById(R.id.image_4);
+        imageView3 = findViewById(R.id.image_3);
 
         textView1 = findViewById(R.id.text_1);
         textView2 = findViewById(R.id.text_2);
         textView3 = findViewById(R.id.text_3);
         textView6 = findViewById(R.id.text_6);
+        textView5 = findViewById(R.id.text_5);
 
         click_fun_1();
         click_fun_2();
+        click_fun_3();
 
         // setColorToGradiant(textView1);
         // setColorToGradiant(textView2);
@@ -111,6 +114,27 @@ public class MainActivity10account extends AppCompatActivity {
                 pairs[9] = new Pair<View,String>(textView6,"10");
                 pairs[10] = new Pair<View,String>(textView6,"11");
                 pairs[11] = new Pair<View,String>(textView6,"12");
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity10account.this, pairs);
+
+                startActivity(intent,options.toBundle());
+            }
+        });
+    }
+    public void click_fun_3(){
+        imageView3.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity17accounts.class);
+
+                Pair[] pairs = new Pair[7];
+                pairs[0] = new Pair<View,String>(textView5,"1");
+                pairs[1] = new Pair<View,String>(textView5,"2");
+                pairs[2] = new Pair<View,String>(textView5,"3");
+                pairs[3] = new Pair<View,String>(textView5,"4");
+                pairs[4] = new Pair<View,String>(textView5,"5");
+                pairs[5] = new Pair<View,String>(textView5,"6");
+                pairs[6] = new Pair<View,String>(textView5,"7");
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity10account.this, pairs);
 
                 startActivity(intent,options.toBundle());
