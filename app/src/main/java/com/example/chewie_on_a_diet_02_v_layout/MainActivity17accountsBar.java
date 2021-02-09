@@ -36,7 +36,7 @@ public class MainActivity17accountsBar extends ArrayAdapter<String> {
         TextView a = row.findViewById(R.id.list_item_text_1);
 
         a.setText(stringName[position]);
-        setBackgroundTo1(stringActivated[position],imageView1);
+         setBackgroundTo1(stringActivated[position],imageView1);
 
         return row;
     }

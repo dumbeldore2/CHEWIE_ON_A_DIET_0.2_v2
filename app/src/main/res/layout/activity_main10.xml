@@ -101,7 +101,7 @@
         app:layout_constraintTop_toTopOf="@id/image_3"
         app:layout_constraintEnd_toEndOf="@id/image_3"
         app:layout_constraintBottom_toBottomOf="@id/image_3"
-        android:text="other account"
+        android:text="other accounts"
         android:textSize="48dp"
         android:textColor="@color/blauw"
         android:fontFamily="@font/roboto_slab"
