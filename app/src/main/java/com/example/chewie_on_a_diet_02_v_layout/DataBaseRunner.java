@@ -171,7 +171,7 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         return uit;
     }
 
-    public void updateEverythingToOff(int id) {
+    public void updateOneLineToOff(int id) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(Table_1_col_1, id);
@@ -180,6 +180,14 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         contentValues.put(Table_1_col_4, "off");
 
         sqLiteDatabase.update(DATABASE_table_1, contentValues, "id = ?", new String[]{"" + id});
+    }
+
+    public void updateAllLinesToOff(){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from "+DATABASE_table_1+"",null);
+        for (int i = 0 ; i < cursor.getCount(); i++){
+            updateOneLineToOff(i);
+        }
     }
 
     // Alle code omwile van de tweede tabel
