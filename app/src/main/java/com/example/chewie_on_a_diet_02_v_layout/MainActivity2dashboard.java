@@ -62,6 +62,12 @@ public class MainActivity2dashboard extends AppCompatActivity {
         textView18 = findViewById(R.id.rectangle_8_page_2_text);
         textView19 = findViewById(R.id.rectangle_9_page_2_text);
 
+        dataBaseRunner = new DataBaseRunner(this);
+
+        System.out.println(dataBaseRunner.IDMAKERTABLE1());
+
+        startAccount();
+
         click_1();
         click_2();
         click_3();
@@ -312,5 +318,11 @@ public class MainActivity2dashboard extends AppCompatActivity {
                         Color.parseColor("#286086")
                 },null,Shader.TileMode.CLAMP);
         textView.getPaint().setShader(shader);
+    }
+
+    public void startAccount(){
+        if (dataBaseRunner.IDMAKERTABLE1() == 0){
+            dataBaseRunner.addToTabel1("default","default");
+        }
     }
 }
