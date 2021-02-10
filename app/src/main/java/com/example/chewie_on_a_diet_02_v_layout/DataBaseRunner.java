@@ -126,7 +126,7 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         return uit;
     }
 
-    public String Name(int id){
+    public String getTable_1_col_2Name(int id){
         String uit = "";
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         StringBuffer stringBuffer = new StringBuffer();
@@ -134,6 +134,21 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         if (cursor.moveToFirst()){
             stringBuffer.append(cursor.getString(0));
         }
+        uit += stringBuffer.toString();
+        return uit;
+    }
+
+    public String getTable_1_col_3Email(int id){
+        String uit = "";
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        StringBuffer stringBuffer = new StringBuffer();
+        Cursor cursor =
+                sqLiteDatabase.rawQuery("select "+Table_1_col_3+" from "+DATABASE_table_1+" where "+Table_1_col_1+" == id",null);
+        if (cursor.moveToFirst()){
+            stringBuffer.append(cursor.getString(0));
+        }
+        uit += stringBuffer.toString();
+        return uit;
     }
 
     public String[] activated(){
@@ -160,35 +175,11 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(Table_1_col_1, id);
-        contentValues.put(Table_1_col_1, get(id));
-        contentValues.put(COL_0_3, getDatumLes(id));
-        contentValues.put(COL_0_4, getSemesterLes(id));
-        if (i == 1) {
-            contentValues.put(COL_0_5, "false");
-        } else if (i == 2) {
-            contentValues.put(COL_0_6, "false");
-        } else if (i == 3) {
-            contentValues.put(COL_0_7, "false");
-        } else if (i == 4) {
-            contentValues.put(COL_0_8, "false");
-        } else if (i == 5) {
-            contentValues.put(COL_0_9, "false");
-        } else if (i == 6) {
-            contentValues.put(COL_0_10, "false");
-        } else if (i == 7) {
-            contentValues.put(COL_0_11, "false");
-        } else if (i == 8) {
-            contentValues.put(COL_0_12, "false");
-        } else if (i == 9) {
-            contentValues.put(COL_0_13, "false");
-        } else if (i == 10) {
-            contentValues.put(COL_0_14, "false");
-        } else if (i == 11) {
-            contentValues.put(COL_0_15, "false");
-        } else if (i == 12) {
-            contentValues.put(COL_0_16, "false");
-        }
-        sqLiteDatabase.update(DATABASE_TABLE0, contentValues, "id = ?", new String[]{"" + id});
+        contentValues.put(Table_1_col_2, getTable_1_col_2Name(id));
+        contentValues.put(Table_1_col_3, getTable_1_col_3Email(id));
+        contentValues.put(Table_1_col_4, "off");
+
+        sqLiteDatabase.update(DATABASE_table_1, contentValues, "id = ?", new String[]{"" + id});
     }
 
     // Alle code omwile van de tweede tabel
