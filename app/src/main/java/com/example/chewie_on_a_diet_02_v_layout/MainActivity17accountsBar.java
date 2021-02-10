@@ -1,6 +1,8 @@
 package com.example.chewie_on_a_diet_02_v_layout;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +19,7 @@ public class MainActivity17accountsBar extends ArrayAdapter<String> {
     String stringActivated[];
     int anInt[];
     ImageView imageView1;
+    TextView a;
 
     public MainActivity17accountsBar(@NonNull Context c, String s[] , String s1[], int i[]) {
         super(c,R.layout.activity_main17_bar, R.id.listview_1,s);
@@ -33,7 +36,7 @@ public class MainActivity17accountsBar extends ArrayAdapter<String> {
         View row = layoutInflater.inflate(R.layout.activity_main17_bar, parent, false);
         imageView1 = row.findViewById(R.id.image_listview);
 
-        TextView a = row.findViewById(R.id.list_item_text_1);
+        a = row.findViewById(R.id.list_item_text_1);
 
         a.setText(stringName[position]);
          setBackgroundTo1(stringActivated[position],imageView1);
@@ -44,9 +47,12 @@ public class MainActivity17accountsBar extends ArrayAdapter<String> {
     public void setBackgroundTo1(String activated , ImageView imageView1){
         if (activated.equals("on")){
             imageView1.setImageResource(anInt[0]);
+            a.setTextColor(Color.parseColor("#00688B"));
+
         } else {
             if (activated.equals("off")){
                 imageView1.setImageResource(anInt[1]);
+                a.setTextColor(Color.parseColor("#ffffff"));
             }
         }
     }

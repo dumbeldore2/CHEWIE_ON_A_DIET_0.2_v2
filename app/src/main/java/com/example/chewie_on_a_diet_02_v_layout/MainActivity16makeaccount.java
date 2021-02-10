@@ -96,6 +96,7 @@ public class MainActivity16makeaccount extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (controle()){
+                    dataBaseRunner.updateAllLinesToOff();
                     dataBaseRunner.addToTabel1(getString1(),getString2());
                     Intent intent = new Intent(getApplicationContext(), MainActivity10account.class);
 

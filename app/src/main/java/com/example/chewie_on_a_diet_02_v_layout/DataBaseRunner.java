@@ -130,7 +130,7 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         String uit = "";
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         StringBuffer stringBuffer = new StringBuffer();
-        Cursor cursor = sqLiteDatabase.rawQuery("select "+Table_1_col_2+" from "+DATABASE_table_1+" where "+Table_1_col_1+" == id",null);
+        Cursor cursor = sqLiteDatabase.rawQuery("select "+Table_1_col_2+" from "+DATABASE_table_1+" where "+Table_1_col_1+" == "+id+"",null);
         if (cursor.moveToFirst()){
             stringBuffer.append(cursor.getString(0));
         }
@@ -143,7 +143,7 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         StringBuffer stringBuffer = new StringBuffer();
         Cursor cursor =
-                sqLiteDatabase.rawQuery("select "+Table_1_col_3+" from "+DATABASE_table_1+" where "+Table_1_col_1+" == id",null);
+                sqLiteDatabase.rawQuery("select "+Table_1_col_3+" from "+DATABASE_table_1+" where "+Table_1_col_1+" == "+id+"",null);
         if (cursor.moveToFirst()){
             stringBuffer.append(cursor.getString(0));
         }
@@ -179,7 +179,7 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         contentValues.put(Table_1_col_3, getTable_1_col_3Email(id));
         contentValues.put(Table_1_col_4, "off");
 
-        sqLiteDatabase.update(DATABASE_table_1, contentValues, "id = ?", new String[]{"" + id});
+        sqLiteDatabase.update(DATABASE_table_1, contentValues, ""+Table_1_col_1+" = ?", new String[]{"" + id});
     }
 
     public void updateAllLinesToOff(){
