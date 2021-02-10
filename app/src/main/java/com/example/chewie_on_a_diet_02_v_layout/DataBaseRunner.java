@@ -106,7 +106,45 @@ public class DataBaseRunner extends SQLiteOpenHelper {
 
         sqLiteDatabase.insert(DATABASE_table_1, null, contentValues);
     }
+    public String[] firstLettersNaam(){
 
+        String uit[];
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select substr("+Table_1_col_2+", 1, 1)from "+DATABASE_table_1+"",null);
+
+        uit = new String[cursor.getCount()];
+
+        for (int i = 0; i <= cursor.getCount(); i++){
+            if (cursor.moveToPosition(i)) {
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append(cursor.getString(0));
+                uit[i] = stringBuffer.toString();
+            }
+        }
+
+        return uit;
+    }
+
+    public String[] activated(){
+
+        String uit[];
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select "+Table_1_col_4+" from "+DATABASE_table_1+"",null);
+
+        uit = new String[cursor.getCount()];
+
+        for (int i = 0; i <= cursor.getCount(); i++){
+            if (cursor.moveToPosition(i)) {
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append(cursor.getString(0));
+                uit[i] = stringBuffer.toString();
+            }
+        }
+
+        return uit;
+    }
     // Alle code omwile van de tweede tabel
     public int IDMAKERTABLE2() {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();

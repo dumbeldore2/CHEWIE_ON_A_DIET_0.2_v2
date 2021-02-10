@@ -24,9 +24,10 @@ public class MainActivity17accounts extends AppCompatActivity {
 
     MainActivity17accountsBar mainActivity17accountsBar;
 
-    String data[] = {"Y","F"};
+    DataBaseRunner dataBaseRunner;
+    String data[];
     int data1[] = {R.drawable.but_15,R.drawable.but_16};
-    String data3[] = {"off","on"};
+    String data3[];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,9 @@ public class MainActivity17accounts extends AppCompatActivity {
 
         listView = findViewById(R.id.listview_1);
 
+        dataBaseRunner = new DataBaseRunner(this);
+        data = dataBaseRunner.firstLettersNaam();
+        data3 = dataBaseRunner.activated();
         mainActivity17accountsBar = new MainActivity17accountsBar(this,data,data3,data1);
         listView.setAdapter(mainActivity17accountsBar);
 
