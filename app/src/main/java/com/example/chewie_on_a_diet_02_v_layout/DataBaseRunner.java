@@ -15,6 +15,8 @@ public class DataBaseRunner extends SQLiteOpenHelper {
     public static final String DATABASE_table_1 = "accounts";
     public static final String Table_1_col_1 = "account_id";
     public static final String Table_1_col_2 = "account_naam";
+    public static final String Table_1_col_3 = "email";
+    public static final String Table_1_col_4 = "geactiveerd";
 
     //tabel 2
     public static final String DATABASE_table_2 = "food_en_drink";
@@ -66,7 +68,7 @@ public class DataBaseRunner extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + DATABASE_table_1 + "("+Table_1_col_1+" INTEGER primary key,"+Table_1_col_2+" TEXT )");
+        db.execSQL("create table " + DATABASE_table_1 + "("+Table_1_col_1+" INTEGER primary key,"+Table_1_col_2+" TEXT ,"+Table_1_col_3+" TEXT ,"+Table_1_col_4+" TEXT )");
         db.execSQL("create table " + DATABASE_table_2 + "("+Table_2_col_1+" INTEGER primary key,"+Table_2_col_2+" TEXT ,"+Table_2_col_3+" TEXT ,"+Table_2_col_4+" INTEGER ,"+Table_2_col_5+" INTEGER ,"+Table_2_col_6+" TEXT , foreign key ("+Table_2_col_5+") references "+DATABASE_table_1+"("+Table_1_col_1+"))");
         db.execSQL("create table " + DATABASE_table_3 + "("+Table_3_col_1+" INTEGER primary key,"+Table_3_col_2+" TEXT ,"+Table_3_col_3+" TEXT ,"+Table_3_col_4+" INTEGER ,"+Table_3_col_5+" INTEGER , foreign key ("+Table_3_col_5+") references "+DATABASE_table_1+"("+Table_1_col_1+"))");
         db.execSQL("create table " + DATABASE_table_4 + "("+Table_4_col_1+" INTEGER primary key,"+Table_4_col_2+" TEXT ,"+Table_4_col_3+" TEXT ,"+Table_4_col_4+" INTEGER ,"+Table_4_col_5+" INTEGER , foreign key ("+Table_4_col_4+") references "+DATABASE_table_1+"("+Table_1_col_1+"))");
@@ -91,13 +93,15 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         return cursor.getCount();
     }
 
-    public void addToTabel1(String naam){
+    public void addToTabel1(String naam , String email){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
         if (!naam.trim().isEmpty() && naam != null){
             contentValues.put(Table_1_col_1,IDMAKERTABLE1());
             contentValues.put(Table_1_col_2,naam);
+            contentValues.put(Table_1_col_3,email);
+            contentValues.put(Table_1_col_4,"on");
         }
 
         sqLiteDatabase.insert(DATABASE_table_1, null, contentValues);

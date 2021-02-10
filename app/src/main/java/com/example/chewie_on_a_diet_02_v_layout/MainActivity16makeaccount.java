@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,6 +20,9 @@ public class MainActivity16makeaccount extends AppCompatActivity {
 
     TextView textView3,textView6;
 
+    EditText editText1,editText2;
+
+    DataBaseRunner dataBaseRunner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +37,11 @@ public class MainActivity16makeaccount extends AppCompatActivity {
 
         textView3 = findViewById(R.id.text_3);
         textView6 = findViewById(R.id.text_6);
+
+        editText1 = findViewById(R.id.edit_text_1);
+        editText2 = findViewById(R.id.edit_text_2);
+
+        dataBaseRunner = new DataBaseRunner(this);
 
         click_fun_1();
         click_fun_2();
@@ -86,23 +95,53 @@ public class MainActivity16makeaccount extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity10account.class);
+                if (controle()){
+                    dataBaseRunner.addToTabel1(getString1(),getString2());
+                    Intent intent = new Intent(getApplicationContext(), MainActivity10account.class);
 
-                Pair[] pairs = new Pair[10];
-                pairs[0] = new Pair<View,String>(textView6,"1");
-                pairs[1] = new Pair<View,String>(textView6,"2");
-                pairs[2] = new Pair<View,String>(textView6,"3");
-                pairs[3] = new Pair<View,String>(textView6,"4");
-                pairs[4] = new Pair<View,String>(textView6,"5");
-                pairs[5] = new Pair<View,String>(textView6,"6");
-                pairs[6] = new Pair<View,String>(textView6,"7");
-                pairs[7] = new Pair<View,String>(textView6,"8");
-                pairs[8] = new Pair<View,String>(textView6,"9");
-                pairs[9] = new Pair<View,String>(textView6,"10");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity16makeaccount.this, pairs);
+                    Pair[] pairs = new Pair[10];
+                    pairs[0] = new Pair<View,String>(textView6,"1");
+                    pairs[1] = new Pair<View,String>(textView6,"2");
+                    pairs[2] = new Pair<View,String>(textView6,"3");
+                    pairs[3] = new Pair<View,String>(textView6,"4");
+                    pairs[4] = new Pair<View,String>(textView6,"5");
+                    pairs[5] = new Pair<View,String>(textView6,"6");
+                    pairs[6] = new Pair<View,String>(textView6,"7");
+                    pairs[7] = new Pair<View,String>(textView6,"8");
+                    pairs[8] = new Pair<View,String>(textView6,"9");
+                    pairs[9] = new Pair<View,String>(textView6,"10");
+                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity16makeaccount.this, pairs);
 
-                startActivity(intent,options.toBundle());
+                    startActivity(intent,options.toBundle());
+                }
             }
         });
+    }
+
+    public String getString1(){
+        String uit = "";
+        if (!editText1.getText().toString().trim().isEmpty() || editText1.getText().toString() != null){
+            uit += editText1.getText().toString().trim();
+        }
+        return uit;
+    }
+    public String getString2(){
+        String uit = "";
+        if (!editText2.getText().toString().trim().isEmpty() || editText2.getText().toString() != null){
+            uit += editText2.getText().toString().trim();
+        }
+        return uit;
+    }
+
+    public boolean controle(){
+        boolean uit = false;
+
+        if (getString1()!= null && !getString1().trim().isEmpty()){
+            if (getString2() != null && !getString2().trim().isEmpty()){
+                uit = true;
+            }
+        }
+        System.out.println(uit);
+        return uit;
     }
 }

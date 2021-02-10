@@ -62,12 +62,6 @@ public class MainActivity2dashboard extends AppCompatActivity {
         textView18 = findViewById(R.id.rectangle_8_page_2_text);
         textView19 = findViewById(R.id.rectangle_9_page_2_text);
 
-        dataBaseRunner = new DataBaseRunner(this);
-        dataBaseRunner.addToTabel1("lol");
-        dataBaseRunner.addToTabel1("elo");
-        dataBaseRunner.addToTabel2("elo","delhaize",50,1,"food");
-        dataBaseRunner.addToTabel2("elo","delhaize",50,1,"food");
-
         click_1();
         click_2();
         click_3();
@@ -98,8 +92,6 @@ public class MainActivity2dashboard extends AppCompatActivity {
         // setColorToGradiant2(textView17);
         // setColorToGradiant2(textView18);
 
-        System.out.println(dataBaseRunner.IDMAKERTABLE1());
-        System.out.println(dataBaseRunner.IDMAKERTABLE2());
     }
 
     public void click_1(){
