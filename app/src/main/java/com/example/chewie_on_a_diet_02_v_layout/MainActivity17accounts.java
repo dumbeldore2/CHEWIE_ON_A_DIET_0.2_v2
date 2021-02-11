@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -49,11 +50,13 @@ public class MainActivity17accounts extends AppCompatActivity {
         dataBaseRunner = new DataBaseRunner(this);
         data = dataBaseRunner.firstLettersNaam();
         data3 = dataBaseRunner.activated();
+        System.out.println(dataBaseRunner.getIdActivated());
         mainActivity17accountsBar = new MainActivity17accountsBar(this,data,data3,data1);
         listView.setAdapter(mainActivity17accountsBar);
 
         click_fun_1();
         click_fun_2();
+        click_fun_3();
 
     }
 
@@ -124,6 +127,16 @@ public class MainActivity17accounts extends AppCompatActivity {
                 ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity17accounts.this, pairs);
 
                 startActivity(intent,options.toBundle());
+            }
+        });
+    }
+    public void click_fun_3(){
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity18individualaccount.class);
+                intent.putExtra("id",i);
+                startActivity(intent);
             }
         });
     }

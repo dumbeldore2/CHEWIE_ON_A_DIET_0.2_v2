@@ -64,8 +64,6 @@ public class MainActivity2dashboard extends AppCompatActivity {
 
         dataBaseRunner = new DataBaseRunner(this);
 
-        System.out.println(dataBaseRunner.IDMAKERTABLE1());
-
         startAccount();
 
         click_1();

@@ -2,9 +2,11 @@ package com.example.chewie_on_a_diet_02_v_layout;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.transition.CircularPropagation;
 
 import androidx.annotation.Nullable;
 
@@ -68,12 +70,12 @@ public class DataBaseRunner extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + DATABASE_table_1 + "("+Table_1_col_1+" INTEGER primary key,"+Table_1_col_2+" TEXT ,"+Table_1_col_3+" TEXT ,"+Table_1_col_4+" TEXT )");
-        db.execSQL("create table " + DATABASE_table_2 + "("+Table_2_col_1+" INTEGER primary key,"+Table_2_col_2+" TEXT ,"+Table_2_col_3+" TEXT ,"+Table_2_col_4+" INTEGER ,"+Table_2_col_5+" INTEGER ,"+Table_2_col_6+" TEXT , foreign key ("+Table_2_col_5+") references "+DATABASE_table_1+"("+Table_1_col_1+"))");
-        db.execSQL("create table " + DATABASE_table_3 + "("+Table_3_col_1+" INTEGER primary key,"+Table_3_col_2+" TEXT ,"+Table_3_col_3+" TEXT ,"+Table_3_col_4+" INTEGER ,"+Table_3_col_5+" INTEGER , foreign key ("+Table_3_col_5+") references "+DATABASE_table_1+"("+Table_1_col_1+"))");
-        db.execSQL("create table " + DATABASE_table_4 + "("+Table_4_col_1+" INTEGER primary key,"+Table_4_col_2+" TEXT ,"+Table_4_col_3+" TEXT ,"+Table_4_col_4+" INTEGER ,"+Table_4_col_5+" INTEGER , foreign key ("+Table_4_col_4+") references "+DATABASE_table_1+"("+Table_1_col_1+"))");
-        db.execSQL("create table " + DATABASE_table_5 + "("+Table_5_col_1+" INTEGER primary key,"+Table_5_col_2+" TEXT ,"+Table_5_col_3+" TEXT ,"+Table_5_col_4+" INTEGER ,"+Table_5_col_5+" INTEGER ,"+Table_5_col_6+" INTEGER ,"+Table_5_col_7+" INTEGER , foreign key ("+Table_5_col_4+") references "+DATABASE_table_1+"("+Table_1_col_1+") , foreign key ("+Table_5_col_5+") references "+DATABASE_table_2+"("+Table_2_col_1+"))");
-        db.execSQL("create table " + DATABASE_table_6 + "("+Table_6_col_1+" INTEGER primary key,"+Table_6_col_2+" TEXT ,"+Table_6_col_3+" TEXT ,"+Table_6_col_4+" INTEGER ,"+Table_6_col_5+" INTEGER ,"+Table_6_col_6+" INTEGER , foreign key ("+Table_6_col_4+") references "+DATABASE_table_1+"("+Table_1_col_1+"), foreign key ("+Table_6_col_5+") references "+DATABASE_table_3+"("+Table_3_col_1+"))");
+        db.execSQL("create table " + DATABASE_table_1 + "(" + Table_1_col_1 + " INTEGER primary key," + Table_1_col_2 + " TEXT ," + Table_1_col_3 + " TEXT ," + Table_1_col_4 + " TEXT )");
+        db.execSQL("create table " + DATABASE_table_2 + "(" + Table_2_col_1 + " INTEGER primary key," + Table_2_col_2 + " TEXT ," + Table_2_col_3 + " TEXT ," + Table_2_col_4 + " INTEGER ," + Table_2_col_5 + " INTEGER ," + Table_2_col_6 + " TEXT , foreign key (" + Table_2_col_5 + ") references " + DATABASE_table_1 + "(" + Table_1_col_1 + "))");
+        db.execSQL("create table " + DATABASE_table_3 + "(" + Table_3_col_1 + " INTEGER primary key," + Table_3_col_2 + " TEXT ," + Table_3_col_3 + " TEXT ," + Table_3_col_4 + " INTEGER ," + Table_3_col_5 + " INTEGER , foreign key (" + Table_3_col_5 + ") references " + DATABASE_table_1 + "(" + Table_1_col_1 + "))");
+        db.execSQL("create table " + DATABASE_table_4 + "(" + Table_4_col_1 + " INTEGER primary key," + Table_4_col_2 + " TEXT ," + Table_4_col_3 + " TEXT ," + Table_4_col_4 + " INTEGER ," + Table_4_col_5 + " INTEGER , foreign key (" + Table_4_col_4 + ") references " + DATABASE_table_1 + "(" + Table_1_col_1 + "))");
+        db.execSQL("create table " + DATABASE_table_5 + "(" + Table_5_col_1 + " INTEGER primary key," + Table_5_col_2 + " TEXT ," + Table_5_col_3 + " TEXT ," + Table_5_col_4 + " INTEGER ," + Table_5_col_5 + " INTEGER ," + Table_5_col_6 + " INTEGER ," + Table_5_col_7 + " INTEGER , foreign key (" + Table_5_col_4 + ") references " + DATABASE_table_1 + "(" + Table_1_col_1 + ") , foreign key (" + Table_5_col_5 + ") references " + DATABASE_table_2 + "(" + Table_2_col_1 + "))");
+        db.execSQL("create table " + DATABASE_table_6 + "(" + Table_6_col_1 + " INTEGER primary key," + Table_6_col_2 + " TEXT ," + Table_6_col_3 + " TEXT ," + Table_6_col_4 + " INTEGER ," + Table_6_col_5 + " INTEGER ," + Table_6_col_6 + " INTEGER , foreign key (" + Table_6_col_4 + ") references " + DATABASE_table_1 + "(" + Table_1_col_1 + "), foreign key (" + Table_6_col_5 + ") references " + DATABASE_table_3 + "(" + Table_3_col_1 + "))");
     }
 
     @Override
@@ -88,34 +90,35 @@ public class DataBaseRunner extends SQLiteOpenHelper {
     public int IDMAKERTABLE1() {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery(
-                "select * from "+ DATABASE_table_1, null
+                "select * from " + DATABASE_table_1, null
         );
         return cursor.getCount();
     }
 
-    public void addToTabel1(String naam , String email){
+    public void addToTabel1(String naam, String email) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
-        if (!naam.trim().isEmpty() && naam != null){
-            contentValues.put(Table_1_col_1,IDMAKERTABLE1());
-            contentValues.put(Table_1_col_2,naam);
-            contentValues.put(Table_1_col_3,email);
-            contentValues.put(Table_1_col_4,"on");
+        if (!naam.trim().isEmpty() && naam != null) {
+            contentValues.put(Table_1_col_1, IDMAKERTABLE1());
+            contentValues.put(Table_1_col_2, naam);
+            contentValues.put(Table_1_col_3, email);
+            contentValues.put(Table_1_col_4, "on");
         }
 
         sqLiteDatabase.insert(DATABASE_table_1, null, contentValues);
     }
-    public String[] firstLettersNaam(){
+
+    public String[] firstLettersNaam() {
 
         String uit[];
 
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        Cursor cursor = sqLiteDatabase.rawQuery("select substr("+Table_1_col_2+", 1, 1)from "+DATABASE_table_1+"",null);
+        Cursor cursor = sqLiteDatabase.rawQuery("select substr(" + Table_1_col_2 + ", 1, 1)from " + DATABASE_table_1 + "", null);
 
         uit = new String[cursor.getCount()];
 
-        for (int i = 0; i <= cursor.getCount(); i++){
+        for (int i = 0; i <= cursor.getCount(); i++) {
             if (cursor.moveToPosition(i)) {
                 StringBuffer stringBuffer = new StringBuffer();
                 stringBuffer.append(cursor.getString(0));
@@ -126,41 +129,53 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         return uit;
     }
 
-    public String getTable_1_col_2Name(int id){
+    public String getTable_1_col_2Name(int id) {
         String uit = "";
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         StringBuffer stringBuffer = new StringBuffer();
-        Cursor cursor = sqLiteDatabase.rawQuery("select "+Table_1_col_2+" from "+DATABASE_table_1+" where "+Table_1_col_1+" == "+id+"",null);
-        if (cursor.moveToFirst()){
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_1_col_2 + " from " + DATABASE_table_1 + " where " + Table_1_col_1 + " == " + id + "", null);
+        if (cursor.moveToFirst()) {
             stringBuffer.append(cursor.getString(0));
         }
         uit += stringBuffer.toString();
         return uit;
     }
 
-    public String getTable_1_col_3Email(int id){
+    public String getTable_1_col_2NameFirstLetter(int id) {
+        String uit = "";
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        StringBuffer stringBuffer = new StringBuffer();
+        Cursor cursor = sqLiteDatabase.rawQuery("select substr(" + Table_1_col_2 + ",1,1) from " + DATABASE_table_1 + " where " + Table_1_col_1 + " == " + id + "", null);
+        if (cursor.moveToFirst()) {
+            stringBuffer.append(cursor.getString(0));
+        }
+        uit += stringBuffer.toString();
+        return uit;
+    }
+
+    public String getTable_1_col_3Email(int id) {
         String uit = "";
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         StringBuffer stringBuffer = new StringBuffer();
         Cursor cursor =
-                sqLiteDatabase.rawQuery("select "+Table_1_col_3+" from "+DATABASE_table_1+" where "+Table_1_col_1+" == "+id+"",null);
-        if (cursor.moveToFirst()){
+                sqLiteDatabase.rawQuery("select " + Table_1_col_3 + " from " + DATABASE_table_1 + " where " + Table_1_col_1 + " == " + id + "", null);
+        if (cursor.moveToFirst()) {
             stringBuffer.append(cursor.getString(0));
         }
         uit += stringBuffer.toString();
         return uit;
     }
 
-    public String[] activated(){
+    public String[] activated() {
 
         String uit[];
 
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        Cursor cursor = sqLiteDatabase.rawQuery("select "+Table_1_col_4+" from "+DATABASE_table_1+"",null);
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_1_col_4 + " from " + DATABASE_table_1 + "", null);
 
         uit = new String[cursor.getCount()];
 
-        for (int i = 0; i <= cursor.getCount(); i++){
+        for (int i = 0; i <= cursor.getCount(); i++) {
             if (cursor.moveToPosition(i)) {
                 StringBuffer stringBuffer = new StringBuffer();
                 stringBuffer.append(cursor.getString(0));
@@ -179,39 +194,51 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         contentValues.put(Table_1_col_3, getTable_1_col_3Email(id));
         contentValues.put(Table_1_col_4, "off");
 
-        sqLiteDatabase.update(DATABASE_table_1, contentValues, ""+Table_1_col_1+" = ?", new String[]{"" + id});
+        sqLiteDatabase.update(DATABASE_table_1, contentValues, "" + Table_1_col_1 + " = ?", new String[]{"" + id});
     }
 
-    public void updateAllLinesToOff(){
+    public void updateAllLinesToOff() {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        Cursor cursor = sqLiteDatabase.rawQuery("select * from "+DATABASE_table_1+"",null);
-        for (int i = 0 ; i < cursor.getCount(); i++){
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from " + DATABASE_table_1 + "", null);
+        for (int i = 0; i < cursor.getCount(); i++) {
             updateOneLineToOff(i);
         }
+    }
+
+    public int getIdActivated(){
+        int uit = 0;
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select "+Table_1_col_1+" from "+DATABASE_table_1+" where "+Table_1_col_4+" == 'on'",null);
+        StringBuffer stringBuffer = new StringBuffer();
+        if (cursor.moveToFirst()){
+            stringBuffer.append(cursor.getString(0));
+        }
+        uit = Integer.parseInt(stringBuffer.toString().trim());
+        return uit;
     }
 
     // Alle code omwile van de tweede tabel
     public int IDMAKERTABLE2() {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery(
-                "select * from "+ DATABASE_table_2, null
+                "select * from " + DATABASE_table_2, null
         );
         return cursor.getCount();
     }
 
-    public void addToTabel2(String naam, String maker , int aantalCal,int accountId,String type){
+    public void addToTabel2(String naam, String maker, int aantalCal, int accountId, String type) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
-        if (!naam.trim().isEmpty() && naam != null && !maker.trim().isEmpty() && maker != null){
-            contentValues.put(Table_2_col_1,IDMAKERTABLE2());
-            contentValues.put(Table_2_col_2,naam);
-            contentValues.put(Table_2_col_3,maker);
-            if (aantalCal > -1 && accountId > -1){
-                contentValues.put(Table_2_col_4,aantalCal);
-                contentValues.put(Table_2_col_5,accountId);
-                if (type == "food" || type == "drink"){
-                    contentValues.put(Table_2_col_6,type);
+        if (!naam.trim().isEmpty() && naam != null && !maker.trim().isEmpty() && maker != null) {
+            contentValues.put(Table_2_col_1, IDMAKERTABLE2());
+            contentValues.put(Table_2_col_2, naam);
+            contentValues.put(Table_2_col_3, maker);
+            if (aantalCal > -1 && accountId > -1) {
+                contentValues.put(Table_2_col_4, aantalCal);
+                contentValues.put(Table_2_col_5, accountId);
+                if (type == "food" || type == "drink") {
+                    contentValues.put(Table_2_col_6, type);
                     sqLiteDatabase.insert(DATABASE_table_2, null, contentValues);
                 }
             }

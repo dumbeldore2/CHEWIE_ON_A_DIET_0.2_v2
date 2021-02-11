@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity17accounts"
-    android:background="@drawable/background_1">
+    android:background="@drawable/background_3">
     <TextView
         android:id="@+id/text_1"
         android:layout_width="wrap_content"

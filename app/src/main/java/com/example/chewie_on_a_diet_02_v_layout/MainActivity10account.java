@@ -18,10 +18,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity10account extends AppCompatActivity {
-
     ImageView imageView1,imageView3,imageView4;
 
-    TextView textView1,textView2,textView3,textView5,textView6;
+    TextView textView1,textView2,textView3,textView4,textView5,textView6;
+
+    DataBaseRunner dataBaseRunner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class MainActivity10account extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
+
         imageView1 = findViewById(R.id.image_1);
         imageView4 = findViewById(R.id.image_4);
         imageView3 = findViewById(R.id.image_3);
@@ -38,8 +40,13 @@ public class MainActivity10account extends AppCompatActivity {
         textView1 = findViewById(R.id.text_1);
         textView2 = findViewById(R.id.text_2);
         textView3 = findViewById(R.id.text_3);
-        textView6 = findViewById(R.id.text_6);
+        textView4 = findViewById(R.id.text_4);
         textView5 = findViewById(R.id.text_5);
+        textView6 = findViewById(R.id.text_6);
+
+        dataBaseRunner = new DataBaseRunner(this);
+
+        setAccountToTextview();
 
         click_fun_1();
         click_fun_2();
@@ -163,5 +170,11 @@ public class MainActivity10account extends AppCompatActivity {
                         Color.parseColor("#286086")
                 },null,Shader.TileMode.CLAMP);
         textView.getPaint().setShader(shader);
+    }
+
+    public void setAccountToTextview(){
+        int id = 0;
+        id = dataBaseRunner.getIdActivated();
+        textView4.setText(dataBaseRunner.getTable_1_col_2NameFirstLetter(id));
     }
 }
