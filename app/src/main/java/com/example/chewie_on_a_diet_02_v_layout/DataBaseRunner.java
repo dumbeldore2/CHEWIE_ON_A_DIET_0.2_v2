@@ -197,6 +197,17 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         sqLiteDatabase.update(DATABASE_table_1, contentValues, "" + Table_1_col_1 + " = ?", new String[]{"" + id});
     }
 
+    public void updateOneLineToOn(int id) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(Table_1_col_1, id);
+        contentValues.put(Table_1_col_2, getTable_1_col_2Name(id));
+        contentValues.put(Table_1_col_3, getTable_1_col_3Email(id));
+        contentValues.put(Table_1_col_4, "on");
+
+        sqLiteDatabase.update(DATABASE_table_1, contentValues, "" + Table_1_col_1 + " = ?", new String[]{"" + id});
+    }
+
     public void updateAllLinesToOff() {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("select * from " + DATABASE_table_1 + "", null);

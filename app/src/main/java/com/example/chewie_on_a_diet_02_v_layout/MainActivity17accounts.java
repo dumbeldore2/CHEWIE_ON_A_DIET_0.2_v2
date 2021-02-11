@@ -132,11 +132,23 @@ public class MainActivity17accounts extends AppCompatActivity {
     }
     public void click_fun_3(){
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity18individualaccount.class);
+
+                Pair[] pairs = new Pair[6];
+                pairs[0] = new Pair<View,String>(view,"1");
+                pairs[1] = new Pair<View,String>(view,"2");
+                pairs[2] = new Pair<View,String>(view,"3");
+                pairs[3] = new Pair<View,String>(view,"4");
+                pairs[4] = new Pair<View,String>(view,"5");
+                pairs[5] = new Pair<View,String>(view,"6");
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity17accounts.this, pairs);
+
+                startActivity(intent,options.toBundle());
                 intent.putExtra("id",i);
-                startActivity(intent);
+                startActivity(intent,options.toBundle());
             }
         });
     }
