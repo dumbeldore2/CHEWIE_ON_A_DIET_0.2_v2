@@ -19,7 +19,8 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_margin="50dp"
         android:transitionName="1"
-        android:textColor="@color/blauw"/>
+        android:textColor="@color/blauw"
+        android:maxHeight="400dp"/>
 
     <TextView
         android:id="@+id/text_2"
