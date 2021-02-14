@@ -27,9 +27,11 @@ public class MainActivity7food extends AppCompatActivity {
     ListView listView;
 
     MainActivity7foodBar mainActivity7foodBar;
-    String data[] = {"naam = appel","naam = peer","naam = olifant","naam = muis"};
-    String data2[] = {"maker = appelman","maker = peerman","maker = olifantman","maker = muisman"};
-    String data3[] = {"aantal calories/100g = 1500","aantal calories/100g = 1500","aantal calories/100g = 1500","aantal calories/100g = 1500"};
+
+    DataBaseRunner dataBaseRunner;
+    String data[] = {};
+    String data2[] = {};
+    String data3[] = {};
 
 
     @Override
@@ -50,6 +52,12 @@ public class MainActivity7food extends AppCompatActivity {
         textView4 = findViewById(R.id.text_4);
 
         listView = findViewById(R.id.listview_1);
+
+        dataBaseRunner = new DataBaseRunner(this);
+
+        data = dataBaseRunner.getTable_2_col_2NameArrayList(dataBaseRunner.getIdActivated());
+        data2 = dataBaseRunner.getTable_2_col_3MakerArrayList(dataBaseRunner.getIdActivated());
+        data3 = dataBaseRunner.getTable_2_col_4CaloriesArrayList(dataBaseRunner.getIdActivated());
 
         mainActivity7foodBar = new MainActivity7foodBar(this,data,data2,data3);
         listView.setAdapter(mainActivity7foodBar);

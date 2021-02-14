@@ -24,7 +24,7 @@ public class MainActivity12makefoodobject extends AppCompatActivity {
 
     ImageView imageView1,imageView7,imageView8;
 
-    EditText editText1,editText2,editText3,editText4;
+    EditText editText1,editText2,editText3;
 
     DataBaseRunner dataBaseRunner;
 
@@ -54,14 +54,12 @@ public class MainActivity12makefoodobject extends AppCompatActivity {
         editText1 = findViewById(R.id.edit_text_1);
         editText2 = findViewById(R.id.edit_text_2);
         editText3 = findViewById(R.id.edit_text_3);
-        editText4 = findViewById(R.id.edit_text_4);
 
         dataBaseRunner = new DataBaseRunner(this);
 
         setColorToGradiant(textView4);
         setColorToGradiant(textView5);
         setColorToGradiant(textView6);
-        setColorToGradiant(textView7);
 
         click_fun_1();
         click_fun_2();
@@ -145,11 +143,6 @@ public class MainActivity12makefoodobject extends AppCompatActivity {
                 if (controller()){
                     Intent intent = new Intent(getApplicationContext(), MainActivity4today.class);
 
-                    System.out.println(getNaam());
-                    System.out.println(getMaker());
-                    System.out.println(getAantalCalories());
-                    System.out.println(getSize());
-
                     Pair[] pairs = new Pair[7];
                     pairs[0] = new Pair<View,String>(textView9,"1");
                     pairs[1] = new Pair<View,String>(textView9,"2");
@@ -207,18 +200,12 @@ public class MainActivity12makefoodobject extends AppCompatActivity {
         return uit;
     }
 
-    public int getSize(){
-        int uit = -1;
-        uit = Integer.parseInt(editText4.getText().toString().trim());
-        return uit;
-    }
-
     public boolean controller(){
         boolean uit = false;
 
         if (!getMaker().trim().isEmpty() && getMaker() != null){
             if (!getNaam().trim().isEmpty() && getNaam() != null){
-                if (getAantalCalories() != -1 && getSize() != -1){
+                if (getAantalCalories() != -1){
                     uit = true;
                 }
             }

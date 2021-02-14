@@ -255,4 +255,86 @@ public class DataBaseRunner extends SQLiteOpenHelper {
             }
         }
     }
+
+
+    public String getTable_2_col_2Name(int id) {
+        String uit = "";
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        StringBuffer stringBuffer = new StringBuffer();
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_2_col_2 + " from " + DATABASE_table_2 + " where " + Table_2_col_5 + " == " + id + " and "+Table_2_col_6+" == 'food'", null);
+        if (cursor.moveToFirst()) {
+            stringBuffer.append(cursor.getString(0));
+        }
+        uit += stringBuffer.toString();
+        return uit;
+    }
+
+    public String [] getTable_2_col_2NameArrayList(int id) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_2_col_2 + " from " + DATABASE_table_2 + " where " + Table_2_col_5 + " == " + id + " and " + Table_2_col_6 + " == 'food'", null);
+        String[] uit = new String[cursor.getCount()];
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                if (cursor.moveToPosition(i)) {
+                    StringBuffer stringBuffer = new StringBuffer();
+                    stringBuffer.append(cursor.getString(0));
+                    uit[i] = "name = " + stringBuffer.toString();
+                }
+            }
+        }
+        return uit;
+    }
+
+
+
+    public String [] getTable_2_col_3MakerArrayList(int id) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_2_col_3 + " from " + DATABASE_table_2 + " where " + Table_2_col_5 + " == " + id + " and " + Table_2_col_6 + " == 'food'", null);
+        String[] uit = new String[cursor.getCount()];
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                if (cursor.moveToPosition(i)) {
+                    StringBuffer stringBuffer = new StringBuffer();
+                    stringBuffer.append(cursor.getString(0));
+                    uit[i] = "maker = " + stringBuffer.toString();
+                }
+            }
+        }
+        return uit;
+    }
+
+    public String [] getTable_2_col_4CaloriesArrayList(int id) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_2_col_4 + " from " + DATABASE_table_2 + " where " + Table_2_col_5 + " == " + id + " and " + Table_2_col_6 + " == 'food'", null);
+        String [] uit = new String[cursor.getCount()];
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                if (cursor.moveToPosition(i)) {
+                    StringBuffer stringBuffer = new StringBuffer();
+                    stringBuffer.append(cursor.getString(0));
+                    uit[i] = stringBuffer.toString()+" Cal/100g";
+                }
+            }
+        }
+        return uit;
+    }
+    public String [] getTable_2_col_1IdArrayList(int id) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_2_col_1 + " from " + DATABASE_table_2 + " where " + Table_2_col_5 + " == " + id + " and " + Table_2_col_6 + " == 'food'", null);
+        String[] uit = new String[cursor.getCount()];
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                if (cursor.moveToPosition(i)) {
+                    StringBuffer stringBuffer = new StringBuffer();
+                    stringBuffer.append(cursor.getString(0));
+                    uit[i] = stringBuffer.toString();
+                }
+            }
+        }
+        return uit;
+    }
 }

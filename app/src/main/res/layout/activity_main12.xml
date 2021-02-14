@@ -212,52 +212,6 @@
                         app:layout_constraintEnd_toEndOf="parent"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraint_4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp">
-
-                    <ImageView
-                        android:id="@+id/image_5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:src="@drawable/but_11"
-                        android:transitionName="14"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent" />
-
-                    <TextView
-                        android:id="@+id/text_7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_slab"
-                        android:text="size in grams"
-                        android:textColor="@color/groen"
-                        android:textSize="48dp"
-                        android:transitionName="15"
-                        app:layout_constraintBottom_toBottomOf="@id/image_5"
-                        app:layout_constraintEnd_toEndOf="@id/image_5"
-                        app:layout_constraintStart_toStartOf="@id/image_5"
-                        app:layout_constraintTop_toTopOf="@id/image_5" />
-
-                    <EditText
-                        android:id="@+id/edit_text_4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/but_12"
-                        android:gravity="center"
-                        android:hint="write size in grams here"
-                        android:textColor="@color/blauw"
-                        android:textColorHint="@color/wit"
-                        android:transitionName="16"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/image_5"
-                        app:layout_constraintEnd_toEndOf="parent"/>
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
 
