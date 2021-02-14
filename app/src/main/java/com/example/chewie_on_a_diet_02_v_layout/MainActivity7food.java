@@ -55,9 +55,9 @@ public class MainActivity7food extends AppCompatActivity {
 
         dataBaseRunner = new DataBaseRunner(this);
 
-        data = dataBaseRunner.getTable_2_col_2NameArrayList(dataBaseRunner.getIdActivated());
-        data2 = dataBaseRunner.getTable_2_col_3MakerArrayList(dataBaseRunner.getIdActivated());
-        data3 = dataBaseRunner.getTable_2_col_4CaloriesArrayList(dataBaseRunner.getIdActivated());
+        data = dataBaseRunner.getTable_2_col_2NameArrayListFood(dataBaseRunner.getIdActivated());
+        data2 = dataBaseRunner.getTable_2_col_3MakerArrayListFood(dataBaseRunner.getIdActivated());
+        data3 = dataBaseRunner.getTable_2_col_4CaloriesArrayListFood(dataBaseRunner.getIdActivated());
 
         mainActivity7foodBar = new MainActivity7foodBar(this,data,data2,data3);
         listView.setAdapter(mainActivity7foodBar);

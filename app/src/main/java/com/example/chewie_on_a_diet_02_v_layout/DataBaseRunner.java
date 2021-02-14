@@ -269,7 +269,7 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         return uit;
     }
 
-    public String [] getTable_2_col_2NameArrayList(int id) {
+    public String [] getTable_2_col_2NameArrayListFood(int id) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_2_col_2 + " from " + DATABASE_table_2 + " where " + Table_2_col_5 + " == " + id + " and " + Table_2_col_6 + " == 'food'", null);
         String[] uit = new String[cursor.getCount()];
@@ -286,9 +286,7 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         return uit;
     }
 
-
-
-    public String [] getTable_2_col_3MakerArrayList(int id) {
+    public String [] getTable_2_col_3MakerArrayListFood(int id) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_2_col_3 + " from " + DATABASE_table_2 + " where " + Table_2_col_5 + " == " + id + " and " + Table_2_col_6 + " == 'food'", null);
         String[] uit = new String[cursor.getCount()];
@@ -305,7 +303,7 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         return uit;
     }
 
-    public String [] getTable_2_col_4CaloriesArrayList(int id) {
+    public String [] getTable_2_col_4CaloriesArrayListFood(int id) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_2_col_4 + " from " + DATABASE_table_2 + " where " + Table_2_col_5 + " == " + id + " and " + Table_2_col_6 + " == 'food'", null);
         String [] uit = new String[cursor.getCount()];
@@ -321,7 +319,8 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         }
         return uit;
     }
-    public String [] getTable_2_col_1IdArrayList(int id) {
+
+    public String [] getTable_2_col_1IdArrayListFood(int id) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_2_col_1 + " from " + DATABASE_table_2 + " where " + Table_2_col_5 + " == " + id + " and " + Table_2_col_6 + " == 'food'", null);
         String[] uit = new String[cursor.getCount()];
@@ -337,4 +336,76 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         }
         return uit;
     }
+
+    //drink part van tabel 2
+
+    public String [] getTable_2_col_2NameArrayListDrink(int id) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_2_col_2 + " from " + DATABASE_table_2 + " where " + Table_2_col_5 + " == " + id + " and " + Table_2_col_6 + " == 'drink'", null);
+        String[] uit = new String[cursor.getCount()];
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                if (cursor.moveToPosition(i)) {
+                    StringBuffer stringBuffer = new StringBuffer();
+                    stringBuffer.append(cursor.getString(0));
+                    uit[i] = "name = " + stringBuffer.toString();
+                }
+            }
+        }
+        return uit;
+    }
+
+    public String [] getTable_2_col_3MakerArrayListDrink(int id) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_2_col_3 + " from " + DATABASE_table_2 + " where " + Table_2_col_5 + " == " + id + " and " + Table_2_col_6 + " == 'drink'", null);
+        String[] uit = new String[cursor.getCount()];
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                if (cursor.moveToPosition(i)) {
+                    StringBuffer stringBuffer = new StringBuffer();
+                    stringBuffer.append(cursor.getString(0));
+                    uit[i] = "maker = " + stringBuffer.toString();
+                }
+            }
+        }
+        return uit;
+    }
+
+    public String [] getTable_2_col_4CaloriesArrayListDrink(int id) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_2_col_4 + " from " + DATABASE_table_2 + " where " + Table_2_col_5 + " == " + id + " and " + Table_2_col_6 + " == 'drink'", null);
+        String [] uit = new String[cursor.getCount()];
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                if (cursor.moveToPosition(i)) {
+                    StringBuffer stringBuffer = new StringBuffer();
+                    stringBuffer.append(cursor.getString(0));
+                    uit[i] = stringBuffer.toString()+" Cal/100g";
+                }
+            }
+        }
+        return uit;
+    }
+
+    public String [] getTable_2_col_1IdArrayListDrink(int id) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_2_col_1 + " from " + DATABASE_table_2 + " where " + Table_2_col_5 + " == " + id + " and " + Table_2_col_6 + " == 'drink'", null);
+        String[] uit = new String[cursor.getCount()];
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                if (cursor.moveToPosition(i)) {
+                    StringBuffer stringBuffer = new StringBuffer();
+                    stringBuffer.append(cursor.getString(0));
+                    uit[i] = stringBuffer.toString();
+                }
+            }
+        }
+        return uit;
+    }
+
+
 }
