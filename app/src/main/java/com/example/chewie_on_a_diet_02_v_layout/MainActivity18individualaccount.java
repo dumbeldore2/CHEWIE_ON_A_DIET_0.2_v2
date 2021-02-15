@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Pair;
@@ -21,6 +22,7 @@ public class MainActivity18individualaccount extends AppCompatActivity {
 
     DataBaseRunner dataBaseRunner;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,9 @@ public class MainActivity18individualaccount extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
+        getWindow().setNavigationBarColor(Color.parseColor("#00688B"));
+        getWindow().setStatusBarColor(Color.parseColor("#00FA9A"));
+
 
         textView1 = findViewById(R.id.text_1);
         textView2 = findViewById(R.id.text_2);

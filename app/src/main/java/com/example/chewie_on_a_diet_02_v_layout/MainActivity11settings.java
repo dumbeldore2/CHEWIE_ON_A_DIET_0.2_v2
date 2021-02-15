@@ -23,6 +23,7 @@ public class MainActivity11settings extends AppCompatActivity {
 
     TextView textView1,textView2,textView3;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +32,9 @@ public class MainActivity11settings extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
+        getWindow().setNavigationBarColor(Color.parseColor("#00688B"));
+        getWindow().setStatusBarColor(Color.parseColor("#00FA9A"));
+
 
         imageView1 = findViewById(R.id.image_1);
 

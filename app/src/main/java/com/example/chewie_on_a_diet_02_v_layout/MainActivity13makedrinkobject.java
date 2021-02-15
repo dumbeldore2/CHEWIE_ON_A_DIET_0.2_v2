@@ -12,8 +12,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.TextPaint;
 import android.util.Pair;
+import android.view.TextureView;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,6 +25,11 @@ public class MainActivity13makedrinkobject extends AppCompatActivity {
 
     ImageView imageView1,imageView7,imageView8;
 
+    EditText editText1,editText2,editText3;
+
+    DataBaseRunner dataBaseRunner;
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +38,10 @@ public class MainActivity13makedrinkobject extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
+        getWindow().setNavigationBarColor(Color.parseColor("#00688B"));
+        getWindow().setStatusBarColor(Color.parseColor("#00FA9A"));
+
+
 
         textView1 = findViewById(R.id.text_1);
         textView2 = findViewById(R.id.text_2);
@@ -45,6 +56,12 @@ public class MainActivity13makedrinkobject extends AppCompatActivity {
         imageView1 = findViewById(R.id.image_1);
         imageView7 = findViewById(R.id.image_7);
         imageView8 = findViewById(R.id.image_8);
+
+        editText1 = findViewById(R.id.edit_text_1);
+        editText2 = findViewById(R.id.edit_text_2);
+        editText3 = findViewById(R.id.edit_text_3);
+
+        dataBaseRunner = new DataBaseRunner(this);
 
         setColorToGradiant(textView4);
         setColorToGradiant(textView5);
@@ -105,19 +122,21 @@ public class MainActivity13makedrinkobject extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity8drink.class);
+                if (controller()){
+                    Intent intent = new Intent(getApplicationContext(),MainActivity8drink.class);
 
-                Pair[] pairs = new Pair[7];
-                pairs[0] = new Pair<View, String>(textView8, "1");
-                pairs[1] = new Pair<View, String>(textView8, "2");
-                pairs[2] = new Pair<View, String>(textView8, "3");
-                pairs[3] = new Pair<View, String>(textView8, "4");
-                pairs[4] = new Pair<View, String>(textView8, "5");
-                pairs[5] = new Pair<View, String>(textView8, "6");
-                pairs[6] = new Pair<View, String>(textView8, "7");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity13makedrinkobject.this, pairs);
+                    Pair[] pairs = new Pair[7];
+                    pairs[0] = new Pair<View, String>(textView8, "1");
+                    pairs[1] = new Pair<View, String>(textView8, "2");
+                    pairs[2] = new Pair<View, String>(textView8, "3");
+                    pairs[3] = new Pair<View, String>(textView8, "4");
+                    pairs[4] = new Pair<View, String>(textView8, "5");
+                    pairs[5] = new Pair<View, String>(textView8, "6");
+                    pairs[6] = new Pair<View, String>(textView8, "7");
+                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity13makedrinkobject.this, pairs);
 
-                startActivity(intent, options.toBundle());
+                    startActivity(intent, options.toBundle());
+                }
             }
         });
     }
@@ -166,5 +185,35 @@ public class MainActivity13makedrinkobject extends AppCompatActivity {
                         Color.parseColor("#286086")
                 }, null, Shader.TileMode.CLAMP);
         textView.getPaint().setShader(shader);
+    }
+
+    public String getNaam(){
+        String uit = "";
+        uit += editText1.getText().toString().trim();
+        return uit;
+    }
+
+    public String getMaker(){
+        String uit = "";
+        uit += editText2.getText().toString().trim();
+        return uit;
+    }
+
+    public int getAantalCalories(){
+        int uit = -1;
+        uit = Integer.parseInt(editText3.getText().toString().trim());
+        return uit;
+    }
+
+    public boolean controller(){
+        boolean uit = false;
+        if (!getMaker().trim().isEmpty() && getMaker() != null){
+            if (!getNaam().trim().isEmpty() && getNaam() != null){
+                if (getAantalCalories() != -1){
+                    uit = true;
+                }
+            }
+        }
+        return uit;
     }
 }

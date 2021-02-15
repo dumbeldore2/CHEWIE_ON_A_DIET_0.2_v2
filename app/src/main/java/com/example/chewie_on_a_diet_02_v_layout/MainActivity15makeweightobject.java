@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Pair;
@@ -19,6 +20,7 @@ public class MainActivity15makeweightobject extends AppCompatActivity {
 
     ImageView imageView1,imageView3;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +29,9 @@ public class MainActivity15makeweightobject extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
+        getWindow().setNavigationBarColor(Color.parseColor("#00688B"));
+        getWindow().setStatusBarColor(Color.parseColor("#00FA9A"));
+
 
         imageView1 = findViewById(R.id.image_1);
         imageView3 = findViewById(R.id.image_3);

@@ -23,6 +23,7 @@ public class MainActivity2dashboard extends AppCompatActivity {
     TextView textView1,textView2,textView3,textView4,textView5,textView6,textView7,textView8,textView9,textView10,
             textView11,textView12,textView13,textView14,textView15,textView16,textView17,textView18,textView19;
     DataBaseRunner dataBaseRunner;
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +32,9 @@ public class MainActivity2dashboard extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
+        getWindow().setNavigationBarColor(Color.parseColor("#00688B"));
+        getWindow().setStatusBarColor(Color.parseColor("#00FA9A"));
+
 
         imageView1 = findViewById(R.id.rectangle_1_page_2);
         imageView2 = findViewById(R.id.rectangle_3_page_2);

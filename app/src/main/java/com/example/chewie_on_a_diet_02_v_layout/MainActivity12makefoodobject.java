@@ -28,6 +28,7 @@ public class MainActivity12makefoodobject extends AppCompatActivity {
 
     DataBaseRunner dataBaseRunner;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +37,9 @@ public class MainActivity12makefoodobject extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
+        getWindow().setNavigationBarColor(Color.parseColor("#00688B"));
+        getWindow().setStatusBarColor(Color.parseColor("#00FA9A"));
+
 
         textView1 = findViewById(R.id.text_1);
         textView2 = findViewById(R.id.text_2);
@@ -203,7 +207,6 @@ public class MainActivity12makefoodobject extends AppCompatActivity {
 
     public boolean controller(){
         boolean uit = false;
-
         if (!getMaker().trim().isEmpty() && getMaker() != null){
             if (!getNaam().trim().isEmpty() && getNaam() != null){
                 if (getAantalCalories() != -1){
