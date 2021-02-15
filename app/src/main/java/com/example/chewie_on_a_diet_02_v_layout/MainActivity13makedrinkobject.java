@@ -66,7 +66,6 @@ public class MainActivity13makedrinkobject extends AppCompatActivity {
         setColorToGradiant(textView4);
         setColorToGradiant(textView5);
         setColorToGradiant(textView6);
-        setColorToGradiant(textView7);
 
         click_fun_1();
         click_fun_2();
@@ -123,6 +122,8 @@ public class MainActivity13makedrinkobject extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (controller()){
+                    dataBaseRunner.addToTabel2(getNaam(),getMaker(),getAantalCalories(),
+                            dataBaseRunner.getIdActivated(),"drink");
                     Intent intent = new Intent(getApplicationContext(),MainActivity8drink.class);
 
                     Pair[] pairs = new Pair[7];

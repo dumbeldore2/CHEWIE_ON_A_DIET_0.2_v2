@@ -383,7 +383,7 @@ public class DataBaseRunner extends SQLiteOpenHelper {
                 if (cursor.moveToPosition(i)) {
                     StringBuffer stringBuffer = new StringBuffer();
                     stringBuffer.append(cursor.getString(0));
-                    uit[i] = stringBuffer.toString()+" Cal/100g";
+                    uit[i] = stringBuffer.toString()+" Cal/100ml";
                 }
             }
         }
