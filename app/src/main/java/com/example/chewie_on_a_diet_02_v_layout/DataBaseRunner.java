@@ -10,6 +10,10 @@ import android.transition.CircularPropagation;
 
 import androidx.annotation.Nullable;
 
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class DataBaseRunner extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "databaserunner.db";
@@ -82,6 +86,7 @@ public class DataBaseRunner extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("DROP TABLE IF EXISTS " + DATABASE_table_1);
         db.execSQL("DROP TABLE IF EXISTS " + DATABASE_table_2);
+        db.execSQL("DROP TABLE IF EXISTS " + DATABASE_table_3);
         onCreate(db);
     }
 
@@ -407,5 +412,34 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         return uit;
     }
 
+// de activity databaseeeee
+
+    public int IDMAKERTABLE3() {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery(
+                "select * from " + DATABASE_table_3, null
+        );
+        return cursor.getCount();
+    }
+
+
+    public void addToTabel3(String naam, int calories) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        Date calendar = Calendar.getInstance().getTime();
+        String deDatum = DateFormat.getDateInstance(DateFormat.SHORT).format(calendar);
+
+        if (!naam.trim().isEmpty() && naam != null && calories > -1) {
+            contentValues.put(Table_3_col_1, IDMAKERTABLE3());
+            contentValues.put(Table_3_col_2, naam);
+            contentValues.put(Table_3_col_3, deDatum);
+            contentValues.put(Table_3_col_4, calories);
+            contentValues.put(Table_3_col_5, getIdActivated());
+
+        }
+
+        sqLiteDatabase.insert(DATABASE_table_1, null, contentValues);
+    }
 
 }
