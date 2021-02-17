@@ -28,12 +28,15 @@
         android:layout_alignLeft="@id/image_listview"
         android:layout_alignTop="@id/image_listview"
         android:layout_alignRight="@id/image_listview"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="25dp"
         android:fontFamily="@font/roboto_slab"
         android:gravity="center"
         android:text="naam = appel"
         android:textColor="@color/groen"
-        android:textSize="24dp" />
+        android:textSize="24dp"
+        android:maxHeight="30dp"/>
 
     <TextView
         android:id="@+id/list_item_text_3"
@@ -42,10 +45,13 @@
         android:layout_below="@+id/list_item_text_2"
         android:layout_alignLeft="@id/image_listview"
         android:layout_alignRight="@id/image_listview"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_marginTop="25dp"
         android:fontFamily="@font/roboto_slab"
         android:gravity="center"
-        android:text="aantal calories burned = 1500"
+        android:text="burned = 1500 cal"
         android:textColor="@color/groen"
-        android:textSize="24dp" />
+        android:textSize="24dp"
+        android:maxHeight="30dp"/>
 </RelativeLayout>

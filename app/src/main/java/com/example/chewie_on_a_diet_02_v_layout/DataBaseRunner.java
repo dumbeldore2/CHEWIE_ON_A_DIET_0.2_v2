@@ -413,7 +413,6 @@ public class DataBaseRunner extends SQLiteOpenHelper {
     }
 
 // de activity databaseeeee
-
     public int IDMAKERTABLE3() {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery(
@@ -439,7 +438,58 @@ public class DataBaseRunner extends SQLiteOpenHelper {
 
         }
 
-        sqLiteDatabase.insert(DATABASE_table_1, null, contentValues);
+        sqLiteDatabase.insert(DATABASE_table_3, null, contentValues);
+    }
+
+    public String [] getTable_3_col_1IdArrayListFood(int id) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_3_col_1 + " from " + DATABASE_table_3 + " where " + Table_3_col_5 + " == " + id, null);
+        String[] uit = new String[cursor.getCount()];
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                if (cursor.moveToPosition(i)) {
+                    StringBuffer stringBuffer = new StringBuffer();
+                    stringBuffer.append(cursor.getString(0));
+                    uit[i] = stringBuffer.toString();
+                }
+            }
+        }
+        return uit;
+    }
+
+    public String [] getTable_3_col_2NameArrayListDrink(int id) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_3_col_2 + " from " + DATABASE_table_3 + " where " + Table_3_col_5 + " == " + id , null);
+        String[] uit = new String[cursor.getCount()];
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                if (cursor.moveToPosition(i)) {
+                    StringBuffer stringBuffer = new StringBuffer();
+                    stringBuffer.append(cursor.getString(0));
+                    uit[i] = "" + stringBuffer.toString();
+                }
+            }
+        }
+        return uit;
+    }
+
+    public String [] getTable_3_col_4CaloriesArrayListDrink(int id) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_3_col_4 + " from " + DATABASE_table_3 + " where " + Table_3_col_5 + " == " + id , null);
+        String[] uit = new String[cursor.getCount()];
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                if (cursor.moveToPosition(i)) {
+                    StringBuffer stringBuffer = new StringBuffer();
+                    stringBuffer.append(cursor.getString(0));
+                    uit[i] = "" + stringBuffer.toString();
+                }
+            }
+        }
+        return uit;
     }
 
 }

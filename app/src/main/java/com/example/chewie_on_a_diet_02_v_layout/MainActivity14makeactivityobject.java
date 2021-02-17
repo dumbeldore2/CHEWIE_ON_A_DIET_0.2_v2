@@ -14,14 +14,21 @@ import android.text.TextPaint;
 import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import javax.microedition.khronos.egl.EGLDisplay;
 
 public class MainActivity14makeactivityobject extends AppCompatActivity {
 
     TextView textView1,textView2,textView3,textView4,textView5,textView6,textView7;
 
     ImageView imageView1,imageView4,imageView5;
+
+    EditText editText1, editText2;
+
+    DataBaseRunner dataBaseRunner;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -47,6 +54,11 @@ public class MainActivity14makeactivityobject extends AppCompatActivity {
         imageView1 = findViewById(R.id.image_1);
         imageView4 = findViewById(R.id.image_4);
         imageView5 = findViewById(R.id.image_5);
+
+        editText1 = findViewById(R.id.edit_text_1);
+        editText2 = findViewById(R.id.edit_text_2);
+
+        dataBaseRunner = new DataBaseRunner(this);
 
         setColorToGradiant(textView4);
         setColorToGradiant(textView5);
@@ -105,19 +117,23 @@ public class MainActivity14makeactivityobject extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity9activity.class);
+                if (controller()){
+                    dataBaseRunner.addToTabel3(getNaam(),getCalories());
+                    System.out.println(dataBaseRunner.IDMAKERTABLE3());
+                    Intent intent = new Intent(getApplicationContext(),MainActivity9activity.class);
 
-                Pair[] pairs = new Pair[7];
-                pairs[0] = new Pair<View, String>(textView6, "1");
-                pairs[1] = new Pair<View, String>(textView6, "2");
-                pairs[2] = new Pair<View, String>(textView6, "3");
-                pairs[3] = new Pair<View, String>(textView6, "4");
-                pairs[4] = new Pair<View, String>(textView6, "5");
-                pairs[5] = new Pair<View, String>(textView6, "6");
-                pairs[6] = new Pair<View, String>(textView6, "7");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity14makeactivityobject.this, pairs);
+                    Pair[] pairs = new Pair[7];
+                    pairs[0] = new Pair<View, String>(textView6, "1");
+                    pairs[1] = new Pair<View, String>(textView6, "2");
+                    pairs[2] = new Pair<View, String>(textView6, "3");
+                    pairs[3] = new Pair<View, String>(textView6, "4");
+                    pairs[4] = new Pair<View, String>(textView6, "5");
+                    pairs[5] = new Pair<View, String>(textView6, "6");
+                    pairs[6] = new Pair<View, String>(textView6, "7");
+                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity14makeactivityobject.this, pairs);
 
-                startActivity(intent, options.toBundle());
+                    startActivity(intent, options.toBundle());
+                }
             }
         });
     }
@@ -166,5 +182,28 @@ public class MainActivity14makeactivityobject extends AppCompatActivity {
                         Color.parseColor("#286086")
                 }, null, Shader.TileMode.CLAMP);
         textView.getPaint().setShader(shader);
+    }
+
+    public String getNaam(){
+        String uit = "";
+        uit += editText1.getText().toString().trim();
+        return uit;
+    }
+
+    public int getCalories(){
+        int uit = -1;
+        uit = Integer.parseInt(editText2.getText().toString().trim());
+        return uit;
+    }
+
+    public boolean controller(){
+        boolean uit = false;
+
+        if (!getNaam().trim().isEmpty() && getNaam() != null){
+            if (getCalories() > -1){
+                uit = true;
+            }
+        }
+        return uit;
     }
 }

@@ -28,8 +28,10 @@ public class MainActivity9activity extends AppCompatActivity {
 
     MainActivity9activityBar mainActivity9activityBar;
 
-    String data[] = {"naam = appel","naam = peer","naam = olifant","naam = muis"};
-    String data3[] = {"aantal calories/100ml = 1500","aantal calories/100ml = 1500","aantal calories/100ml = 1500","aantal calories/100ml = 1500"};
+    DataBaseRunner dataBaseRunner;
+
+    String data[] = {""};
+    String data3[] = {""};
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -53,6 +55,11 @@ public class MainActivity9activity extends AppCompatActivity {
         textView4 = findViewById(R.id.text_4);
 
         listView = findViewById(R.id.listview_1);
+
+        dataBaseRunner = new DataBaseRunner(this);
+
+        data = dataBaseRunner.getTable_3_col_2NameArrayListDrink(dataBaseRunner.getIdActivated());
+        data3 = dataBaseRunner.getTable_3_col_4CaloriesArrayListDrink(dataBaseRunner.getIdActivated());
 
         mainActivity9activityBar = new MainActivity9activityBar(this,data,data3);
         listView.setAdapter(mainActivity9activityBar);
