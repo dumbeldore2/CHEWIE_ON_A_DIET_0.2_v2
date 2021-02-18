@@ -111,6 +111,7 @@
                     android:background="@drawable/but_12"
                     android:gravity="center"
                     android:hint="name here"
+                    android:inputType="number"
                     android:textColor="@color/blauw"
                     android:textColorHint="@color/wit"
                     android:transitionName="7"

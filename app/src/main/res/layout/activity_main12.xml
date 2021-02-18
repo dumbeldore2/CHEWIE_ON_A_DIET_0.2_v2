@@ -112,12 +112,13 @@
                         android:background="@drawable/but_12"
                         android:gravity="center"
                         android:hint="write name here"
+                        android:inputType="text"
                         android:textColor="@color/blauw"
                         android:textColorHint="@color/wit"
                         android:transitionName="7"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/image_2"
-                        app:layout_constraintEnd_toEndOf="parent"/>
+                        app:layout_constraintTop_toBottomOf="@id/image_2" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -158,12 +159,13 @@
                         android:background="@drawable/but_12"
                         android:gravity="center"
                         android:hint="write maker here"
+                        android:inputType="text"
                         android:textColor="@color/blauw"
                         android:textColorHint="@color/wit"
                         android:transitionName="10"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/image_3"
-                        app:layout_constraintEnd_toEndOf="parent"/>
+                        app:layout_constraintTop_toBottomOf="@id/image_3" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -204,12 +206,13 @@
                         android:background="@drawable/but_12"
                         android:gravity="center"
                         android:hint="write calories/100g here"
+                        android:inputType="number"
                         android:textColor="@color/blauw"
                         android:textColorHint="@color/wit"
                         android:transitionName="13"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/image_4"
-                        app:layout_constraintEnd_toEndOf="parent"/>
+                        app:layout_constraintTop_toBottomOf="@id/image_4" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
