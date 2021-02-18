@@ -2,11 +2,9 @@ package com.example.chewie_on_a_diet_02_v_layout;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.transition.CircularPropagation;
 
 import androidx.annotation.Nullable;
 
@@ -72,6 +70,7 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, 1);
     }
 
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table " + DATABASE_table_1 + "(" + Table_1_col_1 + " INTEGER primary key," + Table_1_col_2 + " TEXT ," + Table_1_col_3 + " TEXT ," + Table_1_col_4 + " TEXT )");
@@ -87,6 +86,9 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + DATABASE_table_1);
         db.execSQL("DROP TABLE IF EXISTS " + DATABASE_table_2);
         db.execSQL("DROP TABLE IF EXISTS " + DATABASE_table_3);
+        db.execSQL("DROP TABLE IF EXISTS " + DATABASE_table_4);
+        db.execSQL("DROP TABLE IF EXISTS " + DATABASE_table_5);
+        db.execSQL("DROP TABLE IF EXISTS " + DATABASE_table_6);
         onCreate(db);
     }
 
@@ -412,7 +414,7 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         return uit;
     }
 
-// de activity databaseeeee
+// de activity databaseeeee 3
     public int IDMAKERTABLE3() {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery(
@@ -441,7 +443,7 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         sqLiteDatabase.insert(DATABASE_table_3, null, contentValues);
     }
 
-    public String [] getTable_3_col_1IdArrayListFood(int id) {
+    public String [] getTable_3_col_1IdArrayList(int id) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_3_col_1 + " from " + DATABASE_table_3 + " where " + Table_3_col_5 + " == " + id, null);
         String[] uit = new String[cursor.getCount()];
@@ -458,7 +460,7 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         return uit;
     }
 
-    public String [] getTable_3_col_2NameArrayListDrink(int id) {
+    public String [] getTable_3_col_2NameArrayList(int id) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_3_col_2 + " from " + DATABASE_table_3 + " where " + Table_3_col_5 + " == " + id , null);
         String[] uit = new String[cursor.getCount()];
@@ -475,7 +477,7 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         return uit;
     }
 
-    public String [] getTable_3_col_4CaloriesArrayListDrink(int id) {
+    public String [] getTable_3_col_4CaloriesArrayList(int id) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_3_col_4 + " from " + DATABASE_table_3 + " where " + Table_3_col_5 + " == " + id , null);
         String[] uit = new String[cursor.getCount()];
@@ -492,4 +494,95 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         return uit;
     }
 
+    //tabel 4
+    public int IDMAKERTABLE4() {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery(
+                "select * from " + DATABASE_table_4, null
+        );
+        return cursor.getCount();
+    }
+
+    public void addToTabel4( float weight) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        Date calendar = Calendar.getInstance().getTime();
+        String deDatum = DateFormat.getDateInstance(DateFormat.SHORT).format(calendar);
+        String hetUur = DateFormat.getTimeInstance(DateFormat.SHORT).format(calendar);
+
+        if (weight > -1) {
+            contentValues.put(Table_4_col_1, IDMAKERTABLE4());
+            contentValues.put(Table_4_col_2, deDatum);
+            contentValues.put(Table_4_col_3, hetUur);
+            contentValues.put(Table_4_col_4, getIdActivated());
+            contentValues.put(Table_4_col_5, weight);
+
+        }
+
+        sqLiteDatabase.insert(DATABASE_table_4, null, contentValues);
+    }
+
+    public String [] getTable_4_col_1IdArrayList(int id) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_4_col_1 + " from " + DATABASE_table_4 + " where " + Table_4_col_4 + " == " + id + " order by "+Table_4_col_1+" desc", null);
+        String[] uit = new String[cursor.getCount()];
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                if (cursor.moveToPosition(i)) {
+                    StringBuffer stringBuffer = new StringBuffer();
+                    stringBuffer.append(cursor.getString(0));
+                    uit[i] = "" + stringBuffer.toString();
+                }
+            }
+        }
+        return uit;
+    }
+
+    public String [] getTable_4_col_2DateArrayList(int id) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_4_col_2 + " from " + DATABASE_table_4 + " where " + Table_4_col_4 + " == " + id + " order by "+Table_4_col_1+" desc" , null);
+        String[] uit = new String[cursor.getCount()];
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                if (cursor.moveToPosition(i)) {
+                    StringBuffer stringBuffer = new StringBuffer();
+                    stringBuffer.append(cursor.getString(0));
+                    uit[i] = "" + stringBuffer.toString();
+                }
+            }
+        }
+        return uit;
+    }
+
+    public String [] getTable_4_col_5WeightArrayList(int id) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_4_col_5 + " from " + DATABASE_table_4 + " where " + Table_4_col_4 + " == " + id + " order by "+Table_4_col_1+" desc" , null);
+        String[] uit = new String[cursor.getCount()];
+
+        for (int i = 0; i < cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                if (cursor.moveToPosition(i)) {
+                    StringBuffer stringBuffer = new StringBuffer();
+                    stringBuffer.append(cursor.getString(0));
+                    uit[i] = "" + stringBuffer.toString();
+                }
+            }
+        }
+        return uit;
+    }
+
+    public float getTable_4_col_5WeightLastData(int id) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_4_col_5 + " from " + DATABASE_table_4 + " where " + Table_4_col_4 + " == " + id + " order by "+Table_4_col_1+" desc limit 1" , null);
+        float uit = -1;
+        if (cursor.moveToFirst()) {
+            StringBuffer stringBuffer = new StringBuffer();
+            stringBuffer.append(cursor.getString(0));
+            uit = Float.parseFloat(stringBuffer.toString().trim());
+        }
+        return uit;
+    }
 }

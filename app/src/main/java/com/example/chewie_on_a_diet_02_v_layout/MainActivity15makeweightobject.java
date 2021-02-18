@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,6 +20,10 @@ public class MainActivity15makeweightobject extends AppCompatActivity {
     TextView textView3,textView5;
 
     ImageView imageView1,imageView3;
+
+    EditText editText1;
+
+    DataBaseRunner dataBaseRunner;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -38,6 +43,10 @@ public class MainActivity15makeweightobject extends AppCompatActivity {
 
         textView3 = findViewById(R.id.text_3);
         textView5 = findViewById(R.id.text_5);
+
+        editText1 = findViewById(R.id.edit_text_1);
+
+        dataBaseRunner = new DataBaseRunner(this);
 
         click_fun_1();
         click_fun_2();
@@ -92,25 +101,45 @@ public class MainActivity15makeweightobject extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
+                if (controller()){
 
-                Intent intent = new Intent(getApplicationContext(), MainActivity6weight.class);
+                    dataBaseRunner.addToTabel4(getWeight());
 
-                Pair[] pairs = new Pair[10];
-                pairs[0] = new Pair<View, String>(textView5, "1");
-                pairs[1] = new Pair<View, String>(textView5, "2");
-                pairs[2] = new Pair<View, String>(textView5, "3");
-                pairs[3] = new Pair<View, String>(textView5, "4");
-                pairs[4] = new Pair<View, String>(textView5, "5");
-                pairs[5] = new Pair<View, String>(textView5, "6");
-                pairs[6] = new Pair<View, String>(textView5, "7");
-                pairs[7] = new Pair<View, String>(textView5, "8");
-                pairs[8] = new Pair<View, String>(textView5, "9");
-                pairs[9] = new Pair<View, String>(textView5, "10");
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity15makeweightobject.this, pairs);
+                    Intent intent = new Intent(getApplicationContext(), MainActivity6weight.class);
 
-                startActivity(intent, options.toBundle());
+                    Pair[] pairs = new Pair[10];
+                    pairs[0] = new Pair<View, String>(textView5, "1");
+                    pairs[1] = new Pair<View, String>(textView5, "2");
+                    pairs[2] = new Pair<View, String>(textView5, "3");
+                    pairs[3] = new Pair<View, String>(textView5, "4");
+                    pairs[4] = new Pair<View, String>(textView5, "5");
+                    pairs[5] = new Pair<View, String>(textView5, "6");
+                    pairs[6] = new Pair<View, String>(textView5, "7");
+                    pairs[7] = new Pair<View, String>(textView5, "8");
+                    pairs[8] = new Pair<View, String>(textView5, "9");
+                    pairs[9] = new Pair<View, String>(textView5, "10");
+                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity15makeweightobject.this, pairs);
+
+                    startActivity(intent, options.toBundle());
+                }
             }
         });
     }
 
+    public float getWeight(){
+        float uit = -1;
+        if (!editText1.getText().toString().trim().isEmpty() && editText1.getText().toString().trim() != null){
+            uit = Float.parseFloat(editText1.getText().toString().trim());
+        }
+        return uit;
+    }
+
+    public boolean controller(){
+        boolean uit = false;
+
+        if (getWeight() > -1 ){
+            uit = true;
+        }
+        return uit;
+    }
 }

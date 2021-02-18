@@ -21,12 +21,16 @@ public class MainActivity6weightBar extends ArrayAdapter<String> {
     String stringKilo[];
     String stringKiloDiff[];
 
-    public MainActivity6weightBar(@NonNull Context c, String s[] ,String s1[] ,String s2[]) {
+    public MainActivity6weightBar(@NonNull Context c, String s[] ,String s1[]) {
         super(c,R.layout.activity_main6_bar, R.id.listview_1,s);
         this.context = c;
         this.stringDatum = s;
         this.stringKilo = s1;
-        this.stringKiloDiff = s2;
+
+        stringKiloDiff = new String[stringKilo.length];
+        for (int i = 0; i < stringKiloDiff.length ; i++){
+            stringKiloDiff[i] += 10;
+        }
     }
 
     @NonNull
@@ -36,16 +40,24 @@ public class MainActivity6weightBar extends ArrayAdapter<String> {
         View row = layoutInflater.inflate(R.layout.activity_main6_bar,parent,false);
         ImageView images = row.findViewById(R.id.image_listview);
 
+        kleurveranderaar();
+
         TextView a = row.findViewById(R.id.text_listvieuw_bar_1);
         TextView b = row.findViewById(R.id.text_listvieuw_bar_2);
         TextView c = row.findViewById(R.id.text_listvieuw_bar_3);
 
         a.setText(stringDatum[position]);
-        b.setText(stringKilo[position]);
-        c.setText(stringKiloDiff[position]);
+        b.setText(stringKilo[position] + " kg");
+        c.setText(stringKiloDiff[position] + " kg");
 
         setColorToGradiant(b);
-        setColorToGradiant(c);
+
+        if (Float.parseFloat(stringKiloDiff[position]) >= 0){
+            c.setText("+ " + stringKiloDiff[position] + " kg");
+            setColorToGradiant2(c);
+        } else {
+            setColorToGradiant(c);
+        }
 
         return row;
     }
@@ -72,5 +84,21 @@ public class MainActivity6weightBar extends ArrayAdapter<String> {
                         Color.parseColor("#FF0000")
                 },null,Shader.TileMode.CLAMP);
         textView.getPaint().setShader(shader);
+    }
+
+    public float verschil(float one, float twoo){
+        float uit = one;
+        uit -= twoo;
+        return uit;
+    }
+
+    public void kleurveranderaar(){
+        for (int i = 0; i < stringKilo.length ; i++){
+            if (i == stringKilo.length -1){
+                stringKiloDiff[i] = ""+verschil(Float.parseFloat(stringKilo[i]),Float.parseFloat(stringKilo[i]));
+            } else {
+                stringKiloDiff[i] = ""+verschil(Float.parseFloat(stringKilo[i]),Float.parseFloat(stringKilo[i+1]));
+            }
+        }
     }
 }

@@ -22,14 +22,16 @@ public class MainActivity6weight extends AppCompatActivity {
 
     ImageView imageView1,imageView3;
 
-    TextView textView1,textView2,textView3,textView6;
+    TextView textView1,textView2,textView3,textView4,textView6;
 
     ListView listView;
 
     MainActivity6weightBar mainActivity6weightBar;
-    String data[] = {"15 Oktober 2020","15 Oktober 2010","15 Oktober 2010","15 Oktober 2010"};
-    String data2[] = {"59kg","59kg","59kg","59kg"};
-    String data3[] = {"-5kg","-15kg","-19kg","-15kg"};
+
+    DataBaseRunner dataBaseRunner;
+
+    String data[] = {""};
+    String data2[] = {""};
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -50,12 +52,20 @@ public class MainActivity6weight extends AppCompatActivity {
         textView1 = findViewById(R.id.text_1);
         textView2 = findViewById(R.id.text_2);
         textView3 = findViewById(R.id.text_3);
+        textView4 = findViewById(R.id.text_4);
         textView6 = findViewById(R.id.text_6);
 
         listView = findViewById(R.id.listview_1);
 
-        mainActivity6weightBar = new MainActivity6weightBar(this,data,data2,data3);
+        dataBaseRunner = new DataBaseRunner(this);
+
+        data = dataBaseRunner.getTable_4_col_2DateArrayList(dataBaseRunner.getIdActivated());
+        data2 = dataBaseRunner.getTable_4_col_5WeightArrayList(dataBaseRunner.getIdActivated());
+
+        mainActivity6weightBar = new MainActivity6weightBar(this,data,data2);
         listView.setAdapter(mainActivity6weightBar);
+
+        setTextView4();
 
         click_fun_1();
         click_fun_2();
@@ -156,5 +166,15 @@ public class MainActivity6weight extends AppCompatActivity {
                         Color.parseColor("#286086")
                 },null,Shader.TileMode.CLAMP);
         textView.getPaint().setShader(shader);
+    }
+
+    private void setTextView4(){
+        if (dataBaseRunner.getTable_4_col_5WeightLastData(dataBaseRunner.getIdActivated()) != -1){
+            textView4.setText("weight = " + dataBaseRunner.getTable_4_col_5WeightLastData(dataBaseRunner.getIdActivated()) + " kg");
+        } else {
+            if (dataBaseRunner.getTable_4_col_5WeightLastData(dataBaseRunner.getIdActivated()) == -1){
+                textView4.setText("no data was given jet");
+            }
+        }
     }
 }

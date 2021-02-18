@@ -58,8 +58,8 @@ public class MainActivity9activity extends AppCompatActivity {
 
         dataBaseRunner = new DataBaseRunner(this);
 
-        data = dataBaseRunner.getTable_3_col_2NameArrayListDrink(dataBaseRunner.getIdActivated());
-        data3 = dataBaseRunner.getTable_3_col_4CaloriesArrayListDrink(dataBaseRunner.getIdActivated());
+        data = dataBaseRunner.getTable_3_col_2NameArrayList(dataBaseRunner.getIdActivated());
+        data3 = dataBaseRunner.getTable_3_col_4CaloriesArrayList(dataBaseRunner.getIdActivated());
 
         mainActivity9activityBar = new MainActivity9activityBar(this,data,data3);
         listView.setAdapter(mainActivity9activityBar);
