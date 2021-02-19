@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity18individualaccount"></activity>
+        <activity android:name=".MainActivity19Size"></activity>
+        <activity android:name=".MainActivity18individualaccount" />
         <activity android:name=".MainActivity17accounts" />
         <activity android:name=".MainActivity16makeaccount" />
         <activity android:name=".MainActivity15makeweightobject" />

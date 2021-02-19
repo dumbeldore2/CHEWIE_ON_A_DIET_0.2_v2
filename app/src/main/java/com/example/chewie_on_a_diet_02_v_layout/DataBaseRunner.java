@@ -397,6 +397,19 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         return uit;
     }
 
+
+    public int getTable_2_col_4CalorieForId(int foodendrinkID ){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_2_col_4 + " from " + DATABASE_table_2 + " where " + Table_2_col_5 + " == " + getIdActivated() + " and "+Table_2_col_1+" == "+foodendrinkID+" ", null);
+
+        int uit = -1;
+        StringBuffer stringBuffer = new StringBuffer();
+        if (cursor.moveToFirst()){
+            stringBuffer.append(cursor.getString(0));
+            uit = Integer.parseInt(stringBuffer.toString().trim());
+        }
+        return uit;
+    }
     public String [] getTable_2_col_1IdArrayListDrink(int id) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_2_col_1 + " from " + DATABASE_table_2 + " where " + Table_2_col_5 + " == " + id + " and " + Table_2_col_6 + " == 'drink'", null);
@@ -585,4 +598,35 @@ public class DataBaseRunner extends SQLiteOpenHelper {
         }
         return uit;
     }
+
+
+    // Database 5
+
+    public int IDMAKERTABLE5() {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery(
+                "select * from " + DATABASE_table_5, null
+        );
+        return cursor.getCount();
+    }
+
+    public void addToTabel5( int id,int size) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        Date calendar = Calendar.getInstance().getTime();
+        String deDatum = DateFormat.getDateInstance(DateFormat.SHORT).format(calendar);
+        String hetUur = DateFormat.getTimeInstance(DateFormat.SHORT).format(calendar);
+
+        contentValues.put(Table_5_col_1, IDMAKERTABLE5());
+        contentValues.put(Table_5_col_2, deDatum);
+        contentValues.put(Table_5_col_3, hetUur);
+        contentValues.put(Table_5_col_4, getIdActivated());
+        contentValues.put(Table_5_col_5, id);
+        contentValues.put(Table_5_col_6, size);
+        contentValues.put(Table_5_col_7, getTable_2_col_4CalorieForId(id));
+
+        sqLiteDatabase.insert(DATABASE_table_5, null, contentValues);
+    }
+
 }
