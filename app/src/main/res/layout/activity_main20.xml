@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity20boolean"
+    android:background="@drawable/background_1">
+
+
+    <TextView
+        android:id="@+id/text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="C"
+        android:textSize="90dp"
+        android:transitionName="1"
+        android:textColor="@color/wit"/>
+
+    <TextView
+        android:id="@+id/text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="hoose"
+        android:textColor="@color/wit"
+        android:textSize="45dp"
+        android:transitionName="2"
+        app:layout_constraintBottom_toBottomOf="@id/text_1"
+        app:layout_constraintStart_toEndOf="@id/text_1" />
+
+    <ImageView
+        android:id="@+id/image_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="25dp"
+        android:src="@drawable/circle_1"
+        android:transitionName="3"/>
+
+    <TextView
+        android:id="@+id/text_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/image_1"
+        app:layout_constraintEnd_toEndOf="@id/image_1"
+        app:layout_constraintTop_toTopOf="@id/image_1"
+        app:layout_constraintBottom_toBottomOf="@id/image_1"
+        android:fontFamily="@font/roboto_slab"
+        android:text="dashboard"
+        android:textColor="@color/wit"
+        android:textSize="14dp"
+        android:transitionName="4"/>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestle"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/but_19"
+                    android:transitionName="5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_slab"
+                    android:text="add new item"
+                    android:textColor="@color/groen"
+                    android:textSize="48dp"
+                    android:gravity="center"
+                    android:transitionName="6"
+                    app:layout_constraintBottom_toBottomOf="@id/image_2"
+                    app:layout_constraintEnd_toEndOf="@id/image_2"
+                    app:layout_constraintStart_toStartOf="@id/image_2"
+                    app:layout_constraintTop_toTopOf="@id/image_2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/but_19"
+                    android:transitionName="7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/text_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_slab"
+                    android:text="already existing item"
+                    android:textColor="@color/groen"
+                    android:textSize="48dp"
+                    android:transitionName="8"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="@id/image_3"
+                    app:layout_constraintEnd_toEndOf="@id/image_3"
+                    app:layout_constraintStart_toStartOf="@id/image_3"
+                    app:layout_constraintTop_toTopOf="@id/image_3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
