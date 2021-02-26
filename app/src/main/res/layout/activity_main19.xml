@@ -125,10 +125,10 @@
                     android:background="@drawable/but_11"
                     android:gravity="center"
                     android:hint="name here"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:textColor="@color/blauw"
                     android:textColorHint="@color/wit"
-                    android:transitionName="7"
+                    android:transitionName="8"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/image_2"
                     app:layout_constraintEnd_toEndOf="parent"/>
