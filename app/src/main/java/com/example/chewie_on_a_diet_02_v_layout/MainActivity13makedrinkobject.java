@@ -63,9 +63,9 @@ public class MainActivity13makedrinkobject extends AppCompatActivity {
 
         dataBaseRunner = new DataBaseRunner(this);
 
-        setColorToGradiant(textView4);
-        setColorToGradiant(textView5);
-        setColorToGradiant(textView6);
+        //setColorToGradiant(textView4);
+        //setColorToGradiant(textView5);
+        //setColorToGradiant(textView6);
 
         click_fun_1();
         click_fun_2();
