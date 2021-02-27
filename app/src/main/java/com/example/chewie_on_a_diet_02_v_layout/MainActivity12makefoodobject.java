@@ -146,9 +146,13 @@ public class MainActivity12makefoodobject extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (controller()){
-                    Intent intent = new Intent(getApplicationContext(), MainActivity4today.class);
+                    dataBaseRunner.addToTabel2(getNaam(),getMaker(),getAantalCalories(),dataBaseRunner.getIdActivated(),"food");
+                    Intent intent = new Intent(getApplicationContext(), MainActivity19Size.class);
 
-                    Pair[] pairs = new Pair[7];
+                    intent.putExtra("id",dataBaseRunner.IDMAKERTABLE2() -1);
+                    intent.putExtra("task",2);
+
+                    Pair[] pairs = new Pair[8];
                     pairs[0] = new Pair<View,String>(textView9,"1");
                     pairs[1] = new Pair<View,String>(textView9,"2");
                     pairs[2] = new Pair<View,String>(textView9,"3");
@@ -156,6 +160,7 @@ public class MainActivity12makefoodobject extends AppCompatActivity {
                     pairs[4] = new Pair<View,String>(textView9,"5");
                     pairs[5] = new Pair<View,String>(textView9,"6");
                     pairs[6] = new Pair<View,String>(textView9,"7");
+                    pairs[7] = new Pair<View,String>(textView9,"8");
                     ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity12makefoodobject.this, pairs);
 
                     startActivity(intent,options.toBundle());

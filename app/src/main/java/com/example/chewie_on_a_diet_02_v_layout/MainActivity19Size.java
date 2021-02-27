@@ -18,7 +18,7 @@ import android.widget.TextView;
 
 public class MainActivity19Size extends AppCompatActivity {
 
-    TextView textView3,textView6;
+    TextView textView3,textView5,textView6;
 
     ImageView imageView1, imageView3;
 
@@ -35,10 +35,12 @@ public class MainActivity19Size extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
+
         getWindow().setNavigationBarColor(Color.parseColor("#00688B"));
         getWindow().setStatusBarColor(Color.parseColor("#00FA9A"));
 
         textView3 = findViewById(R.id.text_3);
+        textView5 = findViewById(R.id.text_5);
         textView6 = findViewById(R.id.text_6);
 
         imageView1 = findViewById(R.id.image_1);
@@ -50,6 +52,7 @@ public class MainActivity19Size extends AppCompatActivity {
 
         click_fun_1();
         click_fun_2();
+        changeTextToTask();
     }
 
     public void click_fun_1(){
@@ -143,5 +146,21 @@ public class MainActivity19Size extends AppCompatActivity {
         return uit;
     }
 
+    public int getTask(){
+        int uit = -1;
+        Intent intent = getIntent();
+        uit = intent.getIntExtra("task",-1);
+        return uit;
+    }
+
+    public void changeTextToTask(){
+        if (getTask() == 1){
+            textView5.setText("size in ml");
+        } else {
+            if (getTask() == 2){
+                textView5.setText("size in gr");
+            }
+        }
+    }
 
 }

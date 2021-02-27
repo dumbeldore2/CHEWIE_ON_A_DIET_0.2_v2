@@ -152,6 +152,7 @@ public class MainActivity13makedrinkobject extends AppCompatActivity {
 
                 Intent intent = new Intent(getApplicationContext(), MainActivity19Size.class);
                 intent.putExtra("id",dataBaseRunner.IDMAKERTABLE2() -1);
+                intent.putExtra("task",1);
                 System.out.println(dataBaseRunner.IDMAKERTABLE2() -1);
 
                 Pair[] pairs = new Pair[8];

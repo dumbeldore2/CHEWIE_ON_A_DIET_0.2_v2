@@ -124,7 +124,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/but_11"
                     android:gravity="center"
-                    android:hint="name here"
+                    android:hint="number here"
                     android:inputType="number"
                     android:textColor="@color/blauw"
                     android:textColorHint="@color/wit"
